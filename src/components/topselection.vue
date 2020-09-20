@@ -1,5 +1,5 @@
 <template>
-  <div class="financial_sort col-sm mt-3">
+  <div class="topselection col-sm mt-3">
         <div class="col-sm row p-5 unselected" :class="{selected:focus}">
             <div class="col-sm-2">
                 <i class="fas fa-hand-holding-heart border border-success rounded-circle p-4 mr-4"></i>
@@ -11,7 +11,7 @@
 
 <script>
     export default {
-        name: "FinancialSort",
+        name: "TopSelection",
 
         props: {
             title: {
