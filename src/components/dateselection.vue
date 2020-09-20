@@ -13,7 +13,7 @@
 
 <script>
 export default {
- name: "TopSelection",
+ name: "DateSelection",
 
         props: {
             title: {
