@@ -7,7 +7,7 @@
 
       <div class="TopSelectionDiv mt-5">
           <h2 class="text-left h3 mb-4 mt-5"><strong>Découvrez tous les financements auxquels vous pouvez faire appel :</strong></h2>
-          <div class="row">
+          <div class="row container-fluid">
             <TopSelection :title="topSelection1" :focus="focusTopSelection1" @click.native="goToSelection1()"></TopSelection>
             <TopSelection :title="topSelection2" :focus="focusTopSelection2" @click.native="goToSelection2()"></TopSelection>    
           </div>
@@ -15,14 +15,14 @@
 
       <div class="DateSelectionDiv mt-5" v-if="topSelectionEtat">
           <h2 class="text-left h3 mb-4 mt-5"><strong>Quelle est l'échéance de votre projet ?</strong></h2>
-          <div class="row">
+          <div class="row container-fluid">
             <DateSelection :title="dateSelection1" :date="date1" :focus="focusEcheance1" @click.native="goToEcheance2022()"></DateSelection>
             <DateSelection :title="dateSelection2" :date="date2" :focus="focusEcheance2" @click.native="goToEcheance2023()"></DateSelection>    
           </div>
       </div>
 
       <ResultSection v-if="results">
-        <p class="text-left mb-5" v-if="echeance2022">ℹ︎ Vous pouvez candidater à plusieurs de ces offres pour un même projet</p>
+        <p class="text-left" v-if="echeance2022">ℹ︎ Vous pouvez candidater à plusieurs de ces offres pour un même projet</p>
       </ResultSection>
   </div>
 </template>
@@ -67,6 +67,8 @@
                 this.focusTopSelection2 = true;
                 this.focusTopSelection1 = false;
                 this.topSelectionEtat = false;
+                this.focusEcheance1 = false;
+                this.focusEcheance2 = false;
                 this.results = true;
             },
             goToEcheance2022() {

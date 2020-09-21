@@ -2,8 +2,8 @@
     <div class="resultsection mt-5">
           <h2 class="text-left h3 mt-5"><strong>Dans le cadre de votre projet, vous souhaitez :</strong></h2>
           <slot></slot>
-              <div class="row" >
-                <!-- <div class="row" v-for="aide in aides" :key="aide.id" > -->
+              <div class="container-fluid row mt-5">
+                <!-- <div class="container-fluid row mt-5" v-for="aide in aides" :key="aide.id" > -->
                     <!-- <div class="col-sm-4 mb-4">
                         <div class="col-sm bgGrey p-4">
                             <p class="mb-5 text-left"><strong>{{ aide.name }}</strong></p>
