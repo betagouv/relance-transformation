@@ -21,7 +21,9 @@
           </div>
       </div>
 
-      <ResultSection v-if="results"></ResultSection>
+      <ResultSection v-if="results">
+        <p class="text-left mb-5" v-if="echeance2022">ℹ︎ Vous pouvez candidater à plusieurs de ces offres pour un même projet</p>
+      </ResultSection>
   </div>
 </template>
 
