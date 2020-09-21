@@ -8,20 +8,20 @@
       <div class="TopSelectionDiv mt-5">
           <h2 class="text-left h3 mb-4 mt-5"><strong>Découvrez tous les financements auxquels vous pouvez faire appel :</strong></h2>
           <div class="row">
-            <TopSelection :title="topSelection1" :focus="true"></TopSelection>
-            <TopSelection :title="topSelection2" :focus="false"></TopSelection>    
+            <TopSelection :title="topSelection1" :focus="focusTopSelection1" @click.native="goToSelection1()"></TopSelection>
+            <TopSelection :title="topSelection2" :focus="focusTopSelection2" @click.native="goToSelection2()"></TopSelection>    
           </div>
       </div>
 
-      <div class="DateSelectionDiv mt-5">
+      <div class="DateSelectionDiv mt-5" v-if="topSelectionEtat">
           <h2 class="text-left h3 mb-4 mt-5"><strong>Quelle est l'échéance de votre projet ?</strong></h2>
           <div class="row">
-            <DateSelection :title="dateSelection1" :date="date1" :focus="false"></DateSelection>
-            <DateSelection :title="dateSelection2" :date="date2" :focus="false"></DateSelection>    
+            <DateSelection :title="dateSelection1" :date="date1" :focus="focusEcheance1" @click.native="goToEcheance2022()"></DateSelection>
+            <DateSelection :title="dateSelection2" :date="date2" :focus="focusEcheance2" @click.native="goToEcheance2023()"></DateSelection>    
           </div>
       </div>
 
-      <ResultSection></ResultSection>
+      <ResultSection v-if="results"></ResultSection>
   </div>
 </template>
 
@@ -45,8 +45,41 @@
           dateSelection2: "Votre projet sera réalisé au plus tôt en début d'année 2023",
           date1: "→ 2022",
           date2: "2023 →",
+          focusTopSelection1: false,
+          focusTopSelection2: false,
+          focusEcheance1: false,
+          focusEcheance2: false,
+          topSelectionEtat: false,
+          echeance2022: false,
+          results: false,
         }
-      }
+      },
+
+      methods: {
+            goToSelection1() {
+                this.focusTopSelection1 = true;
+                this.focusTopSelection2 = false;
+                this.topSelectionEtat = true;
+            },
+            goToSelection2() {
+                this.focusTopSelection2 = true;
+                this.focusTopSelection1 = false;
+                this.topSelectionEtat = false;
+                this.results = true;
+            },
+            goToEcheance2022() {
+                this.focusEcheance1 = true;
+                this.focusEcheance2 = false;
+                this.echeance2022 = true;
+                this.results = true;
+            },
+            goToEcheance2023() {
+                this.focusEcheance2 = true;
+                this.focusEcheance1 = false;
+                this.echeance2022 = false;
+                this.results = true;
+            },
+      },
 
   }
 </script>

@@ -1,6 +1,7 @@
 <template>
     <div class="resultsection mt-5">
-          <h2 class="text-left h3 mb-4 mt-5"><strong>Dans le cadre de votre projet, vous souhaitez :</strong></h2>
+          <h2 class="text-left h3 mt-5"><strong>Dans le cadre de votre projet, vous souhaitez :</strong></h2>
+          <p class="text-left mb-4"><small v-if="echeance2022">Vous pouvez candidater à plusieurs de ces offres pour un même projet.</small></p>
               <div class="row" >
                 <!-- <div class="row" v-for="aide in aides" :key="aide.id" > -->
                     <!-- <div class="col-sm-4 mb-4">
