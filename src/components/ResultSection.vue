@@ -5,39 +5,39 @@
               <div class="container-fluid row mt-5">
                 <!-- <div class="container-fluid row mt-5" v-for="aide in aides" :key="aide.id" > -->
                     <!-- <div class="col-sm-4 mb-4">
-                        <div class="col-sm bgGrey p-4">
-                            <p class="mb-5 text-left"><strong>{{ aide.name }}</strong></p>
-                            <button class="moreInfos text-left" @click="goToAide(aide.id)">Obtenir des informations →</button>
+                        <div class="col-sm bgGrey p-4 justify-content-start">
+                            <p class="mb-5 text-left col-sm"><strong>{{ aide.name }}</strong></p>
+                            <button class="moreInfos text-left col-sm" @click="goToAide(aide.id)">Obtenir des informations →</button>
                         </div>
                     </div> -->
                     <div class="col-sm-4 mb-4">
-                        <div class="col-sm bgGrey p-4">
-                            <p class="mb-5 text-left"><strong>Développer la dématérialisation de qualité des services aux usagers</strong></p>
-                            <button class="moreInfos text-left">Obtenir des informations →</button>
+                        <div class="col-sm bgGrey p-4 justify-content-start">
+                            <p class="mb-5 text-left col-sm"><strong>Développer la dématérialisation de qualité des services aux usagers</strong></p>
+                            <button class="moreInfos text-left col-sm">Obtenir des informations →</button>
                         </div>
                     </div>
                     <div class="col-sm-4 mb-4">
                         <div class="col-sm bgGrey p-4">
-                            <p class="mb-5 text-left"><strong>Développer la dématérialisation de qualité des services aux usagers</strong></p>
-                            <button class="moreInfos text-left">Obtenir des informations →</button>
+                            <p class="mb-5 text-left col-sm"><strong>Développer la dématérialisation de qualité des services aux usagers</strong></p>
+                            <button class="moreInfos text-left col-sm">Obtenir des informations →</button>
                         </div>
                     </div>
                     <div class="col-sm-4 mb-4">
                         <div class="col-sm bgGrey p-4">
-                            <p class="mb-5 text-left"><strong>Développer la dématérialisation de qualité des services aux usagers</strong></p>
-                            <button class="moreInfos text-left">Obtenir des informations →</button>
+                            <p class="mb-5 text-left col-sm"><strong>Développer la dématérialisation de qualité des services aux usagers</strong></p>
+                            <button class="moreInfos text-left col-sm">Obtenir des informations →</button>
                         </div>
                     </div>
                     <div class="col-sm-4 mb-4">
                         <div class="col-sm bgGrey p-4">
-                            <p class="mb-5 text-left"><strong>Développer la dématérialisation de qualité des services aux usagers</strong></p>
-                            <button class="moreInfos text-left">Obtenir des informations →</button>
+                            <p class="mb-5 text-left col-sm"><strong>Développer la dématérialisation de qualité des services aux usagers</strong></p>
+                            <button class="moreInfos text-left col-sm">Obtenir des informations →</button>
                         </div>
                     </div>
                     <div class="col-sm-4 mb-4">
                         <div class="col-sm bgGrey p-4">
-                            <p class="mb-5 text-left"><strong>Développer la dématérialisation de qualité des services aux usagers</strong></p>
-                            <button class="moreInfos text-left">Obtenir des informations →</button>
+                            <p class="mb-5 text-left col-sm"><strong>Développer la dématérialisation de qualité des services aux usagers</strong></p>
+                            <button class="moreInfos text-left col-sm">Obtenir des informations →</button>
                         </div>
                     </div>
             </div>

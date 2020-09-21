@@ -1,7 +1,7 @@
 <template>
   <div class="dateselection col-sm mt-3">
         <button class="col-sm row p-5 unselected align-items-center bordernone" :class="{selected:focus}">
-            <span class="col-sm-2 rounded-circle p-3 text-center bgWhite">
+            <span class="col-sm-2 rounded-circle p-3 text-center bgWhite mr-1">
                 <strong class="date">
                     {{ date }}
                 </strong>
