@@ -1,20 +1,26 @@
 <template>
+
   <div class="france_relance">
+    
+    <Header></Header>
+    
+    <div class="rf-grid-row rf-grid-row--center">
+      <div class="rf-col-8">
       
       <IntroSection></IntroSection>
 
       <SearchBar></SearchBar>
 
-      <div class="TopSelectionDiv mt-5">
-          <h2 class="text-left h3 mb-4 mt-5"><strong>Découvrez tous les financements auxquels vous pouvez faire appel :</strong></h2>
+      <div class="TopSelectionDiv">
+          <h2>Découvrez tous les financements auxquels vous pouvez faire appel :</h2>
           <div class="row container-fluid">
             <TopSelection :title="topSelection1" :focus="focusTopSelection1" @click.native="goToSelection1()"></TopSelection>
             <TopSelection :title="topSelection2" :focus="focusTopSelection2" @click.native="goToSelection2()"></TopSelection>    
           </div>
       </div>
 
-      <div class="DateSelectionDiv mt-5" v-if="topSelectionEtat">
-          <h2 class="text-left h3 mb-4 mt-5"><strong>Quelle est l'échéance de votre projet ?</strong></h2>
+      <div class="DateSelectionDiv" v-if="topSelectionEtat">
+          <h2>Quelle est l'échéance de votre projet ?</h2>
           <div class="row container-fluid">
             <DateSelection :title="dateSelection1" :date="date1" :focus="focusEcheance1" @click.native="goToEcheance2022()"></DateSelection>
             <DateSelection :title="dateSelection2" :date="date2" :focus="focusEcheance2" @click.native="goToEcheance2023()"></DateSelection>    
@@ -22,22 +28,29 @@
       </div>
 
       <ResultSection v-if="results">
-        <p class="text-left" v-if="echeance2022">ℹ︎ Vous pouvez candidater à plusieurs de ces offres pour un même projet</p>
+        <p v-if="echeance2022">ℹ︎ Vous pouvez candidater à plusieurs de ces offres pour un même projet</p>
       </ResultSection>
+
+      </div>
+    </div>
+  
+    <Footer></Footer>
   </div>
 </template>
 
 <script>
+  import Header from "@/components/Header";
   import IntroSection from "@/components/IntroSection";
   import SearchBar from "@/components/SearchBar";
   import TopSelection from "@/components/TopSelection";
   import DateSelection from "@/components/DateSelection";
   import ResultSection from "@/components/ResultSection";
+  import Footer from "@/components/Footer";
 
   export default {
       name: "FranceRelance",
 
-      components: { IntroSection, TopSelection, SearchBar, DateSelection, ResultSection },
+      components: { Header, IntroSection, TopSelection, SearchBar, DateSelection, ResultSection, Footer, },
 
       data() {
         return {
@@ -88,9 +101,3 @@
   }
 </script>
 
-<style>
-
-  .france_relance {
-    margin: 10vh 10vw;
-  }
-</style>
