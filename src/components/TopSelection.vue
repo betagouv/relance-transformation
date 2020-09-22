@@ -1,11 +1,11 @@
 <template>
   <div class="topselection col-sm mt-3">
-        <div class="col-sm row p-5 unselected" :class="{selected:focus}">
-            <div class="col-sm-2">
+        <button class="col-sm row p-5 unselected bordernone" :class="{selected:focus}">
+            <span class="col-sm-2 p-2">
                 <i class="fas fa-hand-holding-heart border border-success rounded-circle p-4 mr-4"></i>
-            </div>
-            <p class="h5 text-left col-sm ml-4"><strong>{{ title }}</strong></p>
-        </div>
+            </span>
+            <span class="h5 text-left col-sm ml-4"><strong>{{ title }}</strong></span>
+        </button>
   </div>
 </template>
 
@@ -36,6 +36,19 @@
     .unselected {
         background-color: whitesmoke;
         color: #757479;
+    }
+
+    .bordernone {
+        border: none;
+    }
+
+    button:active {
+        border: none !important; 
+    }
+
+    button:focus {
+        border: 0px solid inherit !important; 
+        outline-color: inherit;
     }
 
 </style>
