@@ -62,6 +62,7 @@
                 this.focusTopSelection1 = true;
                 this.focusTopSelection2 = false;
                 this.topSelectionEtat = true;
+                this.results = false;
             },
             goToSelection2() {
                 this.focusTopSelection2 = true;
@@ -83,6 +84,9 @@
                 this.echeance2022 = false;
                 this.results = true;
             },
+            goToAides(identifiant) {
+              this.$router.push({ path: `/aides/${identifiant}` });
+            }
       },
 
   }
