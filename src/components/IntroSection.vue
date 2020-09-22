@@ -1,19 +1,22 @@
 <template>
-  <div class="introsection row">
-          <div class="col-sm-1"><i class="fas fa-hand-holding-heart border border-success rounded-circle p-4"></i></div>
-          <div class="col-sm">
-              <h1 class="greenTitle text-left mb-4"><strong>Administrations : bénéficiez du volet « Mise à niveau numérique de l'État et des territoires »</strong></h1>
-              <div class="row container-fluid">
-                <p class="text-left col-sm-8 mr-5 h3">Votre projet doit contribuer à la relance de l'économie française, notamment des entreprises, et doit produire des résultats concrets sous 18 mois.</p>
-                <div class="video col-sm-3">
-                    <div class="embed-responsive embed-responsive-16by9 col-sm">
-                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/fTP37ETteOQ" allowfullscreen></iframe>
-                    </div>
-                    <p class="text-center mt-2 fontbrown">Le mot d'Amélie de Montchalin</p>
-                </div>
-              </div>
-          </div>
-      </div>
+
+    <div class="rf-grid-row rf-grid-row--end ">
+        <div class="rf-col-2">
+            <i class="fas fa-hand-holding-heart border border-success rounded-circle p-4">France Relance</i>
+        </div>
+        <div class="rf-col-10">
+            <h1 class="greenTitle">Administrations : bénéficiez du volet « Mise à niveau numérique de l'État et des territoires »</h1>
+        </div>
+
+        <div class="rf-col-8">
+            <p>Votre projet doit contribuer à la relance de l'économie française, notamment des entreprises, et doit produire des résultats concrets sous 18 mois.</p>
+        </div>
+        <div class="rf-col-2">
+            <a href=""><img src="" alt="la vidéo d'Amélie de Montchalin" /></a><br>
+            <p class="text-center mt-2 fontbrown">Le mot d'Amélie de Montchalin</p>
+        </div>
+    </div>
+
 </template>
 
 <script>
