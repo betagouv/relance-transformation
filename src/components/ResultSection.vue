@@ -7,37 +7,37 @@
                     <!-- <div class="col-sm-4 mb-4">
                         <div class="col-sm bgGrey p-4 justify-content-start">
                             <p class="mb-5 text-left col-sm"><strong>{{ aide.name }}</strong></p>
-                            <button class="moreInfos text-left col-sm" @click="goToAide(aide.id)">Obtenir des informations →</button>
+                            <button class="moreInfos text-left col-sm" @click="goToAides(aide.id)">Obtenir des informations →</button>
                         </div>
                     </div> -->
                     <div class="col-sm-4 mb-4">
                         <div class="col-sm bgGrey p-4 justify-content-start">
                             <p class="mb-5 text-left col-sm"><strong>Développer la dématérialisation de qualité des services aux usagers</strong></p>
-                            <button class="moreInfos text-left col-sm">Obtenir des informations →</button>
+                            <button class="moreInfos text-left col-sm" @click="goToAides(aide.id)">Obtenir des informations →</button>
                         </div>
                     </div>
                     <div class="col-sm-4 mb-4">
                         <div class="col-sm bgGrey p-4">
                             <p class="mb-5 text-left col-sm"><strong>Développer la dématérialisation de qualité des services aux usagers</strong></p>
-                            <button class="moreInfos text-left col-sm">Obtenir des informations →</button>
+                            <button class="moreInfos text-left col-sm" @click="goToAides(aide.id)">Obtenir des informations →</button>
                         </div>
                     </div>
                     <div class="col-sm-4 mb-4">
                         <div class="col-sm bgGrey p-4">
                             <p class="mb-5 text-left col-sm"><strong>Développer la dématérialisation de qualité des services aux usagers</strong></p>
-                            <button class="moreInfos text-left col-sm">Obtenir des informations →</button>
+                            <button class="moreInfos text-left col-sm" @click="goToAides(aide.id)">Obtenir des informations →</button>
                         </div>
                     </div>
                     <div class="col-sm-4 mb-4">
                         <div class="col-sm bgGrey p-4">
                             <p class="mb-5 text-left col-sm"><strong>Développer la dématérialisation de qualité des services aux usagers</strong></p>
-                            <button class="moreInfos text-left col-sm">Obtenir des informations →</button>
+                            <button class="moreInfos text-left col-sm" @click="goToAides(aide.id)">Obtenir des informations →</button>
                         </div>
                     </div>
                     <div class="col-sm-4 mb-4">
                         <div class="col-sm bgGrey p-4">
                             <p class="mb-5 text-left col-sm"><strong>Développer la dématérialisation de qualité des services aux usagers</strong></p>
-                            <button class="moreInfos text-left col-sm">Obtenir des informations →</button>
+                            <button class="moreInfos text-left col-sm" @click="goToAides(aide.id)">Obtenir des informations →</button>
                         </div>
                     </div>
             </div>
@@ -63,6 +63,7 @@
         color: #408669;
         background-color: inherit;
         border: none;
+        padding: 1vh 1vw;
     }
 
 </style>
