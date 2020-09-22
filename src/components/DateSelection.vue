@@ -1,13 +1,11 @@
 <template>
   <div class="dateselection col-sm mt-3">
-        <button class="col-sm row p-5 unselected align-items-center bordernone" :class="{selected:focus}">
-            <span class="col-sm-2 rounded-circle p-3 text-center bgWhite mr-1">
-                <strong class="date">
-                    {{ date }}
-                </strong>
-            </span>
-            <span class="h5 text-left col-sm ml-4"><strong>{{ title }}</strong></span>
-        </button>
+        <div class="col-sm row px-2 py-2 unselected bordernone align-items-center position-relative" :class="{selected:focus}">
+            <div class="col-sm-2 mr-1">
+                <img :src="require(`@/assets/picto/${filename}`)" alt="" class="py-3">
+            </div>
+            <h3 class="font18 text-left col-sm ml-4 streched-link"><strong>{{ title }}</strong></h3>
+        </div>
   </div>
 </template>
 
@@ -19,6 +17,9 @@ export default {
             title: {
                 type: String,
                 required: true,
+            },
+            filename: {
+                type: String,
             },
             date: {
                 type: String,
@@ -35,17 +36,17 @@ export default {
 <style>
 
     .selected {
-        background-color: #29a571 !important; 
-        color: #fff !important;
+        background-color: #169B62 !important; 
+        color: #FFFFFF !important;
+    }
+
+    .unselected {
+        background-color: #F9F8F6;
+        color: #6A6A6A;
     }
 
     .selected > span > .date {
         color: #408669 !important;
-    }
-
-    .unselected {
-        background-color: #f7f5f5;
-        color:#408669;
     }
 
     .bgWhite {
