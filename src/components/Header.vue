@@ -146,7 +146,9 @@
     }
 
     .rf-nav__rs--custom {
-      display: none;
+      z-index: 2;
+      position: absolute;
+      top: -28px;
     }
 
     .rf-header .rf-nav {
