@@ -50,14 +50,14 @@
                     </ul>
                 </nav>
                 <div class="rf-nav__rs--custom">
-                  <a href="https://www.facebook.com/AmeliedeMontchalin/" title="Acceder à la page facebook de la ministre Amelie de Montchalin" target="_blank">
+                  <a href="https://www.facebook.com/AmeliedeMontchalin/" title="Acceder à la page facebook de la ministre Amélie de Montchalin" target="_blank">
                     <img class="rf-nav__rs-image--custom" src="@/assets/picto/facebook.svg" alt="Facebook">
                   </a>
-                  <a href="https://www.facebook.com/AmeliedeMontchalin/" title="Acceder à la page facebook de la ministre Amelie de Montchalin" target="_blank">
-                    <img class="rf-nav__rs-image--custom" src="@/assets/picto/twitter.svg" alt="Facebook">
+                  <a href="https://twitter.com/AdeMontchalin" title="Acceder à la page twitter de la ministre Amélie de Montchalin" target="_blank">
+                    <img class="rf-nav__rs-image--custom" src="@/assets/picto/twitter.svg" alt="Twitter">
                   </a>
-                  <a href="https://www.facebook.com/AmeliedeMontchalin/" title="Acceder à la page facebook de la ministre Amelie de Montchalin" target="_blank">
-                    <img class="rf-nav__rs-image--custom" src="@/assets/picto/instagram.svg" alt="Facebook">
+                  <a href="https://www.instagram.com/amelie.demontchalin/?hl=fr" title="Acceder à la page instagram de la ministre Amélie de Montchalin" target="_blank">
+                    <img class="rf-nav__rs-image--custom" src="@/assets/picto/instagram.svg" alt="Instagram">
                   </a>
                 </div>
             </div>
