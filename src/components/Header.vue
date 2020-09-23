@@ -11,7 +11,7 @@
                     </a>
                 </div>
             </div> -->
-            <a class="rf-logo--custom" href="./">
+            <a href="./">
               <img class="rf-logo__image--custom" src="@/assets/MarqueMTFP.svg" alt="Ministère de la Transformation et de la Fonction publiques. Liberté Égalité Fraternit. - Retour à l'accueil">
             </a>
             <div class="rf-header__navbar">
@@ -49,6 +49,17 @@
                             France Relance</a></li>
                     </ul>
                 </nav>
+                <div class="rf-nav__rs--custom">
+                  <a href="https://www.facebook.com/AmeliedeMontchalin/" title="Acceder à la page facebook de la ministre Amelie de Montchalin" target="_blank">
+                    <img class="rf-nav__rs-image--custom" src="@/assets/picto/facebook.svg" alt="Facebook">
+                  </a>
+                  <a href="https://www.facebook.com/AmeliedeMontchalin/" title="Acceder à la page facebook de la ministre Amelie de Montchalin" target="_blank">
+                    <img class="rf-nav__rs-image--custom" src="@/assets/picto/twitter.svg" alt="Facebook">
+                  </a>
+                  <a href="https://www.facebook.com/AmeliedeMontchalin/" title="Acceder à la page facebook de la ministre Amelie de Montchalin" target="_blank">
+                    <img class="rf-nav__rs-image--custom" src="@/assets/picto/instagram.svg" alt="Facebook">
+                  </a>
+                </div>
             </div>
         </div>
     </header>
@@ -67,7 +78,15 @@
     box-shadow: none;
   }
 
+  .rf-nav__rs--custom {
+    z-index: 1;
+    position: absolute;
+    right: 2px;
+    top: 16px;
+  }
+
   .rf-header .rf-nav {
+    z-index: 0;
     box-shadow: none;
     border-top: 1px solid #e7e7e7;
     border-bottom: 1px solid #e7e7e7;
@@ -93,6 +112,43 @@
 
   .rf-link {
     margin: 0 -4px 0 -4px !important;
+  }
+
+  .rf-nav__rs--custom a::after {
+    display: none;
+  }
+
+  .rf-nav__rs--custom a:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  .rf-nav__rs-image--custom {
+    width: 20px;
+    height: 20px;
+  }
+
+  @media screen and (max-width: 767px) {
+
+    .rf-logo__image--custom {
+      height: 79px;
+      margin: 16px 16px 16px 0px;
+    }
+
+    .rf-container {
+      padding: 0 16px;
+    }
+
+    .rf-nav__rs--custom {
+      display: none;
+    }
+
+    .rf-header .rf-nav {
+      z-index: 1;
+      box-shadow: none;
+      border-top: 1px solid #e7e7e7;
+      border-bottom: 1px solid #e7e7e7;
+      width: auto;
+    }
   }
 
 </style>
