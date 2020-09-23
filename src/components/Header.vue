@@ -11,7 +11,7 @@
                     </a>
                 </div>
             </div> -->
-            <a href="./">
+            <a href="https://www.transformation.gouv.fr/">
               <img class="rf-logo__image--custom" src="@/assets/MarqueMTFP.svg" alt="Ministère de la Transformation et de la Fonction publiques. Liberté Égalité Fraternit. - Retour à l'accueil">
             </a>
             <div class="rf-header__navbar">
