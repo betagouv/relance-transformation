@@ -22,12 +22,12 @@
                                 ministre</button>
                             <div class="rf-menu" id="rf-nav-item-0">
                                 <ul class="rf-menu__list">
-                                    <li class="rf-menu__item"><a class="rf-link" href="#" target="_self">Actualités</a>
+                                    <li class="rf-menu__item"><a class="rf-link" href="https://www.transformation.gouv.fr/la-ministre/actualite" target="_self">Actualités</a>
                                     </li>
-                                    <li class="rf-menu__item"><a class="rf-link" href="#" target="_self">Agenda</a></li>
-                                    <li class="rf-menu__item"><a class="rf-link" href="#" target="_self">Biographie</a>
+                                    <li class="rf-menu__item"><a class="rf-link" href="https://www.transformation.gouv.fr/la-ministre/agenda-de-la-ministre" target="_self">Agenda</a></li>
+                                    <li class="rf-menu__item"><a class="rf-link" href="https://www.transformation.gouv.fr/la-ministre/biographie" target="_self">Biographie</a>
                                     </li>
-                                    <li class="rf-menu__item"><a class="rf-link" href="#" target="_self">Cabinet</a>
+                                    <li class="rf-menu__item"><a class="rf-link" href="https://www.transformation.gouv.fr/la-ministre/biographie#cabinet-ministre" target="_self">Cabinet</a>
                                     </li>
                                 </ul>
                             </div>
@@ -37,14 +37,14 @@
                                 ministère</button>
                             <div class="rf-menu" id="rf-nav-item-1">
                                 <ul class="rf-menu__list">
-                                    <li class="rf-menu__item"><a class="rf-link" href="#" target="_self">Missions</a>
+                                    <li class="rf-menu__item"><a class="rf-link" href="https://www.transformation.gouv.fr/le-ministere/missions" target="_self">Missions</a>
                                     </li>
-                                    <li class="rf-menu__item"><a class="rf-link" href="#" target="_self">Direction</a>
+                                    <li class="rf-menu__item"><a class="rf-link" href="https://www.transformation.gouv.fr/le-ministere/directions" target="_self">Direction</a>
                                     </li>
                                 </ul>
                             </div>
                         </li>
-                        <li class="rf-nav__item rf-nav__item--custom"><a class="rf-link rf-link--custom" href="#" target="_self">Espace presse</a></li>
+                        <li class="rf-nav__item rf-nav__item--custom"><a class="rf-link rf-link--custom" href="https://www.transformation.gouv.fr/espace-presse" target="_self">Espace presse</a></li>
                         <li class="rf-nav__item rf-nav__item--custom rf-nav__item--active"><a class="rf-link rf-link--custom" href="#" target="_self">
                             France Relance</a></li>
                     </ul>
