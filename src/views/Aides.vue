@@ -37,9 +37,8 @@
 
                     <div class="candidater text-left my-5 pt-4 col-sm">
                         <h2 class="mb-4 fontBlack"><strong>Candidater</strong></h2>
-                        <p class="">{{aide.eligibility}}</p>
-                        <p class="mt-3">L'appel à projet est continu, vous pouvez candidater dès que vous êtes prêts.</p>
-                        <div class="buttonCandidater p-3 mt-3 col-sm-3"><a :href="aide.application_url" class="text-reset">Candidater à cet appel à projet</a></div>
+                        <div v-html="aide.eligibility"></div>
+                        <div class="buttonCandidater p-3 mt-3 col-sm-5 text-center"><a :href="aide.application_url" class="text-reset">Candidater à cet appel à projet</a></div>
                     </div>
 
                     <div class="questions text-left my-5 pt-4 col-sm">
