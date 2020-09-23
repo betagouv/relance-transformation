@@ -1,6 +1,6 @@
 <template>
   <div class="topselection col-sm mt-3">
-        <div class="col-sm row px-2 py-3 unselected bordernone align-items-center position-relative" :class="{selected:focus}">
+        <div role="button" tabindex="0" class="col-sm row px-2 py-3 unselected bordernone align-items-center position-relative" :class="{selected:focus}">
             <div class="col-sm-2 mr-4">
                 <img :src="require(`@/assets/picto/${filename}`)" alt="" class="py-3">
             </div>
