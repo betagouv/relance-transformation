@@ -1,6 +1,6 @@
 <template>
     <div class="">
-          <h2>Dans le cadre de votre projet, vous souhaitez :</h2>
+         <slot name="titleResultSection"></slot>
           <slot></slot>
           <slot name="resultCards"></slot>             
     </div>

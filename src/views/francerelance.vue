@@ -27,6 +27,10 @@
     </div>
 
       <ResultSection v-if="results">
+        <template v-slot:titleResultSection>
+          <h2 v-if="focusTopSelection1">Dans le cadre de votre projet, vous pouvez :</h2>
+          <h2 v-if="focusTopSelection2">Dans le cadre de votre projet, vous souhaitez :</h2>
+        </template>
         <div v-if="echeance2022" class="rf-grid-row rf-grid-row--center rf-grid-row--gutter">
           <div class="rf-col-8"> 
             <img src="@/assets/picto/Info.svg" alt="" >
