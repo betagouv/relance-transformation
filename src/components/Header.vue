@@ -17,7 +17,7 @@
             <div class="rf-header__navbar">
                 <nav class="rf-nav" role="navigation" aria-label="Menu principal" id="header-navigation">
                     <ul class="rf-nav__list">
-                        <li class="rf-nav__item">
+                        <li class="rf-nav__item rf-nav__item--custom">
                             <button class="rf-btn rf-btn--cutom" aria-expanded="false" aria-controls="rf-nav-item-0">La
                                 ministre</button>
                             <div class="rf-menu" id="rf-nav-item-0">
@@ -32,7 +32,7 @@
                                 </ul>
                             </div>
                         </li>
-                        <li class="rf-nav__item">
+                        <li class="rf-nav__item rf-nav__item--custom">
                             <button class="rf-btn rf-btn--cutom" aria-expanded="false" aria-controls="rf-nav-item-1">Le
                                 ministère</button>
                             <div class="rf-menu" id="rf-nav-item-1">
@@ -44,8 +44,8 @@
                                 </ul>
                             </div>
                         </li>
-                        <li class="rf-nav__item"><a class="rf-link" href="#" target="_self">Espace presse</a></li>
-                        <li class="rf-nav__item rf-nav__item--active"><a class=" rf-link" href="#" target="_self">
+                        <li class="rf-nav__item rf-nav__item--custom"><a class="rf-link rf-link--custom" href="#" target="_self">Espace presse</a></li>
+                        <li class="rf-nav__item rf-nav__item--custom rf-nav__item--active"><a class="rf-link rf-link--custom" href="#" target="_self">
                             France Relance</a></li>
                     </ul>
                 </nav>
@@ -121,11 +121,11 @@
       padding: 16px 16px 16px 12px !important;
     }
 
-    .rf-nav__item {
+    .rf-nav__item--custom {
       margin: 0 12px 0 0px !important;
     }
 
-    .rf-link {
+    .rf-link--custom {
       margin: 0 -4px 0 -4px !important;
     }
   }
