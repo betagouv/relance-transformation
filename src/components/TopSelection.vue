@@ -1,12 +1,11 @@
 <template>
-  <div class="topselection col-sm mt-3">
-        <div role="button" tabindex="0" class="col-sm row px-2 py-3 unselected bordernone align-items-center position-relative" :class="{selected:focus}">
-            <div class="col-sm-2 mr-4">
-                <img :src="require(`@/assets/picto/${filename}`)" alt="" class="py-3">
-            </div>
-            <h3 class="font18 col-sm ml-4 streched-link">{{ title }}</h3>
+
+        <div role="button" tabindex="0" class="rf-col-4 unselected bordernone" :class="{selected:focus}">
+           
+            <img :src="require(`@/assets/picto/${filename}`)" alt="" class="">
+           
+            <h3>{{ title }}</h3>
         </div>
-  </div>
 </template>
 
 <script>
@@ -31,37 +30,24 @@
 
 <style>
 
-    .unselected > h3 {
-        color: #6A6A6A !important;
+    .topselection div[role="button"]:hover, .topselection div[role="button"]:focus {
+        background-color: #169B62; 
+        color: #fff;        
     }
-
+    .topselection div[role="button"]:hover h3, .topselection div[role="button"]:focus h3 {
+        color: #fff;
+    }
     .selected {
-        background-color: #169B62 !important; 
-        color: #fff !important;
+        background-color: #169B62; 
+        color: #fff;
     }
-
-    .selected > h3 {
-        color: #fff !important;
-    }
-
     .unselected {
         background-color: #F9F8F6;
         color: #6A6A6A;
     }
-
     .bordernone {
         border: none;
     }
-
-    button:active {
-        border: none !important; 
-    }
-
-    button:focus {
-        border: 0px solid inherit !important; 
-        outline-color: inherit;
-    }
-
     .font18 {
         font-size: 18px;
     }

@@ -5,37 +5,36 @@
     <Header></Header>
     
     <div class="rf-grid-row rf-grid-row--center">
-      <div class="rf-col-8">
-      
-      <IntroSection></IntroSection>
-
-      <SearchBar></SearchBar>
-
-      <div class="TopSelectionDiv my-5">
-          <h2 class="font22">Découvrez tous les financements auxquels vous pouvez faire appel :</h2>
-          <div class="row container-fluid">
-            <TopSelection :title="topSelection1" :filename="logoEtat" :focus="focusTopSelection1" @click.native="goToSelection1()"></TopSelection>
-            <TopSelection :title="topSelection2" :filename="logoCollectivite" :focus="focusTopSelection2" @click.native="goToSelection2()"></TopSelection>    
-          </div>
+      <div class="rf-col-8">      
+        <IntroSection></IntroSection>
+        <h2> Découvrez tous les financements auxquels vous pouvez faire appel :</h2>
       </div>
+    </div>  
 
-      <div class="DateSelectionDiv my-5" v-if="topSelectionEtat">
-          <h2 class="font22">Quelle est l'échéance de votre projet ?</h2>
-          <div class="row container-fluid">
-            <DateSelection :title="dateSelection1" :filename="logo2022" :date="date1" :focus="focusEcheance1" @click.native="goToEcheance2022()"></DateSelection>
-            <DateSelection :title="dateSelection2" :filename="logo2023" :date="date2" :focus="focusEcheance2" @click.native="goToEcheance2023()"></DateSelection>    
-          </div>
+    <div class="rf-grid-row rf-grid-row--center rf-grid-row--gutter">
+      <TopSelection :title="topSelection1" :filename="logoEtat" :focus="focusTopSelection1" @click.native="goToSelection1()"></TopSelection>
+      <TopSelection :title="topSelection2" :filename="logoCollectivite" :focus="focusTopSelection2" @click.native="goToSelection2()"></TopSelection>    
+    </div>  
+
+    <div v-if="topSelectionEtat" class="rf-grid-row rf-grid-row--center rf-grid-row--gutter">
+      <div class="rf-col-8">      
+        <h2>Quelle est l'échéance de votre projet ?</h2>
       </div>
+    </div>  
+    <div v-if="topSelectionEtat" class="rf-grid-row rf-grid-row--center rf-grid-row--gutter">
+      <DateSelection :title="dateSelection1" :filename="logo2022" :date="date1" :focus="focusEcheance1" @click.native="goToEcheance2022()"></DateSelection>
+      <DateSelection :title="dateSelection2" :filename="logo2023" :date="date2" :focus="focusEcheance2" @click.native="goToEcheance2023()"></DateSelection>    
+    </div>
 
       <ResultSection v-if="results">
-        <div v-if="echeance2022" class="rf-grid-row align-items-center">
-          <img src="@/assets/picto/Info.svg" alt="" aria-hidden="true" class="mr-2">
-          <p class="m-0"><small>Vous pouvez candidater à plusieurs de ces offres pour un même projet</small></p>
+        <div v-if="echeance2022" class="rf-grid-row rf-grid-row--center rf-grid-row--gutter">
+          <div class="rf-col-8"> 
+            <img src="@/assets/picto/Info.svg" alt="" >
+            <p><small>Vous pouvez candidater à plusieurs de ces offres pour un même projet</small></p>
+          </div>  
         </div>
       </ResultSection>
-
-      </div>
-    </div>
+    
   
     <Footer></Footer>
   </div>
@@ -108,8 +107,6 @@
 
 <style>
 
-  .font22 {
-      font-size: 22px;
-  }
+
 
 </style>
