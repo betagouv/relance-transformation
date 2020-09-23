@@ -102,22 +102,6 @@
     margin: 30px 30px 30px 0px;
   }
 
-  .rf-btn--cutom {
-    padding: 16px 16px 16px 12px !important;
-  }
-
-  .rf-nav__item {
-    margin: 0 12px 0 0px !important;
-  }
-
-  .rf-link {
-    margin: 0 -4px 0 -4px !important;
-  }
-
-  .rf-nav__rs--custom a::after {
-    display: none;
-  }
-
   .rf-nav__rs--custom a:not(:last-child) {
     margin-right: 20px;
   }
@@ -127,11 +111,34 @@
     height: 20px;
   }
 
+  .rf-nav__rs--custom a::after {
+    display: none;
+  }
+
+  @media screen and (min-width: 768px) {
+
+    .rf-btn--cutom {
+      padding: 16px 16px 16px 12px !important;
+    }
+
+    .rf-nav__item {
+      margin: 0 12px 0 0px !important;
+    }
+
+    .rf-link {
+      margin: 0 -4px 0 -4px !important;
+    }
+  }
+
   @media screen and (max-width: 767px) {
+
+    .rf-header {
+      border-bottom: 1px solid #e7e7e7;
+    }
 
     .rf-logo__image--custom {
       height: 79px;
-      margin: 16px 16px 16px 0px;
+      margin: 16px 16px 4px 0px;
     }
 
     .rf-container {
@@ -143,11 +150,20 @@
     }
 
     .rf-header .rf-nav {
-      z-index: 1;
-      box-shadow: none;
-      border-top: 1px solid #e7e7e7;
-      border-bottom: 1px solid #e7e7e7;
+      z-index: 10;
+      border-top: none;
+      border-bottom: none;
       width: auto;
+    }
+
+    .rf-header__navbar::after {
+      background-color: white;
+    }
+
+    .rf-header__navbar .rf-fi-menu-fill {
+      position: absolute;
+      top: -90px;
+      right: -8px;
     }
   }
 
