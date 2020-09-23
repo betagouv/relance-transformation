@@ -5,7 +5,7 @@
               <div class="container-fluid row mt-5">
                 <!-- <div class="container-fluid row mt-5" v-for="aide in aides" :key="aide.id" > -->
                     <!-- <div class="col-sm-4 mb-4">
-                        <router-link to="/Aides/aide.id">
+                        <router-link to="/Aides/aide.name/aide.id">
                             <div class="col-sm bgGrey p-4 justify-content-start">
                                 <h3 class="mb-5 text-left col-sm"><strong><a href="" class="text-reset font16">{{ aide.name }}</a></strong></h3>
                                 <div class="rf-grid-row align-items-center">
@@ -27,7 +27,7 @@
                         </router-link>
                     </div>
                     <div class="col-sm-4 mb-4">
-                        <router-link to="/Aides/41359">
+                        <router-link to="/Aides/Soutenir le développement rural - programme LEADER/41359">
                             <div class="col-sm bgGrey p-4">
                                 <h3 class="mb-5 text-left col-sm"><strong><a href="#" class="text-reset font16">Développer la dématérialisation de qualité des services aux usagers</a></strong></h3>
                                 <div class="rf-grid-row align-items-center">
@@ -38,7 +38,7 @@
                         </router-link>
                     </div>
                     <div class="col-sm-4 mb-4">
-                        <router-link to="/Aides/41359">
+                        <router-link to="/Aides/Soutenir le développement rural - programme LEADER/41359">
                             <div class="col-sm bgGrey p-4">
                                 <h3 class="mb-5 text-left col-sm"><strong><a href="#" class="text-reset font16">Développer la dématérialisation de qualité des services aux usagers</a></strong></h3>
                                 <div class="rf-grid-row align-items-center">
@@ -49,7 +49,7 @@
                         </router-link>
                     </div>
                     <div class="col-sm-4 mb-4">
-                        <router-link to="/Aides/41359">
+                        <router-link to="/Aides/Soutenir le développement rural - programme LEADER/41359">
                             <div class="col-sm bgGrey p-4">
                                 <h3 class="mb-5 text-left col-sm"><strong><a href="#" class="text-reset font16">Développer la dématérialisation de qualité des services aux usagers</a></strong></h3>
                                 <div class="rf-grid-row align-items-center">
@@ -60,7 +60,7 @@
                         </router-link>
                     </div>
                     <div class="col-sm-4 mb-4">
-                        <router-link to="/Aides/41359">
+                        <router-link to="/Aides/Soutenir le développement rural - programme LEADER/41359">
                             <div class="col-sm bgGrey p-4">
                                 <h3 class="mb-5 text-left col-sm"><strong><a href="#" class="text-reset font16">Développer la dématérialisation de qualité des services aux usagers</a></strong></h3>
                                 <div class="rf-grid-row align-items-center">
