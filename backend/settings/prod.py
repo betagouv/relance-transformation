@@ -24,3 +24,6 @@ SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', SECRET_KEY)
 
 # Set to your Domain here (eg. 'my.site.domain.com')
 ALLOWED_HOSTS = ['*']
+
+LOCKDOWN_ENABLED = True
+LOCKDOWN_PASSWORDS = (os.getenv('LOCKDOWN_MASTER_PASSWORD'),)

@@ -36,9 +36,12 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+
     'whitenoise.runserver_nostatic',  # < Per Whitenoise, to disable built in
     'django.contrib.staticfiles',
     'rest_framework',
+    'lockdown',
+
     'backend.api',
 ]
 
@@ -51,7 +54,10 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'lockdown.middleware.LockdownMiddleware',
 ]
+
+LOCKDOWN_ENABLED = False
 
 ROOT_URLCONF = 'backend.urls'
 
