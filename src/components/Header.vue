@@ -59,5 +59,20 @@
 </script>
 
 <style>
-    #app { text-align: unset;}
+
+  .rf-header {
+    box-shadow: none;
+  }
+
+  .rf-header .rf-nav {
+    box-shadow: none;
+    border-top: 1px solid #e7e7e7;
+    border-bottom: 1px solid #e7e7e7;
+  }
+
+  .rf-logo {
+
+    height: 128px;
+  }
+
 </style>
