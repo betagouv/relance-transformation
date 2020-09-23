@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Flèche</title>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Carte" transform="translate(-213.000000, -197.000000)" fill="#107449">
+            <g id="Lien" transform="translate(32.000000, 195.000000)">
+                <g id="Flêche" transform="translate(179.000000, 0.000000)">
+                    <polygon id="🎨-couleur-icône" points="10.7813333 7.33333333 7.20533333 3.75733332 8.148 2.81466665 13.3333334 8 8.148 13.1853334 7.20533333 12.2426667 10.7813333 8.66666667 2.66666664 8.66666667 2.66666664 7.33333333"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

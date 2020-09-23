@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Info</title>
+    <g id="Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Screen3" transform="translate(-171.000000, -1378.000000)" fill="#107449">
+            <g id="Content" transform="translate(169.000000, 348.000000)">
+                <g id="Group-6" transform="translate(0.000000, 986.000000)">
+                    <g id="arrow-right-line" transform="translate(0.000000, 42.000000)">
+                        <path d="M12,22 C6.47699998,22 1.99999996,17.523 1.99999996,12 C1.99999996,6.47699998 6.47699998,1.99999996 12,1.99999996 C17.523,1.99999996 22,6.47699998 22,12 C22,17.523 17.523,22 12,22 Z M12,20 C16.418278,20 20,16.418278 20,12 C20,7.58172198 16.418278,3.99999997 12,3.99999997 C7.58172198,3.99999997 3.99999997,7.58172198 3.99999997,12 C3.99999997,16.418278 7.58172198,20 12,20 Z M11,6.99999998 L13,6.99999998 L13,8.99999998 L11,8.99999998 L11,6.99999998 Z M11,11 L13,11 L13,17 L11,17 L11,11 Z" id="🎨-couleur-icône"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

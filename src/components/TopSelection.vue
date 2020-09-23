@@ -1,11 +1,11 @@
 <template>
   <div class="topselection col-sm mt-3">
-        <button class="col-sm row p-5 unselected bordernone" :class="{selected:focus}">
-            <span class="col-sm-2 p-2">
-                <i class="fas fa-hand-holding-heart border border-success rounded-circle p-4 mr-4"></i>
-            </span>
-            <span class="h5 text-left col-sm ml-4"><strong>{{ title }}</strong></span>
-        </button>
+        <div class="col-sm row px-2 py-3 unselected bordernone align-items-center position-relative" :class="{selected:focus}">
+            <div class="col-sm-2 mr-4">
+                <img :src="require(`@/assets/picto/${filename}`)" alt="" class="py-3">
+            </div>
+            <h3 class="font18 col-sm ml-4 streched-link">{{ title }}</h3>
+        </div>
   </div>
 </template>
 
@@ -18,6 +18,9 @@
                 type: String,
                 required: true,
             },
+            filename: {
+                type: String,
+            },
             focus: {
                 type: Boolean,
                 required: true,
@@ -28,14 +31,22 @@
 
 <style>
 
+    .unselected > h3 {
+        color: #6A6A6A !important;
+    }
+
     .selected {
-        background-color: #29a571 !important; 
+        background-color: #169B62 !important; 
+        color: #fff !important;
+    }
+
+    .selected > h3 {
         color: #fff !important;
     }
 
     .unselected {
-        background-color: whitesmoke;
-        color: #757479;
+        background-color: #F9F8F6;
+        color: #6A6A6A;
     }
 
     .bordernone {
@@ -49,6 +60,10 @@
     button:focus {
         border: 0px solid inherit !important; 
         outline-color: inherit;
+    }
+
+    .font18 {
+        font-size: 18px;
     }
 
 </style>
