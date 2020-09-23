@@ -1,12 +1,11 @@
 <template>
-  <div class="dateselection col-sm mt-3">
-        <div class="col-sm row px-2 py-2 unselected bordernone align-items-center position-relative" :class="{selected:focus}">
-            <div class="col-sm-2 mr-1">
+
+        <div role="button" tabindex="0" class="rf-col-4 unselected bordernone" :class="{selected:focus}">
+            <div class="">
                 <img :src="require(`@/assets/picto/${filename}`)" alt="" class="py-3">
             </div>
-            <h3 class="font18 text-left col-sm ml-4 streched-link"><strong>{{ title }}</strong></h3>
+            <h3 class="streched-link"><strong>{{ title }}</strong></h3>
         </div>
-  </div>
 </template>
 
 <script>
