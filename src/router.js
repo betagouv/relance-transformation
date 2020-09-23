@@ -12,8 +12,13 @@ export default new Router({
       name: 'FranceRelance',
       component: FranceRelance,
     },
+    // {
+    //   path: '/Aides/:id',
+    //   name: 'Aides',
+    //   component: Aides,
+    // },
     {
-      path: '/Aides/:id',
+      path: '/Aides/:name/:id',
       name: 'Aides',
       component: Aides,
     },
