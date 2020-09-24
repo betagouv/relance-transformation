@@ -229,6 +229,10 @@
       justify-content: space-between;
     }
 
+    .aide:hover {
+        box-shadow: inset 0 0 0 2px #107449;
+    }
+
     .aide a {
         position: initial;
         margin-bottom: 20px;
