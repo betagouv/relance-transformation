@@ -56,22 +56,22 @@
             <img src="@/assets/picto/Info.svg" alt="" >
             <p>Vous pouvez candidater à plusieurs de ces offres pour un même projet</p>
           </div>
-        </div>
-         <div class="rf-grid-row rf-grid-row--gutter">
+        </div>      
         <template v-slot:resultCards>
-          <div v-for="aide in aides" :key="aide.id" class="rf-col-xs-12 rf-col-sm-6  rf-col-md-4 rf-col-xl-3">
-                <router-link :to="{ name: 'aid_detail', params: { slug: aide.slug } }">
-                  <div>
-                    <h3><a href="">{{ aide.name }}</a></h3>
+          <div class="rf-grid-row rf-grid-row--gutter">
+            <div v-for="aide in aides" :key="aide.id" class="rf-col-xs-12 rf-col-sm-6  rf-col-md-4 rf-col-xl-3">
+                  <router-link :to="{ name: 'aid_detail', params: { slug: aide.slug } }">
                     <div>
-                      <p>Obtenir des informations</p>
-                      <img src="@/assets/picto/Fleche.svg" alt="" />
+                      <h3>{{ aide.name }}</h3>
+                      <div>
+                        <p>Obtenir des informations</p>
+                        <img src="@/assets/picto/Fleche.svg" alt="" />
+                      </div>
                     </div>
-                  </div>
-                </router-link>
+                  </router-link>
+            </div>
           </div>
-        </template>
-        </div>
+        </template>      
       </ResultSection>
       </div>
     </div>
