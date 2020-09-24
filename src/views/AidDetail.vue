@@ -47,9 +47,10 @@
 </template>
 
 <script>
-    import Header from "@/components/Header";
+    import aidService from '../services/aidService'
     import Breadcrumbs from "@/components/Breadcrumbs";
     import Footer from "@/components/Footer";
+    import Header from "@/components/Header";
 
     export default {
         name: "Aides",
@@ -66,14 +67,13 @@
             }
         },
 
-        mounted() {
-            const axios = require("axios");
-            axios.get(`https://staging.aides-territoires.beta.gouv.fr/api/aids/${this.$route.params.slug}/`)
-            .then(response => {
-                 this.aide = response.data;
-                 this.title = response.data.short_title;
-                 this.meta_title = this.title + " - Ministère de la Transformation et de la Fonction publiques"
-                 this.description = response.data.name;
+        created() {
+            aidService.fetchAidDetail(this.$route.params.slug)
+                .then(aidDetail => {
+                    this.aide = aidDetail
+                    this.title = aidDetail.short_title;	
+                    this.meta_title = this.title + " - Ministère de la Transformation et de la Fonction publiques"	
+                    this.description = aidDetail.name;
             })
         },
 
