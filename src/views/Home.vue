@@ -12,7 +12,7 @@
 
             <IntroSection class="rf-margin-bottom-2N"></IntroSection>
 
-            <SearchBar class="rf-margin-bottom-9N"></SearchBar>
+            <SearchBar class="rf-margin-bottom-8N"></SearchBar>
 
             <div class="rf-grid-row rf-grid-row--center">
                 <div class="rf-col">

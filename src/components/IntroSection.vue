@@ -8,10 +8,10 @@
                 <h1 class="greenTitle rf-h2">Administrations : bénéficiez du volet «&nbsp;Mise à niveau numérique de l'État et des territoires&nbsp;»</h1>
             </div>
             <div class="rf-grid-row subtitle">
-                <div class="rf-col-md-8 rf-col-sm-7 rf-col-xs-12">
-                    <p class="rf-text--lead">Votre projet doit contribuer à la relance de l'économie française, notamment des entreprises, et doit produire des résultats concrets sous 18 mois.</p>
+                <div class="rf-col-md-8 rf-col-sm-7 rf-col-xs-12 rf-margin-bottom-1N">
+                    <p class="rf-text--lg">Votre projet doit contribuer à la relance de l'économie française, notamment des entreprises, et doit produire des résultats concrets sous 18 mois.</p>
                 </div>
-                <div class="rf-col-md-3 rf-col-sm-4 rf-col-xs-12 rf-margin-top-1N">
+                <div class="rf-col-md-3 rf-col-sm-4 rf-col-xs-12">
                     <div class="thumbs">
                         <router-link :to="`/video/`">
                             <img src="@/assets/FausseVideo.png" alt="Voir la vidéo d'Amélie de Montchalin"/>
