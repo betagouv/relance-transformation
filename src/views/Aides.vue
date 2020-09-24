@@ -22,7 +22,7 @@
 
                     <div class="conditions text-left my-5 pt-4 col-sm">
                         <h2 class="mb-4 fontBlack"><strong>Conditions</strong></h2>
-                        <div v-html="aide.description" class=""></div> 
+                        <div v-html="aide.description" class=""></div>
                     </div>
 
                     <div class="exemples text-left my-5 pt-4 col-sm">
@@ -63,6 +63,9 @@
             return {
                 aide: null,
                 $value: "",
+                title: "",
+                description: "",
+                previewImg: require('@/assets/Preview.png'),
             }
         },
 
@@ -71,7 +74,53 @@
             axios.get(`https://staging.aides-territoires.beta.gouv.fr/api/aids/${this.$route.params.slug}/`)
             .then(response => {
                  this.aide = response.data;
+                 this.title = response.data.short_title + " - Ministère de la Transformation et de la Fonction publiques";
+                 this.description = response.data.name;
             })
+        },
+
+        metaInfo() {
+          return {
+            title: this.title,
+            meta: [
+              {
+                name: "description",
+                content: this.description
+              },
+              {
+                property: 'og:title',
+                content: this.title
+              },
+              {
+                property: 'og:description',
+                content: this.description
+              },
+                {
+                property: 'og:image',
+                content: "https://france-relance.transformation.gouv.fr" + this.previewImg
+              },
+              {
+                name: "twitter:card",
+                content: "summary_large_image"
+              },
+              {
+                name: "twitter:site",
+                content: "@AdeMontchalin"
+              },
+              {
+                name: "twitter:title",
+                content: this.title
+              },
+              {
+                name: "twitter:description",
+                content: this.description
+              },
+              {
+                name: "twitter:image",
+                content: "https://france-relance.transformation.gouv.fr" + this.previewImg
+              },
+            ],
+          }
         },
     }
 </script>
