@@ -7,7 +7,7 @@
       <div class="rf-container">
         <IntroSection></IntroSection>
         <div class="rf-grid-row rf-grid-row--center">
-          <div class="rf-col-8">   
+          <div class="rf-col">   
             <h2> Découvrez tous les financements auxquels vous pouvez faire appel :</h2>
           </div>
         </div>  
@@ -18,7 +18,7 @@
         </div>  
 
         <div v-if="topSelectionEtat" class="rf-grid-row rf-grid-row--center rf-grid-row--gutter">
-          <div class="rf-col-8">      
+          <div class="rf-col">      
             <h2>Quelle est l'échéance de votre projet ?</h2>
           </div>
         </div>  
