@@ -97,7 +97,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 12px 20px;
+        padding: 12px 16px;
     }
 
     .subfooter p {
