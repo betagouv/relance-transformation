@@ -74,7 +74,7 @@
             axios.get(`https://staging.aides-territoires.beta.gouv.fr/api/aids/${this.$route.params.slug}/`)
             .then(response => {
                  this.aide = response.data;
-                 this.title = response.data.short_title;
+                 this.title = response.data.short_title + " - Ministère de la Transformation et de la Fonction publiques";
                  this.description = response.data.name;
             })
         },
