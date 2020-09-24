@@ -13,6 +13,18 @@
       <div class="rf-col-8">
 
         <IntroSection></IntroSection>
+        <SearchBar>
+            <form action="" class="rf-col-11">
+              <div class="input-group mb-3">
+                <input type="search" class="form-control border-bottom-green formresearch p-4" v-model="recherche" placeholder="Rechercher un mot clé, une expression, une référence..." aria-describedby="basic-addon2">
+                <div class="input-group-append">
+                  <router-link :to="`/Recherche/${recherche}`">
+                    <button class="font20 btn my-2 greenButton my-sm-0 input-group-text pl-4 pr-4" type="button">Rechercher</button>
+                  </router-link>
+                </div>
+              </div>
+           </form>
+        </SearchBar>
         <div class="rf-grid-row rf-grid-row--center">
           <div class="rf-col">
             <h2 class="rf-h4"> Découvrez tous les financements auxquels vous pouvez faire appel :</h2>
@@ -48,14 +60,14 @@
          <div class="rf-grid-row  rf-grid-row--gutters">
         <template v-slot:resultCards>
           <div v-for="aide in aides" :key="aide.id" class="aide rf-col-xs-12 rf-col-sm-6  rf-col-md-4 rf-col-xl-3">
-                <router-link :to="{ name: 'aid_detail', params: { slug: aide.slug } }">
-                  <div>
-                    <h3 class="rf-text"><a href="">{{ aide.name }}</a></h3>
-                    <div class="rf-col--bottom">
-                      <p class="rf-text--sm">Obtenir des informations <img src="@/assets/picto/Fleche.svg" alt="" /></p>
-                    </div>
-                  </div>
-                </router-link>
+            <div>
+              <h3><router-link :to="{ name: 'aid_detail', params: { slug: aide.slug } }">{{ aide.name }}</router-link></h3>
+              <div>
+                <p>Obtenir des informations</p>
+                <img src="@/assets/picto/Fleche.svg" alt="" />
+              </div>
+            </div>
+
           </div>
         </template>
         </div>
@@ -102,6 +114,7 @@
           title: "France Relance - Ministère de la Transformation et de la Fonction publiques",
           description: "Administrations : bénéficiez du volet « Mise à niveau numérique de l'État et des territoires »",
           previewImg: require('@/assets/Preview.png'),
+          recherche:"",
         }
       },
 
@@ -198,13 +211,27 @@
 </script>
 
 <style>
-.aide {
-  background-color: #F9F8F6;
-  color: #107449;
-}
-.aide h3 a, .aide h3 a:link, .aide h3 a:visited, {
-  color: #383838;
-}
+    .aide {
+        position: relative;
+        background-color: #F9F8F6;
+        color: #107449;
+    }
 
+    .aide a {
+        position: initial;
+    }
+
+    .aide h3 a, .aide h3 a:link, .aide h3 a:visited, {
+      color: #383838;
+    }
+
+    .aide a::after {
+        position: absolute;
+        content: "";
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
 
 </style>
