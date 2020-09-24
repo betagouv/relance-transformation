@@ -8,11 +8,15 @@
         </li>
 
         <li
-          v-for="crumb in breadcrumbs"
+          v-for="crumb in breadcrumbs" :key="crumb.name"
           class="rf-breadcrumb__item"
           v-bind:class="{ 'rf-breadcrumb__item--current': !crumb.url }"
         >
           <a v-bind:href="crumb.url ? crumb.url : '#'">{{ crumb.name }}</a>
+        </li>
+
+        <li v-if="current_page_title" class="rf-breadcrumb__item rf-breadcrumb__item--current">
+            <a href="#">{{ current_page_title }}</a>
         </li>
       </ul>
     </nav>
@@ -26,6 +30,9 @@ export default {
     return {
       breadcrumbs: [],
     };
+  },
+  props: {
+      current_page_title: String,
   },
   created() {
     this.breadcrumbs = this.$route.meta.breadcrumbs;

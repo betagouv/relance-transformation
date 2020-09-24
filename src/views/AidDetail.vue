@@ -3,7 +3,7 @@
 
         <Header></Header>
 
-        <Breadcrumbs></Breadcrumbs>
+        <Breadcrumbs :current_page_title="title"></Breadcrumbs>
 
         <div class="rf-grid-row rf-grid-row--center">
 
@@ -24,7 +24,7 @@
 
                     <div class="conditions text-left my-5 pt-4 col-sm">
                         <h2 class="mb-4 fontBlack"><strong>Conditions</strong></h2>
-                        <div v-html="aide.eligibility" class=""></div> 
+                        <div v-html="aide.eligibility" class=""></div>
                     </div>
 
                     <div class="exemples text-left my-5 pt-4 col-sm">
@@ -60,6 +60,7 @@
             return {
                 aide: null,
                 title: "",
+                meta_title: "",
                 description: "",
                 previewImg: require('@/assets/Preview.png'),
             }
@@ -70,14 +71,15 @@
             axios.get(`https://staging.aides-territoires.beta.gouv.fr/api/aids/${this.$route.params.slug}/`)
             .then(response => {
                  this.aide = response.data;
-                 this.title = response.data.short_title + " - Ministère de la Transformation et de la Fonction publiques";
+                 this.title = response.data.short_title;
+                 this.meta_title = this.title + " - Ministère de la Transformation et de la Fonction publiques"
                  this.description = response.data.name;
             })
         },
 
         metaInfo() {
           return {
-            title: this.title,
+            title: this.meta_title,
             meta: [
               {
                 name: "description",
@@ -85,7 +87,7 @@
               },
               {
                 property: 'og:title',
-                content: this.title
+                content: this.meta_title
               },
               {
                 property: 'og:description',
@@ -105,7 +107,7 @@
               },
               {
                 name: "twitter:title",
-                content: this.title
+                content: this.meta_title
               },
               {
                 name: "twitter:description",
