@@ -9,6 +9,7 @@
 
         <li
           v-for="crumb in breadcrumbs"
+          :key="crumb.url"
           class="rf-breadcrumb__item"
           v-bind:class="{ 'rf-breadcrumb__item--current': !crumb.url }"
         >
