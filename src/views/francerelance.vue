@@ -4,59 +4,64 @@
 
     <Header></Header>
 
-    <Breadcrumbs></Breadcrumbs>
-
+    <div class="rf-grid-row">
+      <div class="rf-col">
+        <Breadcrumbs></Breadcrumbs>
+      </div>
+    </div>
     <div class="rf-grid-row rf-grid-row--center">
       <div class="rf-col-8">
+
         <IntroSection></IntroSection>
-        <h2> Découvrez tous les financements auxquels vous pouvez faire appel :</h2>
-      </div>
-    </div>
+        <div class="rf-grid-row rf-grid-row--center">
+          <div class="rf-col">   
+            <h2> Découvrez tous les financements auxquels vous pouvez faire appel :</h2>
+          </div>
+        </div>  
 
-    <div class="rf-grid-row rf-grid-row--center rf-grid-row--gutter">
-      <TopSelection :title="topSelection1" :filename="logoEtat" :focus="focusTopSelection1" @click.native="goToSelection1()"></TopSelection>
-      <TopSelection :title="topSelection2" :filename="logoCollectivite" :focus="focusTopSelection2" @click.native="goToSelection2()"></TopSelection>
-    </div>
+        <div class="rf-grid-row rf-grid-row--center rf-grid-row--gutter">
+          <TopSelection :title="topSelection1" :filename="logoEtat" :focus="focusTopSelection1" @click.native="goToSelection1()"></TopSelection>
+          <TopSelection :title="topSelection2" :filename="logoCollectivite" :focus="focusTopSelection2" @click.native="goToSelection2()"></TopSelection>    
+        </div>  
 
-    <div v-if="topSelectionEtat" class="rf-grid-row rf-grid-row--center rf-grid-row--gutter">
-      <div class="rf-col-8">
-        <h2>Quelle est l'échéance de votre projet ?</h2>
-      </div>
-    </div>
-    <div v-if="topSelectionEtat" class="rf-grid-row rf-grid-row--center rf-grid-row--gutter">
-      <DateSelection :title="dateSelection1" :filename="logo2022" :focus="focusEcheance1" @click.native="goToEcheance2022()"></DateSelection>
-      <DateSelection :title="dateSelection2" :filename="logo2023" :focus="focusEcheance2" @click.native="goToEcheance2023()"></DateSelection>
-    </div>
+        <div v-if="topSelectionEtat" class="rf-grid-row rf-grid-row--center rf-grid-row--gutter">
+          <div class="rf-col">      
+            <h2>Quelle est l'échéance de votre projet ?</h2>
+          </div>
+        </div>  
 
+        <div v-if="topSelectionEtat" class="rf-grid-row rf-grid-row--center rf-grid-row--gutter">
+          <DateSelection :title="dateSelection1" :filename="logo2022" :focus="focusEcheance1" @click.native="goToEcheance2022()"></DateSelection>
+          <DateSelection :title="dateSelection2" :filename="logo2023" :focus="focusEcheance2" @click.native="goToEcheance2023()"></DateSelection>    
+        </div>
       <ResultSection v-if="results">
         <template v-slot:titleResultSection>
           <h2 v-if="focusTopSelection1">Dans le cadre de votre projet, vous pouvez :</h2>
           <h2 v-if="focusTopSelection2">Dans le cadre de votre projet, vous souhaitez :</h2>
         </template>
-        <div v-if="echeance2022" class="rf-grid-row rf-grid-row--center rf-grid-row--gutter">
-          <div class="rf-col-8">
+        <div v-if="echeance2022" class="rf-grid-row rf-grid-row--gutter">
+          <div class="rf-col-8"> 
             <img src="@/assets/picto/Info.svg" alt="" >
-            <p><small>Vous pouvez candidater à plusieurs de ces offres pour un même projet</small></p>
-          </div>
+            <p>Vous pouvez candidater à plusieurs de ces offres pour un même projet</p>
+          </div>  
         </div>
+         <div class="rf-grid-row rf-grid-row--gutter">
         <template v-slot:resultCards>
-          <div v-for="aide in aides" :key="aide.id" class="rf-grid-row rf-grid-row--center rf-grid-row--gutter">
-            <div class="rf-col-4">
+          <div v-for="aide in aides" :key="aide.id" class="rf-col-xs-12 rf-col-sm-6  rf-col-md-4 rf-col-xl-3">
                 <router-link :to="`/Aides/${aide.slug}/`">
-                    <div class="col-sm bgGrey p-4 justify-content-start">
-                        <h3 class="mb-5 text-left col-sm"><strong><a href="" class="text-reset font16">{{ aide.name }}</a></strong></h3>
-                        <div class="rf-grid-row align-items-center">
-                            <p class="m-0 moreInfos text-left font14">Obtenir des informations</p>
-                            <img src="@/assets/picto/Fleche.svg" alt="" aria-hidden="true" class="ml-2">
-                        </div>
+                  <div>
+                    <h3><a href="">{{ aide.name }}</a></h3>
+                    <div>
+                      <p>Obtenir des informations</p>
+                      <img src="@/assets/picto/Fleche.svg" alt="" />
                     </div>
+                  </div>
                 </router-link>
-              </div>
-          </div>
-        </template>
+          </div>   
+        </template> 
       </ResultSection>
-
-
+      </div>
+    </main>
     <Footer></Footer>
   </div>
 </template>
