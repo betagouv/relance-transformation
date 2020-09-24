@@ -60,15 +60,13 @@
          <div class="rf-grid-row rf-grid-row--gutter">
         <template v-slot:resultCards>
           <div v-for="aide in aides" :key="aide.id" class="rf-col-xs-12 rf-col-sm-6  rf-col-md-4 rf-col-xl-3">
-                <router-link :to="{ name: 'aid_detail', params: { slug: aide.slug } }">
-                  <div>
-                    <h3><a href="">{{ aide.name }}</a></h3>
-                    <div>
-                      <p>Obtenir des informations</p>
-                      <img src="@/assets/picto/Fleche.svg" alt="" />
-                    </div>
-                  </div>
-                </router-link>
+            <div>
+              <h3><router-link :to="{ name: 'aid_detail', params: { slug: aide.slug } }">{{ aide.name }}</router-link></h3>
+              <div>
+                <p>Obtenir des informations</p>
+                <img src="@/assets/picto/Fleche.svg" alt="" />
+              </div>
+            </div>      
           </div>
         </template>
         </div>
