@@ -16,17 +16,17 @@
 
             <form action="" class="searchBar rf-col-11 my-4">
                 <div class="input-group mb-3">
-                <input type="search" class="form-control border-bottom-green formresearch p-4" v-model="recherche" placeholder="Rechercher un mot clé, une expression, une référence..." aria-describedby="basic-addon2">
+                <input type="search" class="form-control border-bottom-green formresearch p-4" v-model="newResearch" @keydown.enter.prevent="Research(newResearch)" placeholder="Rechercher un mot clé, une expression, une référence..." aria-describedby="basic-addon2">
                 <div class="input-group-append">
-                    <button class="font20 btn my-2 greenButton my-sm-0 input-group-text pl-4 pr-4" type="button" @click="Research(recherche)">Rechercher</button>
+                    <button class="font20 btn my-2 greenButton my-sm-0 input-group-text pl-4 pr-4" type="button" @click="Research(newResearch)">Rechercher</button>
                 </div>
                 </div>
             </form>
 
             <ResultSection>
             <template v-slot:titleResultSection>
-              <h2 v-if="recherche">Résultats pour "{{ recherche }}" :</h2>
-              <h2 v-if="$route.params.recherche && recherche == ''">Résultats pour "{{ $route.params.recherche }}" :</h2>
+              <h2 v-if="text">Résultats pour "{{ text }}" :</h2>
+              <h2 v-if="$route.query.q && text == ''">Résultats pour "{{ this.$route.query.q }}" :</h2>
             </template>
 
             <template v-slot:resultCards>
@@ -63,7 +63,7 @@
     import ResultSection from "@/components/ResultSection";
 
     export default {
-         name: "Video",
+         name: "Search",
 
       components: { Header, Breadcrumbs, SearchBar, ResultSection, Footer, },
 
@@ -73,10 +73,18 @@
               description: "Rechercher un financement dans le cadre du volet « Mise à niveau numérique de l'État et des territoires » du plan de relance",
               previewImg: require('@/assets/Preview.png'),
               results: "",
-              recherche: '',
+              newResearch: '',
+              text: '',
           }
       },
 
+      props: {
+          query: {
+              type: Function,
+              default: null
+          }
+      },
+          
       metaInfo () {
         return {
           title: this.title,
@@ -121,20 +129,24 @@
       },
 
       methods: {
-        Research(recherche) {
-          this.results = "";
-          this.$route.params.recherche = recherche;
-          const axios = require("axios");
-          axios.get(`https://staging.aides-territoires.beta.gouv.fr/api/aids/?backers=505-mtfp&in_france_relance=true&text=${recherche}`)
-                .then(response => {
-                  this.results = response.data.results;
-                })
+        Research(newResearch) {
+          if(this.newResearch !== "") {
+            this.results = "";
+            this.text= newResearch;
+            const axios = require("axios");
+            axios.get(`https://staging.aides-territoires.beta.gouv.fr/api/aids/?backers=505-mtfp&in_france_relance=true&text=${newResearch}`)
+                  .then(response => {
+                    this.results = response.data.results;
+                  })
+          } else {
+              return
+            }       
         }
       },
 
         mounted() {
             const axios = require("axios");
-            axios.get(`https://staging.aides-territoires.beta.gouv.fr/api/aids/?backers=505-mtfp&in_france_relance=true&text=${this.$route.params.recherche}`)
+            axios.get(`https://staging.aides-territoires.beta.gouv.fr/api/aids/?backers=505-mtfp&in_france_relance=true&text=${this.$route.query.q}`)
             .then(response => {
                  this.results = response.data.results;
             })

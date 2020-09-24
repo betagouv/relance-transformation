@@ -31,7 +31,7 @@ export default new Router({
       }
     },
     {
-      path: '/Recherche/:recherche',
+      path: '/Recherche',
       name: 'search',
       component: Search,
       meta: {

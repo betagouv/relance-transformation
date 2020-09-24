@@ -16,9 +16,9 @@
         <SearchBar>
             <form class="rf-col-11">
               <div class="input-group mb-3">
-                <input type="search" class="form-control border-bottom-green formresearch p-4" v-model="recherche" @keydown.enter.prevent="goToResearch(recherche)" placeholder="Rechercher un mot clé, une expression, une référence..." aria-describedby="basic-addon2">
+                <input type="text" name="recherche" class="form-control border-bottom-green formresearch p-4" v-model="recherche" @keydown.enter.prevent="goToResearch(recherche)" placeholder="Rechercher un mot clé, une expression, une référence..." aria-describedby="basic-addon2">
                 <div class="input-group-append">
-                    <button class="font20 btn my-2 greenButton my-sm-0 input-group-text pl-4 pr-4" type="button" @click="goToResearch(recherche)">Rechercher</button>
+                    <button class="font20 btn my-2 greenButton my-sm-0 input-group-text pl-4 pr-4" type="submit" @click.stop.prevent="goToResearch()">Rechercher</button>
                 </div>
               </div>
            </form>
@@ -117,9 +117,9 @@
       },
 
       methods: {
-          goToResearch(recherche) {
-            if(recherche !== ""){
-              this.$router.push({ path: `/Recherche/${recherche}` });
+          goToResearch() {
+            if(this.recherche !== ""){
+              this.$router.push({ path: 'Recherche', query: { q: this.recherche }})
             } 
           },
           goToSelection1() {
