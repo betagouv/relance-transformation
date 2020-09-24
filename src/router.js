@@ -48,7 +48,6 @@ export default new Router({
       meta: {
         breadcrumbs: [
           { name: 'France Relance', url: '/' },
-          { name: 'Mon financement'},
         ]
       }
     },

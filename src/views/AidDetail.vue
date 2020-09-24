@@ -3,7 +3,7 @@
 
         <Header></Header>
 
-        <Breadcrumbs></Breadcrumbs>
+        <Breadcrumbs :current_page_title="title"></Breadcrumbs>
 
         <div class="rf-grid-row rf-grid-row--center">
 
@@ -24,7 +24,7 @@
 
                     <div class="conditions text-left my-5 pt-4 col-sm">
                         <h2 class="mb-4 fontBlack"><strong>Conditions</strong></h2>
-                        <div v-html="aide.eligibility" class=""></div> 
+                        <div v-html="aide.eligibility" class=""></div>
                     </div>
 
                     <div class="exemples text-left my-5 pt-4 col-sm">
