@@ -22,7 +22,7 @@
 
                     <div class="conditions text-left my-5 pt-4 col-sm">
                         <h2 class="mb-4 fontBlack"><strong>Conditions</strong></h2>
-                        <div v-html="aide.description" class=""></div>
+                        <div v-html="aide.eligibility" class=""></div> 
                     </div>
 
                     <div class="exemples text-left my-5 pt-4 col-sm">
@@ -34,14 +34,8 @@
 
                     <div class="candidater text-left my-5 pt-4 col-sm">
                         <h2 class="mb-4 fontBlack"><strong>Candidater</strong></h2>
-                        <div v-html="aide.eligibility"></div>
+                        <div v-html="aide.contact"></div>
                         <div class="buttonCandidater p-3 mt-3 col-sm-5 text-center"><a :href="aide.application_url" class="text-reset">Candidater à cet appel à projet</a></div>
-                    </div>
-
-                    <div class="questions text-left my-5 pt-4 col-sm">
-                        <h2 class="mb-4 fontBlack"><strong>Vous avez une question ?</strong></h2>
-                        <p class="mb-4">Vous pouvez joindre l'équipe en charge de l'appel à projet à l'adresse : </p>
-                        <div v-html="aide.contact" class="h5"></div>
                     </div>
 
             </div>
@@ -62,7 +56,6 @@
         data() {
             return {
                 aide: null,
-                $value: "",
                 title: "",
                 description: "",
                 previewImg: require('@/assets/Preview.png'),
