@@ -15,7 +15,7 @@
         <IntroSection></IntroSection>
         <div class="rf-grid-row rf-grid-row--center">
           <div class="rf-col">
-            <h2> Découvrez tous les financements auxquels vous pouvez faire appel :</h2>
+            <h2 class="rf-h4"> Découvrez tous les financements auxquels vous pouvez faire appel :</h2>
           </div>
         </div>
 
@@ -26,7 +26,7 @@
 
         <div v-if="topSelectionEtat" class="rf-grid-row rf-grid-row--center rf-grid-row--gutter">
           <div class="rf-col">
-            <h2>Quelle est l'échéance de votre projet ?</h2>
+            <h2 class="rf-h4">Quelle est l'échéance de votre projet ?</h2>
           </div>
         </div>
 
@@ -36,8 +36,8 @@
         </div>
       <ResultSection v-if="results">
         <template v-slot:titleResultSection>
-          <h2 v-if="focusTopSelection1">Dans le cadre de votre projet, vous pouvez :</h2>
-          <h2 v-if="focusTopSelection2">Dans le cadre de votre projet, vous souhaitez :</h2>
+          <h2  class="rf-h4" v-if="focusTopSelection1">Dans le cadre de votre projet, vous pouvez :</h2>
+          <h2  class="rf-h4" v-if="focusTopSelection2">Dans le cadre de votre projet, vous souhaitez :</h2>
         </template>
         <div v-if="echeance2022" class="rf-grid-row rf-grid-row--gutter">
           <div class="rf-col-8">
@@ -50,9 +50,9 @@
           <div v-for="aide in aides" :key="aide.id" class="rf-col-xs-12 rf-col-sm-6  rf-col-md-4 rf-col-xl-3">
                 <router-link :to="{ name: 'aid_detail', params: { slug: aide.slug } }">
                   <div>
-                    <h3><a href="">{{ aide.name }}</a></h3>
+                    <h3 class="rf-text"><a href="">{{ aide.name }}</a></h3>
                     <div>
-                      <p>Obtenir des informations</p>
+                      <p class="rf-text--sm">Obtenir des informations</p>
                       <img src="@/assets/picto/Fleche.svg" alt="" />
                     </div>
                   </div>
