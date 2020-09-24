@@ -1,12 +1,10 @@
 <template>
   <div class="rf-container">
-    <nav class="rf-breadcrumb" aria-labelledby="system-breadcrumb">
-      <h2 id="system-breadcrumb" class="sr-only">Fil d'Ariane</h2>
+    <nav class="rf-breadcrumb" aria-label="vous êtes ici :">
       <ul class="rf-breadcrumb__list">
         <li class="rf-breadcrumb__item">
-          <a href="https://www.transformation.gouv.fr/"> Accueil </a>
+          <a href="https://www.transformation.gouv.fr/">Accueil</a>
         </li>
-
         <li
           v-for="crumb in breadcrumbs" :key="crumb.name"
           class="rf-breadcrumb__item"
@@ -15,8 +13,8 @@
           <a v-bind:href="crumb.url ? crumb.url : '#'">{{ crumb.name }}</a>
         </li>
 
-        <li v-if="current_page_title" class="rf-breadcrumb__item rf-breadcrumb__item--current">
-            <a href="#">{{ current_page_title }}</a>
+        <li v-if="current_page_title" aria-current="page” class="rf-breadcrumb__item rf-breadcrumb__item--current">
+            {{ current_page_title }}
         </li>
       </ul>
     </nav>
