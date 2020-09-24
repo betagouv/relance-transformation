@@ -1,11 +1,10 @@
 <template>
-
-        <div role="button" tabindex="0" class="rf-col-4 unselected bordernone" :class="{selected:focus}">
-            <div class="">
-                <img :src="require(`@/assets/picto/${filename}`)" alt="" class="py-3">
-            </div>
-            <h3 class="streched-link"><strong>{{ title }}</strong></h3>
+    <div class="rf-col-xs-10 rf-col-sm-6 rf-col-md-6 rf-col-lg-4 rf-col-xl-4">
+        <div role="button" tabindex="0" class="rf-grid-row unselected bordernone" :class="{selected:focus}">
+            <img :src="require(`@/assets/picto/${filename}`)" alt="" class="rf-col-2">
+            <h3 class="rf-col-10">{{ title }}</h3>
         </div>
+    </div>    
 </template>
 
 <script>
