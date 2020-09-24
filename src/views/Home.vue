@@ -59,9 +59,10 @@
                 </router-link>
           </div>
         </template>
+        </div>
       </ResultSection>
       </div>
-    </main>
+    </div>
     <Footer></Footer>
   </div>
 </template>
