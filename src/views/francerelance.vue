@@ -91,6 +91,8 @@
           echeance2022: false,
           results: false,
           aides: "",
+          title: "France Relance - Ministère de la Transformation et de la Fonction publiques",
+          description: "Administrations : bénéficiez du volet « Mise à niveau numérique de l'État et des territoires »",
           previewImg: require('@/assets/Preview.png'),
         }
       },
@@ -144,18 +146,18 @@
 
       metaInfo () {
         return {
-          title: "France Relance - Ministère de la Transformation et de la Fonction publiques",
+          title: this.title,
           meta: [{
               name: 'description',
-              content: "Administrations : bénéficiez du volet « Mise à niveau numérique de l'État et des territoires »"
+              content: this.description
             },
             {
               property: 'og:title',
-              content: "France Relance - Ministère de la Transformation et de la Fonction publiques"
+              content: this.title
             },
             {
               property: 'og:description',
-              content: "Administrations : bénéficiez du volet « Mise à niveau numérique de l'État et des territoires »"
+              content: this.description
             },
               {
               property: 'og:image',
@@ -171,11 +173,11 @@
             },
             {
               name: "twitter:title",
-              content: "France Relance - Ministère de la Transformation et de la Fonction publiques"
+              content: this.title
             },
             {
               name: "twitter:description",
-              content: "Administrations : bénéficiez du volet « Mise à niveau numérique de l'État et des territoires »"
+              content: this.description
             },
             {
               name: "twitter:image",
