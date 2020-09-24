@@ -3,7 +3,7 @@
   <div class="france_relance">
     
     <Header></Header>
-    
+    <main role="main">
     <div class="rf-grid-row rf-grid-row--center">
       <div class="rf-col-8">      
         <IntroSection></IntroSection>
@@ -54,7 +54,7 @@
         </template> 
       </ResultSection>
     
-  
+    </main>
     <Footer></Footer>
   </div>
 </template>
