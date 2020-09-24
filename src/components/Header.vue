@@ -1,5 +1,5 @@
 <template>
-    <header class="rf-header rf-margin-bottom-5N">
+    <header class="rf-header">
         <div class="rf-container">
             <!-- <div class="rf-header__body">
                 <div class="rf-header__brand">
