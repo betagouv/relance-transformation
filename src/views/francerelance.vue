@@ -3,7 +3,9 @@
   <div class="france_relance">
 
     <Header></Header>
-    
+
+    <Breadcrumbs></Breadcrumbs>
+
     <div class="rf-grid-row rf-grid-row--center">
       <div class="rf-col-8">
         <IntroSection></IntroSection>
@@ -50,17 +52,18 @@
                     </div>
                 </router-link>
               </div>
-          </div>   
-        </template> 
+          </div>
+        </template>
       </ResultSection>
-    
-  
+
+
     <Footer></Footer>
   </div>
 </template>
 
 <script>
   import Header from "@/components/Header";
+  import Breadcrumbs from "@/components/Breadcrumbs";
   import IntroSection from "@/components/IntroSection";
   import SearchBar from "@/components/SearchBar";
   import TopSelection from "@/components/TopSelection";
@@ -71,7 +74,7 @@
   export default {
       name: "FranceRelance",
 
-      components: { Header, IntroSection, TopSelection, SearchBar, DateSelection, ResultSection, Footer, },
+      components: { Header, Breadcrumbs, IntroSection, TopSelection, SearchBar, DateSelection, ResultSection, Footer, },
 
       data() {
         return {
