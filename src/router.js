@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import FranceRelance from '@/views/francerelance.vue'
-import Aides from '@/views/Aides.vue'
+import Home from '@/views/Home.vue'
+import AidDetail from '@/views/AidDetail.vue'
 import Video from '@/views/Video.vue'
-import Recherche from '@/views/Recherche.vue'
+import Search from '@/views/Search.vue'
 
 Vue.use(Router)
 
@@ -11,8 +11,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'FranceRelance',
-      component: FranceRelance,
+      name: 'home',
+      component: Home,
       meta: {
         breadcrumbs: [
           { name: 'France Relance' },
@@ -32,8 +32,8 @@ export default new Router({
     },
     {
       path: '/Recherche',
-      name: 'Recherche',
-      component: Recherche,
+      name: 'search',
+      component: Search,
       meta: {
         breadcrumbs: [
           { name: 'France Relance', url: '/' },
@@ -43,8 +43,8 @@ export default new Router({
     },
     {
       path: '/Aides/:slug',
-      name: 'Aides',
-      component: Aides,
+      name: 'aid_detail',
+      component: AidDetail,
       meta: {
         breadcrumbs: [
           { name: 'France Relance', url: '/' },
