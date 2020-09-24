@@ -1,11 +1,13 @@
 <template>
   <div class="france_relance">
-    
+
     <Header></Header>
-    
+
+    <Breadcrumbs></Breadcrumbs>
+
     <div class="rf-grid-row rf-grid-row--center">
       <div class="rf-col-8">
-      
+
         <div class="rf-grid-row rf-grid-row--center align-items-center">
                 <img src="@/assets/FranceRelance.png" alt="Logo France Relance" class="rf-col-2 mr-5 pt-4" width="110px" >
             <div class="rf-col-9 mt-3">
@@ -44,24 +46,25 @@
                     <p class="mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod iusto sed, praesentium quia et voluptatum commodi quam. Voluptates, amet illo, alias harum, unde officia eveniet fugit porro aliquam labore quisquam.</p>
                 </div>
             </div>
-        
+
         </div>
 
       </div>
     </div>
-  
+
     <Footer></Footer>
   </div>
 </template>
 
 <script>
     import Header from "@/components/Header";
+    import Breadcrumbs from "@/components/Breadcrumbs";
     import Footer from "@/components/Footer";
 
     export default {
          name: "Video",
 
-      components: { Header, Footer, },
+      components: { Header, Breadcrumbs, Footer, },
 
     }
 </script>

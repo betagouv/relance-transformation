@@ -1,11 +1,13 @@
 <template>
   <div class="recherche">
-    
+
     <Header></Header>
-    
+
+    <Breadcrumbs></Breadcrumbs>
+
     <div class="rf-grid-row rf-grid-row--center">
       <div class="rf-col-8">
-      
+
         <div class="rf-grid-row rf-grid-row--center align-items-center">
                 <img src="@/assets/FranceRelance.png" alt="Logo France Relance" class="rf-col-2 mr-5 pt-4" width="110px" >
             <div class="rf-col-9 mt-3">
@@ -19,26 +21,27 @@
                     <button class="font20 btn my-2 greenButton my-sm-0 input-group-text pl-4 pr-4" type="submit">Rechercher</button>
                 </div>
                 </div>
-            </form>   
-        
+            </form>
+
         </div>
 
       </div>
     </div>
-  
+
     <Footer></Footer>
   </div>
 </template>
 
 <script>
     import Header from "@/components/Header";
+    import Breadcrumbs from "@/components/Breadcrumbs";
     import Footer from "@/components/Footer";
     import SearchBar from "@/components/SearchBar";
 
     export default {
          name: "Video",
 
-      components: { Header, SearchBar, Footer, },
+      components: { Header, Breadcrumbs, SearchBar, Footer, },
 
     }
 </script>
