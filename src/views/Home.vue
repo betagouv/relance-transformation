@@ -14,13 +14,11 @@
 
         <IntroSection></IntroSection>
         <SearchBar>
-            <form action="" class="rf-col-11">
+            <form class="rf-col-11">
               <div class="input-group mb-3">
-                <input type="search" class="form-control border-bottom-green formresearch p-4" v-model="recherche" placeholder="Rechercher un mot clé, une expression, une référence..." aria-describedby="basic-addon2">
+                <input type="search" class="form-control border-bottom-green formresearch p-4" v-model="recherche" @keydown.enter.prevent="goToResearch(recherche)" placeholder="Rechercher un mot clé, une expression, une référence..." aria-describedby="basic-addon2">
                 <div class="input-group-append">
-                  <router-link :to="`/Recherche/${recherche}`">
-                    <button class="font20 btn my-2 greenButton my-sm-0 input-group-text pl-4 pr-4" type="button">Rechercher</button>
-                  </router-link>
+                    <button class="font20 btn my-2 greenButton my-sm-0 input-group-text pl-4 pr-4" type="button" @click="goToResearch(recherche)">Rechercher</button>
                 </div>
               </div>
            </form>
@@ -57,19 +55,20 @@
             <p>Vous pouvez candidater à plusieurs de ces offres pour un même projet</p>
           </div>
         </div>
-         <div class="rf-grid-row rf-grid-row--gutter">
+         
         <template v-slot:resultCards>
-          <div v-for="aide in aides" :key="aide.id" class="aide rf-col-xs-12 rf-col-sm-6  rf-col-md-4 rf-col-xl-3">
-            <div>
-              <h3><router-link :to="{ name: 'aid_detail', params: { slug: aide.slug } }">{{ aide.name }}</router-link></h3>
+          <div class="rf-grid-row rf-grid-row--gutter">
+            <div v-for="aide in aides" :key="aide.id" class="aide rf-col-xs-12 rf-col-sm-6  rf-col-md-4 rf-col-xl-3">
               <div>
-                <p>Obtenir des informations</p>
-                <img src="@/assets/picto/Fleche.svg" alt="" />
+                <h3><router-link :to="{ name: 'aid_detail', params: { slug: aide.slug } }">{{ aide.name }}</router-link></h3>
+                <div>
+                  <p>Obtenir des informations</p>
+                  <img src="@/assets/picto/Fleche.svg" alt="" />
+                </div>
               </div>
             </div>
           </div>
         </template>
-        </div>
       </ResultSection>
       </div>
     </div>
@@ -118,6 +117,11 @@
       },
 
       methods: {
+          goToResearch(recherche) {
+            if(recherche !== ""){
+              this.$router.push({ path: `/Recherche/${recherche}` });
+            } 
+          },
           goToSelection1() {
             this.focusTopSelection1 = true;
             this.focusTopSelection2 = false;
