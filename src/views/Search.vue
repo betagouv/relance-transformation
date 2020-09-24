@@ -16,12 +16,35 @@
 
             <form action="" class="searchBar rf-col-11 my-4">
                 <div class="input-group mb-3">
-                <input type="search" class="form-control border-bottom-green formresearch p-4" placeholder="Rechercher un mot clé, une expression, une référence..." aria-describedby="basic-addon2">
+                <input type="search" class="form-control border-bottom-green formresearch p-4" v-model="newResearch" @keydown.enter.prevent="Research(newResearch)" placeholder="Rechercher un mot clé, une expression, une référence..." aria-describedby="basic-addon2">
                 <div class="input-group-append">
-                    <button class="font20 btn my-2 greenButton my-sm-0 input-group-text pl-4 pr-4" type="submit">Rechercher</button>
+                    <button class="font20 btn my-2 greenButton my-sm-0 input-group-text pl-4 pr-4" type="button" @click="Research(newResearch)">Rechercher</button>
                 </div>
                 </div>
             </form>
+
+            <ResultSection>
+            <template v-slot:titleResultSection>
+              <h2 v-if="text">Résultats pour "{{ text }}" :</h2>
+              <h2 v-if="$route.params.recherche && text == ''">Résultats pour "{{ $route.params.recherche }}" :</h2>
+            </template>
+
+            <template v-slot:resultCards>
+              <div v-for="aide in results" :key="aide.id" class="rf-grid-row rf-grid-row--center rf-grid-row--gutter">
+                <div class="rf-col-4">
+                    <router-link :to="`/Aides/${aide.slug}/`">
+                        <div class="col-sm bgGrey p-4 justify-content-start">
+                            <h3 class="mb-5 text-left col-sm"><strong><a href="" class="text-reset font16">{{ aide.name }}</a></strong></h3>
+                            <div class="rf-grid-row align-items-center">
+                                <p class="m-0 moreInfos text-left font14">Obtenir des informations</p>
+                                <img src="@/assets/picto/Fleche.svg" alt="" aria-hidden="true" class="ml-2">
+                            </div>
+                        </div>
+                    </router-link>
+                  </div>
+              </div>   
+            </template> 
+          </ResultSection>
 
         </div>
 
@@ -37,17 +60,22 @@
     import Breadcrumbs from "@/components/Breadcrumbs";
     import Footer from "@/components/Footer";
     import SearchBar from "@/components/SearchBar";
+    import ResultSection from "@/components/ResultSection";
 
     export default {
          name: "Video",
 
-      components: { Header, Breadcrumbs, SearchBar, Footer, },
+      components: { Header, Breadcrumbs, SearchBar, ResultSection, Footer, },
 
       data() {
           return {
               title: "France Relance : rechercher un financement - Ministère de la Transformation et de la Fonction publiques",
               description: "Rechercher un financement dans le cadre du volet « Mise à niveau numérique de l'État et des territoires » du plan de relance",
               previewImg: require('@/assets/Preview.png'),
+              results: "",
+              newResearch: "",
+              recherche: "",
+              text:"",
           }
       },
 
@@ -93,6 +121,30 @@
           ],
         }
       },
+
+      methods: {
+        Research(newResearch) {
+          if(this.newResearch !== "") {
+            this.results = "";
+            this.text= newResearch;
+            const axios = require("axios");
+            axios.get(`https://staging.aides-territoires.beta.gouv.fr/api/aids/?backers=505-mtfp&in_france_relance=true&text=${newResearch}`)
+                  .then(response => {
+                    this.results = response.data.results;
+                  })
+          } else {
+              return
+            }       
+        }
+      },
+
+        mounted() {
+            const axios = require("axios");
+            axios.get(`https://staging.aides-territoires.beta.gouv.fr/api/aids/?backers=505-mtfp&in_france_relance=true&text=${this.$route.params.recherche}`)
+            .then(response => {
+                 this.results = response.data.results;
+            })
+      }
 
     }
 </script>
