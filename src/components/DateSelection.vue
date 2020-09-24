@@ -20,10 +20,6 @@ export default {
             filename: {
                 type: String,
             },
-            date: {
-                type: String,
-                required: true,
-            },
             focus: {
                 type: Boolean,
                 required: true,

@@ -1,77 +1,8 @@
 <template>
     <div class="">
-          <h2>Dans le cadre de votre projet, vous souhaitez :</h2>
+         <slot name="titleResultSection"></slot>
           <slot></slot>
-              <div class="rf-grid-row rf-grid-row--center rf-grid-row--gutter">
-                <!-- <div class="container-fluid row mt-5" v-for="aide in aides" :key="aide.id" > -->
-                    <!-- <div class="col-sm-4 mb-4">
-                        <router-link to="/Aides/aide.name/aide.id">
-                            <div class="col-sm bgGrey p-4 justify-content-start">
-                                <h3 class="mb-5 text-left col-sm"><strong><a href="" class="text-reset font16">{{ aide.name }}</a></strong></h3>
-                                <div class="rf-grid-row align-items-center">
-                                    <p class="m-0 moreInfos text-left font14">Obtenir des informations</p>
-                                    <img src="@/assets/picto/Fleche.svg" alt="" aria-hidden="true" class="ml-2">
-                                </div>
-                            </div>
-                        </router-link>
-                    </div> -->
-                    <div class="rf-col-4">
-                        <router-link to="/Aides/Soutenir le développement rural - programme LEADER/41359">
-                            <div class="col-sm bgGrey p-4 justify-content-start">
-                                <h3 class="mb-5 text-left col-sm"><strong><a href="#" class="text-reset font16">Développer la dématérialisation de qualité des services aux usagers</a></strong></h3>
-                                <div class="rf-grid-row align-items-center">
-                                    <p class="m-0 moreInfos text-left font14">Obtenir des informations</p>
-                                    <img src="@/assets/picto/Fleche.svg" alt="" aria-hidden="true" class="ml-2">
-                                </div>
-                            </div>
-                        </router-link>
-                    </div>
-                    <div class="rf-col-4">
-                        <router-link to="/Aides/Soutenir le développement rural - programme LEADER/41359">
-                            <div class="col-sm bgGrey p-4">
-                                <h3 class="mb-5 text-left col-sm"><strong><a href="#" class="text-reset font16">Développer la dématérialisation de qualité des services aux usagers</a></strong></h3>
-                                <div class="rf-grid-row align-items-center">
-                                    <p class="m-0 moreInfos text-left font14">Obtenir des informations</p>
-                                    <img src="@/assets/picto/Fleche.svg" alt="" aria-hidden="true" class="ml-2">
-                                </div>
-                            </div>
-                        </router-link>
-                    </div>
-                    <div class="rf-col-4">
-                        <router-link to="/Aides/Soutenir le développement rural - programme LEADER/41359">
-                            <div class="col-sm bgGrey p-4">
-                                <h3 class="mb-5 text-left col-sm"><strong><a href="#" class="text-reset font16">Développer la dématérialisation de qualité des services aux usagers</a></strong></h3>
-                                <div class="rf-grid-row align-items-center">
-                                    <p class="m-0 moreInfos text-left font14">Obtenir des informations</p>
-                                    <img src="@/assets/picto/Fleche.svg" alt="" aria-hidden="true" class="ml-2">
-                                </div>
-                            </div>
-                        </router-link>
-                    </div>
-                    <div class="rf-col-4">
-                        <router-link to="/Aides/Soutenir le développement rural - programme LEADER/41359">
-                            <div class="col-sm bgGrey p-4">
-                                <h3 class="mb-5 text-left col-sm"><strong><a href="#" class="text-reset font16">Développer la dématérialisation de qualité des services aux usagers</a></strong></h3>
-                                <div class="rf-grid-row align-items-center">
-                                    <p class="m-0 moreInfos text-left font14">Obtenir des informations</p>
-                                    <img src="@/assets/picto/Fleche.svg" alt="" aria-hidden="true" class="ml-2">
-                                </div>
-                            </div>
-                        </router-link>
-                    </div>
-                    <div class="rf-col-4">
-                        <router-link to="/Aides/Soutenir le développement rural - programme LEADER/41359">
-                            <div class="col-sm bgGrey p-4">
-                                <h3 class="mb-5 text-left col-sm"><strong><a href="#" class="text-reset font16">Développer la dématérialisation de qualité des services aux usagers</a></strong></h3>
-                                <div class="rf-grid-row align-items-center">
-                                    <p class="m-0 moreInfos text-left font14">Obtenir des informations</p>
-                                    <img src="@/assets/picto/Fleche.svg" alt="" aria-hidden="true" class="ml-2">
-                                </div>
-                            </div>
-                        </router-link>
-                    </div>
-            </div>
-              
+          <slot name="resultCards"></slot>             
     </div>
 </template>
 
