@@ -13,6 +13,18 @@
       <div class="rf-col-8">
 
         <IntroSection></IntroSection>
+        <SearchBar>
+            <form action="" class="rf-col-11">
+              <div class="input-group mb-3">
+                <input type="search" class="form-control border-bottom-green formresearch p-4" v-model="recherche" placeholder="Rechercher un mot clé, une expression, une référence..." aria-describedby="basic-addon2">
+                <div class="input-group-append">
+                  <router-link :to="`/Recherche/${recherche}`">
+                    <button class="font20 btn my-2 greenButton my-sm-0 input-group-text pl-4 pr-4" type="button">Rechercher</button>
+                  </router-link>
+                </div>
+              </div>
+           </form>   
+        </SearchBar>
         <div class="rf-grid-row rf-grid-row--center">
           <div class="rf-col">
             <h2> Découvrez tous les financements auxquels vous pouvez faire appel :</h2>
@@ -103,6 +115,7 @@
           title: "France Relance - Ministère de la Transformation et de la Fonction publiques",
           description: "Administrations : bénéficiez du volet « Mise à niveau numérique de l'État et des territoires »",
           previewImg: require('@/assets/Preview.png'),
+          recherche:"",
         }
       },
 
