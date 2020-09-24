@@ -13,7 +13,9 @@
                 </div>
                 <div class="rf-col-sm-3 rf-col-xs-12 rf-margin-top-1N">
                     <div class="thumbs">
-                        <a href="" class="rf-col"><img src="@/assets/PhotoAmelieDeMontchalin.png" alt="la vidéo d'Amélie de Montchalin" width="182px"/></a>
+                        <router-link :to="`/video/`">
+                            <img src="@/assets/FausseVideo.png" alt="Voir la vidéo d'Amélie de Montchalin" width="182px"/>
+                        </router-link>
                         <p class="fontGrey rf-text--xs">Le mot d'Amélie de Montchalin</p>
                     </div>
                 </div>
