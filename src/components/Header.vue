@@ -82,7 +82,7 @@
     z-index: 1;
     position: absolute;
     right: 2px;
-    top: 16px;
+    top: 19px;
   }
 
   .rf-header .rf-nav {
@@ -99,7 +99,7 @@
 
   .rf-logo__image--custom {
     height: 158px;
-    margin: 30px 30px 30px 0px;
+    margin: 30px 30px 26px 0px;
   }
 
   .rf-nav__rs--custom a:not(:last-child) {
