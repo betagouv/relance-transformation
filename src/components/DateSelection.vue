@@ -1,6 +1,6 @@
 <template>
 
-        <div role="button" tabindex="0" class="rf-col-4 unselected bordernone" :class="{selected:focus}">
+        <div role="button" tabindex="0" class="rf-col-4 bordernone" :class="{selected:focus, unselected:!focus}">
             <div class="">
                 <img :src="require(`@/assets/picto/${filename}`)" alt="" class="py-3">
             </div>
@@ -31,8 +31,8 @@ export default {
 <style>
 
     .selected {
-        background-color: #169B62 !important; 
-        color: #FFFFFF !important;
+        background-color: #169B62; 
+        color: #FFFFFF;
     }
 
     .unselected {
