@@ -4,27 +4,29 @@
     
     <Header></Header>
     <main role="main">
-    <div class="rf-grid-row rf-grid-row--center">
-      <div class="rf-col-8">      
+      <div class="rf-container">
         <IntroSection></IntroSection>
-        <h2> Découvrez tous les financements auxquels vous pouvez faire appel :</h2>
-      </div>
-    </div>  
+        <div class="rf-grid-row rf-grid-row--center">
+          <div class="rf-col-8">   
+            <h2> Découvrez tous les financements auxquels vous pouvez faire appel :</h2>
+          </div>
+        </div>  
 
-    <div class="rf-grid-row rf-grid-row--center rf-grid-row--gutter">
-      <TopSelection :title="topSelection1" :filename="logoEtat" :focus="focusTopSelection1" @click.native="goToSelection1()"></TopSelection>
-      <TopSelection :title="topSelection2" :filename="logoCollectivite" :focus="focusTopSelection2" @click.native="goToSelection2()"></TopSelection>    
-    </div>  
+        <div class="rf-grid-row rf-grid-row--center rf-grid-row--gutter">
+          <TopSelection :title="topSelection1" :filename="logoEtat" :focus="focusTopSelection1" @click.native="goToSelection1()"></TopSelection>
+          <TopSelection :title="topSelection2" :filename="logoCollectivite" :focus="focusTopSelection2" @click.native="goToSelection2()"></TopSelection>    
+        </div>  
 
-    <div v-if="topSelectionEtat" class="rf-grid-row rf-grid-row--center rf-grid-row--gutter">
-      <div class="rf-col-8">      
-        <h2>Quelle est l'échéance de votre projet ?</h2>
-      </div>
-    </div>  
-    <div v-if="topSelectionEtat" class="rf-grid-row rf-grid-row--center rf-grid-row--gutter">
-      <DateSelection :title="dateSelection1" :filename="logo2022" :focus="focusEcheance1" @click.native="goToEcheance2022()"></DateSelection>
-      <DateSelection :title="dateSelection2" :filename="logo2023" :focus="focusEcheance2" @click.native="goToEcheance2023()"></DateSelection>    
-    </div>
+        <div v-if="topSelectionEtat" class="rf-grid-row rf-grid-row--center rf-grid-row--gutter">
+          <div class="rf-col-8">      
+            <h2>Quelle est l'échéance de votre projet ?</h2>
+          </div>
+        </div>  
+
+        <div v-if="topSelectionEtat" class="rf-grid-row rf-grid-row--center rf-grid-row--gutter">
+          <DateSelection :title="dateSelection1" :filename="logo2022" :focus="focusEcheance1" @click.native="goToEcheance2022()"></DateSelection>
+          <DateSelection :title="dateSelection2" :filename="logo2023" :focus="focusEcheance2" @click.native="goToEcheance2023()"></DateSelection>    
+        </div>
 
       <ResultSection v-if="results">
         <template v-slot:titleResultSection>
@@ -45,7 +47,7 @@
                         <h3 class="mb-5 text-left col-sm"><strong><a href="" class="text-reset font16">{{ aide.name }}</a></strong></h3>
                         <div class="rf-grid-row align-items-center">
                             <p class="m-0 moreInfos text-left font14">Obtenir des informations</p>
-                            <img src="@/assets/picto/Fleche.svg" alt="" aria-hidden="true" class="ml-2">
+                            <img src="@/assets/picto/Fleche.svg" alt="" class="ml-2">
                         </div>
                     </div>
                 </router-link>
@@ -53,7 +55,7 @@
           </div>   
         </template> 
       </ResultSection>
-    
+      </div>
     </main>
     <Footer></Footer>
   </div>
