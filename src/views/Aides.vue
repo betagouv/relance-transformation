@@ -28,10 +28,7 @@
                     <div class="exemples text-left my-5 pt-4 col-sm">
                         <h2 class="mb-4 fontBlack"><strong>Exemples d'applications</strong></h2>
                         <div>
-                            <p class="">À titre d'exemple, les thématiques suivantes pourront être explorées :</p>
-                            <ul class="" :v-repeat="aide.project_examples">
-                                <li> {{$value}} </li> 
-                            </ul>
+                            <div v-html="aide.project_examples">À titre d'exemple, les thématiques suivantes pourront être explorées :</div>
                         </div>
                     </div>
 
