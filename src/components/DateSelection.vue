@@ -41,12 +41,15 @@ export default {
     }
 
     div[role="button"]:hover h3, div[role="button"]:focus h3 {
-        color: #fff;
+        color: white !important;
     }
 
     .selected {
-        background-color: #169B62;
-        color: #fff;
+        background-color: #169B62 !important;
+    }
+
+    .selected .rf-text {
+        color: white !important;
     }
 
     .unselected {
