@@ -103,11 +103,13 @@
     .subfooter p {
         display: inline-block;
         margin: 0;
+        padding-top: 2px;
     }
 
     .subfooter a {
         display: inline-block;
         margin: 0;
+        padding: 0;
         color: #000091;
     }
 
@@ -119,6 +121,7 @@
         display: inline-block;
         height: 40px;
         margin-left: 32px;
+        margin-bottom: -4px;
     }
 
     .rf-footer__content-desc {
