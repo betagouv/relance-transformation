@@ -10,8 +10,9 @@
         <div class="rf-grid-row rf-grid-row--center">
             <div class="rf-col">
 
-            <IntroSection></IntroSection>
-            <SearchBar></SearchBar>
+            <IntroSection class="rf-margin-bottom-4N"></IntroSection>
+
+            <SearchBar class="rf-margin-bottom-9N"></SearchBar>
 
             <div class="rf-grid-row rf-grid-row--center">
                 <div class="rf-col">
