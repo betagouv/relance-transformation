@@ -13,28 +13,28 @@
                 <div class="rf-footer__content">
                     <div class="rf-footer__content-desc">
                         <div class="rf-footer__content-desc-column">
-                            <p class="rf-footer__content-desc-entity-name">
-                                Direction Générale de l’Administration et de la Fonction Publique (DGAFP)
-                            </p>
                             <a href="https://www.fonction-publique.gouv.fr/">
                                 fonction-publique.gouv.fr
                             </a>
+                            <p class="rf-footer__content-desc-entity-name">
+                                Direction Générale de l’Administration et de la Fonction Publique (DGAFP)
+                            </p>
                         </div>
                         <div class="rf-footer__content-desc-column">
-                            <p>
-                                Direction Interministérielle du Numérique (DINUM)
-                            </p>
                             <a href="https://www.numerique.gouv.fr/">
                                 numerique.gouv.fr
                             </a>
+                            <p>
+                                Direction Interministérielle du Numérique (DINUM)
+                            </p>
                         </div>
                         <div class="rf-footer__content-desc-column">
-                            <p>
-                                Direction Interministérielle de la Transformation Publique (DITP)
-                            </p>
                             <a href="https://www.modernisation.gouv.fr/">
                                 modernisation.gouv.fr
                             </a>
+                            <p>
+                                Direction Interministérielle de la Transformation Publique (DITP)
+                            </p>
                         </div>
                     </div>
                     <ul class="rf-footer__content-links">
@@ -88,23 +88,29 @@
     .rf-footer__content-desc {
         display: flex;
         flex-wrap: wrap;
+        margin-top: -24px;
     }
 
     .rf-footer__content-desc-column {
-        flex-basis: 28%;
-        min-width: 180px;
+        flex: 1 1 220px;
+        margin-top: 24px;
         margin-right: 32px;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
     }
 
     .rf-footer__content-desc-column p {
         font-size: 0.875rem;
+        margin: 0;
     }
 
     .rf-footer__content-desc-column a {
         font-weight: 700;
+        padding-bottom: 6px;
+    }
+
+    .rf-footer__brand {
+        align-items: flex-start;
     }
 
 </style>
