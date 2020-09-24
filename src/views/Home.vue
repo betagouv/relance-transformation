@@ -23,7 +23,7 @@
                   </router-link>
                 </div>
               </div>
-           </form>   
+           </form>
         </SearchBar>
         <div class="rf-grid-row rf-grid-row--center">
           <div class="rf-col">
@@ -59,14 +59,14 @@
         </div>
          <div class="rf-grid-row rf-grid-row--gutter">
         <template v-slot:resultCards>
-          <div v-for="aide in aides" :key="aide.id" class="rf-col-xs-12 rf-col-sm-6  rf-col-md-4 rf-col-xl-3">
+          <div v-for="aide in aides" :key="aide.id" class="aide rf-col-xs-12 rf-col-sm-6  rf-col-md-4 rf-col-xl-3">
             <div>
               <h3><router-link :to="{ name: 'aid_detail', params: { slug: aide.slug } }">{{ aide.name }}</router-link></h3>
               <div>
                 <p>Obtenir des informations</p>
                 <img src="@/assets/picto/Fleche.svg" alt="" />
               </div>
-            </div>      
+            </div>
           </div>
         </template>
         </div>
@@ -211,6 +211,21 @@
 
 <style>
 
+    .aide {
+        position: relative;
+    }
 
+    .aide a {
+        position: initial;
+    }
+
+    .aide a::after {
+        position: absolute;
+        content: "";
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
 
 </style>
