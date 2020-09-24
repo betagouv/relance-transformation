@@ -11,6 +11,32 @@
                     </a>
                 </div>
                 <div class="rf-footer__content">
+                    <div class="rf-footer__content-desc">
+                        <div class="rf-footer__content-desc-column">
+                            <p class="rf-footer__content-desc-entity-name">
+                                Direction Générale de l’Administration et de la Fonction Publique (DGAFP)
+                            </p>
+                            <a href="https://www.fonction-publique.gouv.fr/">
+                                fonction-publique.gouv.fr
+                            </a>
+                        </div>
+                        <div class="rf-footer__content-desc-column">
+                            <p>
+                                Direction Interministérielle du Numérique (DINUM)
+                            </p>
+                            <a href="https://www.numerique.gouv.fr/">
+                                numerique.gouv.fr
+                            </a>
+                        </div>
+                        <div class="rf-footer__content-desc-column">
+                            <p>
+                                Direction Interministérielle de la Transformation Publique (DITP)
+                            </p>
+                            <a href="https://www.modernisation.gouv.fr/">
+                                modernisation.gouv.fr
+                            </a>
+                        </div>
+                    </div>
                     <ul class="rf-footer__content-links">
                         <li>
                             <a href="https://legifrance.gouv.fr">legifrance.gouv.fr</a>
@@ -58,5 +84,27 @@
 </script>
 
 <style>
+
+    .rf-footer__content-desc {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .rf-footer__content-desc-column {
+        flex-basis: 28%;
+        min-width: 180px;
+        margin-right: 32px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .rf-footer__content-desc-column p {
+        font-size: 0.875rem;
+    }
+
+    .rf-footer__content-desc-column a {
+        font-weight: 700;
+    }
 
 </style>
