@@ -5,13 +5,12 @@
                 <div class="rf-footer__brand">
                     <a class="rf-logo" href="./" >
                         <span class="rf-logo__title">Ministère
-                            <br>de la transformation 
+                            <br>de la transformation
                             <br>et de la fonction
                             <br>publiques</span>
                     </a>
                 </div>
                 <div class="rf-footer__content">
-                    <!--p class="rf-footer__content-desc"></p-->
                     <ul class="rf-footer__content-links">
                         <li>
                             <a href="https://legifrance.gouv.fr">legifrance.gouv.fr</a>
@@ -31,23 +30,20 @@
             <div class="rf-footer__bottom">
                 <ul class="rf-footer__bottom-list">
                     <li>
-                        <a href="#">Plan du site</a>
+                        <a href="https://www.transformation.gouv.fr/donnees-personnelles">Données personelles et cookies</a>
                     </li>
                     <li>
-                        <a href="#">Accessibilité: non conforme</a>
+                        <a href="https://www.transformation.gouv.fr/espace-presse/contact-presse">Contact presse</a>
                     </li>
                     <li>
-                        <a href="#">Mentions légales</a>
+                        <a href="https://www.transformation.gouv.fr/mentions-legales">Mentions légales</a>
                     </li>
                     <li>
-                        <a href="#">Données personnelles</a>
-                    </li>
-                    <li>
-                        <a href="#">Gestion des cookies</a>
+                        <a href="https://www.transformation.gouv.fr/accessibilite">Accessibilité: non conforme</a>
                     </li>
                 </ul>
                 <div class="rf-footer__bottom-copy">
-                    République Française 2020
+                    Ministère de la Transformation et de la Fonction publiques 2020
                 </div>
             </div>
         </div>
@@ -60,3 +56,7 @@
 
     }
 </script>
+
+<style>
+
+</style>
