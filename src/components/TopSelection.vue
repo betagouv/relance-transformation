@@ -30,7 +30,7 @@
 <style>
 
     div[role="button"] {
-        height: 8em;
+        max-height: 120px;
     }
 
     div[role="button"]:hover, div[role="button"]:focus {
