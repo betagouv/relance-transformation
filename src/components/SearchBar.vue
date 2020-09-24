@@ -2,7 +2,7 @@
 
         <div class="rf-grid-row">
           <div class="rf-col">
-            <h2 class="rf-h4">Rechercher un financement :</h2>
+            <h2 class="rf-h4 rf-margin-bottom-3N">Rechercher un financement :</h2>
             <form>
               <div class="rf-search-bar" id="search-input">
                   <label class="rf-label" for="search-input-input">Label de la barre de recherche</label>

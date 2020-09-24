@@ -10,7 +10,7 @@
         <div class="rf-grid-row rf-grid-row--center">
             <div class="rf-col">
 
-            <IntroSection class="rf-margin-bottom-4N"></IntroSection>
+            <IntroSection class="rf-margin-bottom-2N"></IntroSection>
 
             <SearchBar class="rf-margin-bottom-9N"></SearchBar>
 
@@ -20,12 +20,12 @@
                 </div>
             </div>
 
-            <div class="rf-grid-row rf-grid-row--center rf-grid-row--middle rf-grid-row--gutters">
+            <div class="rf-grid-row rf-grid-row--center rf-grid-row--middle rf-grid-row--gutters rf-margin-bottom-2N">
                 <TopSelection :title="topSelection1" :filename="logoEtat" :focus="focusTopSelection1" @click.native="goToSelection1()"></TopSelection>
                 <TopSelection :title="topSelection2" :filename="logoCollectivite" :focus="focusTopSelection2" @click.native="goToSelection2()"></TopSelection>
             </div>
 
-            <div v-if="topSelectionEtat" class="rf-grid-row rf-grid-row--center rf-grid-row--gutters">
+            <div v-if="topSelectionEtat" class="rf-grid-row rf-grid-row--center">
                 <div class="rf-col">
                     <h2 class="rf-h4">Quelle est l'échéance de votre projet ?</h2>
                 </div>
