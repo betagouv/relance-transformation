@@ -8,11 +8,9 @@
                     Accueil
                 </a>
             </li>
-            <li class="rf-breadcrumb__item">
-                <a href="#">France Relance</a>
-            </li>
-            <li class="rf-breadcrumb__item rf-breadcrumb__item--current">
-                <a href="#">Mon financement</a>
+
+            <li v-for="crumb in breadcrumbs" class="rf-breadcrumb__item" v-bind:class="{ 'rf-breadcrumb__item--current': !crumb.url }">
+                <a v-bind:href="crumb.url ? crumb.url : '#'">{{ crumb.name }}</a>
             </li>
         </ul>
     </nav>
@@ -22,6 +20,14 @@
 <script>
     export default {
         name: "Breadcrumbs",
+        data() {
+            return {
+                'breadcrumbs': [],
+            }
+        },
+        created() {
+            this.breadcrumbs = this.$route.meta.breadcrumbs;
+        },
     }
 </script>
 
