@@ -1,6 +1,7 @@
 <template>
     <div class="rf-container">
-    <nav class="rf-breadcrumb">
+    <nav class="rf-breadcrumb" aria-labelledby="system-breadcrumb">
+        <h2 id="system-breadcrumb" class="sr-only">Fil d'Ariane</h2>
         <ul class="rf-breadcrumb__list">
             <li class="rf-breadcrumb__item">
                 <a href="https://www.transformation.gouv.fr/">
