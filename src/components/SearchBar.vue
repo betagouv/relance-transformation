@@ -1,10 +1,35 @@
 <template>
-    <div class="searchbar rf-grid-row my-5">
-        <div class="rf-col-11">
-            <h2 class="font22 text-left mb-4"><strong>Rechercher un financement :</strong></h2>
+
+        <div class="rf-grid-row">
+          <div class="rf-col">
+            <h2 class="rf-h4">Rechercher un financement :</h2><br/>
+            <form>
+              <div class="rf-search-bar" id="search-input">
+                  <label class="rf-label" for="search-input-input">Label de la barre de recherche</label>
+                  <input v-model="recherche" class="rf-input" placeholder="Rechercher" type="search" id="search-input-input" name="search-input-input">
+                  <router-link :to="`/Recherche/${recherche}`"><button class="rf-btn" title="Rechercher">
+                      <span>
+                          Rechercher
+                      </span>
+                  </button>
+                  </router-link>
+              </div>
+            </form>
+          </div>
         </div>
-        <slot></slot>   
-      </div>
+
+        <!--div class="rf-grid-row rf-grid-row--center">
+          <div class="rf-col-8">
+            <form action="#">
+
+                <input v-model="recherche" type="search" class="form-control" placeholder="Rechercher un mot clé, une expression, une référence..." >
+                  <router-link :to="`/Recherche/${recherche}`">
+                    <button class="" >Rechercher</button>
+                  </router-link>
+
+           </form>
+        </div>   
+      </div-->
 </template>
 
 <script>
@@ -31,12 +56,12 @@
     border-bottom:              2px solid #107449;
   }
 
-  .font22 {
-    font-size: 22px;
-  }
-
-  .font20 {
-    font-size: 20px;
-  }
+#search-input .rf-input {
+  box-shadow: inset 0 -2px 0 0 #107449;
+  
+}
+#search-input button.rf-btn { 
+background-color: #107449;  
+}
 
 </style>
