@@ -12,21 +12,19 @@
                     <p>Votre projet doit contribuer à la relance de l'économie française, notamment des entreprises, et doit produire des résultats concrets sous 18 mois.</p>
                 </div>
                 <div class="rf-col-sm-4 rf-col-xs-12">
-                <div class="thumbs">
-                    <a href="" class="rf-col"><img src="@/assets/PhotoAmelieDeMontchalin.png" alt="la vidéo d'Amélie de Montchalin" width="182px"/></a>
-                    <p class="fontGrey">Le mot d'Amélie de Montchalin</p>
-                </div>
+                    <div class="thumbs">
+                        <a href="" class="rf-col"><img src="@/assets/PhotoAmelieDeMontchalin.png" alt="la vidéo d'Amélie de Montchalin" width="182px"/></a>
+                        <p class="fontGrey">Le mot d'Amélie de Montchalin</p>
+                    </div>
                 </div>
             </div>
         </div>
-        
     </div>
 </template>
 
 <script>
     export default {
         name: "IntroSection",
-
     }
 </script>
 
