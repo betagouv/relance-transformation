@@ -13,59 +13,48 @@
       <div class="rf-col-8">
 
         <IntroSection></IntroSection>
-        <SearchBar>
-            <form action="" class="rf-col-11">
-              <div class="input-group mb-3">
-                <input type="search" class="form-control border-bottom-green formresearch p-4" v-model="recherche" placeholder="Rechercher un mot clé, une expression, une référence..." aria-describedby="basic-addon2">
-                <div class="input-group-append">
-                  <router-link :to="`/Recherche/${recherche}`">
-                    <button class="font20 btn my-2 greenButton my-sm-0 input-group-text pl-4 pr-4" type="button">Rechercher</button>
-                  </router-link>
-                </div>
-              </div>
-           </form>
-        </SearchBar>
+        <SearchBar></SearchBar>
+
         <div class="rf-grid-row rf-grid-row--center">
           <div class="rf-col">
-            <h2> Découvrez tous les financements auxquels vous pouvez faire appel :</h2>
+            <h2 class="rf-h4"> Découvrez tous les financements auxquels vous pouvez faire appel :</h2>
           </div>
         </div>
 
-        <div class="rf-grid-row rf-grid-row--center rf-grid-row--gutter">
+        <div class="rf-grid-row rf-grid-row--center rf-grid-row--middle rf-grid-row--gutters">
           <TopSelection :title="topSelection1" :filename="logoEtat" :focus="focusTopSelection1" @click.native="goToSelection1()"></TopSelection>
           <TopSelection :title="topSelection2" :filename="logoCollectivite" :focus="focusTopSelection2" @click.native="goToSelection2()"></TopSelection>
         </div>
 
-        <div v-if="topSelectionEtat" class="rf-grid-row rf-grid-row--center rf-grid-row--gutter">
+        <div v-if="topSelectionEtat" class="rf-grid-row rf-grid-row--center rf-grid-row--gutters">
           <div class="rf-col">
-            <h2>Quelle est l'échéance de votre projet ?</h2>
+            <h2 class="rf-h4">Quelle est l'échéance de votre projet ?</h2>
           </div>
         </div>
 
-        <div v-if="topSelectionEtat" class="rf-grid-row rf-grid-row--center rf-grid-row--gutter">
+        <div v-if="topSelectionEtat" class="rf-grid-row rf-grid-row--center rf-grid-row--middle rf-grid-row--gutters">
           <DateSelection :title="dateSelection1" :filename="logo2022" :focus="focusEcheance1" @click.native="goToEcheance2022()"></DateSelection>
           <DateSelection :title="dateSelection2" :filename="logo2023" :focus="focusEcheance2" @click.native="goToEcheance2023()"></DateSelection>
         </div>
+
       <ResultSection v-if="results">
         <template v-slot:titleResultSection>
-          <h2 v-if="focusTopSelection1">Dans le cadre de votre projet, vous pouvez :</h2>
-          <h2 v-if="focusTopSelection2">Dans le cadre de votre projet, vous souhaitez :</h2>
+          <h2  class="rf-h4" v-if="focusTopSelection1">Dans le cadre de votre projet, vous pouvez :</h2>
+          <h2  class="rf-h4" v-if="focusTopSelection2">Dans le cadre de votre projet, vous souhaitez :</h2>
         </template>
-        <div v-if="echeance2022" class="rf-grid-row rf-grid-row--gutter">
+        <div v-if="echeance2022" class="rf-grid-row">
           <div class="rf-col-8">
             <img src="@/assets/picto/Info.svg" alt="" >
             <p>Vous pouvez candidater à plusieurs de ces offres pour un même projet</p>
           </div>
         </div>
-         <div class="rf-grid-row rf-grid-row--gutter">
+         <div class="rf-grid-row rf-grid-row--start rf-grid-row--gutters ">
         <template v-slot:resultCards>
-          <div v-for="aide in aides" :key="aide.id" class="aide rf-col-xs-12 rf-col-sm-6  rf-col-md-4 rf-col-xl-3">
-            <div>
-              <h3><router-link :to="{ name: 'aid_detail', params: { slug: aide.slug } }">{{ aide.name }}</router-link></h3>
-              <div>
-                <p>Obtenir des informations</p>
-                <img src="@/assets/picto/Fleche.svg" alt="" />
-              </div>
+          <div v-for="aide in aides" :key="aide.id" class="rf-col-xs-12 rf-col-sm-6 rf-col-md-4 rf-col-xl-3">
+            <div class="aide">
+            <h3 class="rf-text"><router-link :to="{ name: 'aid_detail', params: { slug: aide.slug } }">{{ aide.name }}</router-link></h3>
+            
+              <p class="rf-text--sm">Obtenir des informations <img src="@/assets/picto/Fleche.svg" alt="" /> </p>
             </div>
           </div>
         </template>
@@ -210,13 +199,20 @@
 </script>
 
 <style>
-
     .aide {
-        position: relative;
+      position: relative;
+      background-color: #F9F8F6;
+      color: #107449;
+      padding: 0.5em;
+      height: 100%;
     }
 
     .aide a {
         position: initial;
+    }
+
+    .aide h3 a, .aide h3 a:link, .aide h3 a:visited, {
+      color: #383838;
     }
 
     .aide a::after {
