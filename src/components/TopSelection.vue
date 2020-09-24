@@ -30,7 +30,7 @@
 <style>
 
     div[role="button"] {
-        max-height: 120px;
+        height: 120px;
     }
 
     div[role="button"]:hover, div[role="button"]:focus {
@@ -65,6 +65,7 @@
     .rf-text {
         margin: 0;
         padding-left: 0 !important;
+        padding-right: 24px !important;
         color: #107449 !important;
         display: flex;
         align-items: center;
