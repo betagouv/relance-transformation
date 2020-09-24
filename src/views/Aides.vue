@@ -3,6 +3,8 @@
 
         <Header></Header>
 
+        <Breadcrumbs></Breadcrumbs>
+
         <div class="rf-grid-row rf-grid-row--center">
 
             <div class="rf-col-7" v-if="aide">
@@ -22,7 +24,7 @@
 
                     <div class="conditions text-left my-5 pt-4 col-sm">
                         <h2 class="mb-4 fontBlack"><strong>Conditions</strong></h2>
-                        <div v-html="aide.description" class=""></div> 
+                        <div v-html="aide.description" class=""></div>
                     </div>
 
                     <div class="exemples text-left my-5 pt-4 col-sm">
@@ -52,12 +54,13 @@
 
 <script>
     import Header from "@/components/Header";
+    import Breadcrumbs from "@/components/Breadcrumbs";
     import Footer from "@/components/Footer";
 
     export default {
         name: "Aides",
 
-        components: { Header, Footer },
+        components: { Header, Breadcrumbs, Footer },
 
         data() {
             return {
