@@ -71,6 +71,9 @@
             aidService.fetchAidDetail(this.$route.params.slug)
                 .then(aidDetail => {
                     this.aide = aidDetail
+                    this.title = aidDetail.short_title;	
+                    this.meta_title = this.title + " - Ministère de la Transformation et de la Fonction publiques"	
+                    this.description = aidDetail.name;
             })
         },
 
