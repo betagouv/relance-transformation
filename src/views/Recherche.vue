@@ -3,6 +3,8 @@
 
     <Header></Header>
 
+    <Breadcrumbs></Breadcrumbs>
+
     <div class="rf-grid-row rf-grid-row--center">
       <div class="rf-col-8">
 
@@ -32,13 +34,14 @@
 
 <script>
     import Header from "@/components/Header";
+    import Breadcrumbs from "@/components/Breadcrumbs";
     import Footer from "@/components/Footer";
     import SearchBar from "@/components/SearchBar";
 
     export default {
          name: "Video",
 
-      components: { Header, SearchBar, Footer, },
+      components: { Header, Breadcrumbs, SearchBar, Footer, },
 
       data() {
           return {

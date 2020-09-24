@@ -3,6 +3,8 @@
 
         <Header></Header>
 
+        <Breadcrumbs></Breadcrumbs>
+
         <div class="rf-grid-row rf-grid-row--center">
 
             <div class="rf-col-7" v-if="aide">
@@ -46,12 +48,13 @@
 
 <script>
     import Header from "@/components/Header";
+    import Breadcrumbs from "@/components/Breadcrumbs";
     import Footer from "@/components/Footer";
 
     export default {
         name: "Aides",
 
-        components: { Header, Footer },
+        components: { Header, Breadcrumbs, Footer },
 
         data() {
             return {

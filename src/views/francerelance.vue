@@ -4,8 +4,14 @@
 
     <Header></Header>
 
-    <main role="main">
-      <div class="rf-container">
+    <div class="rf-grid-row">
+      <div class="rf-col">
+        <Breadcrumbs></Breadcrumbs>
+      </div>
+    </div>
+    <div class="rf-grid-row rf-grid-row--center">
+      <div class="rf-col-8">
+
         <IntroSection></IntroSection>
         <div class="rf-grid-row rf-grid-row--center">
           <div class="rf-col">   
@@ -62,6 +68,7 @@
 
 <script>
   import Header from "@/components/Header";
+  import Breadcrumbs from "@/components/Breadcrumbs";
   import IntroSection from "@/components/IntroSection";
   import SearchBar from "@/components/SearchBar";
   import TopSelection from "@/components/TopSelection";
@@ -72,7 +79,7 @@
   export default {
       name: "FranceRelance",
 
-      components: { Header, IntroSection, TopSelection, SearchBar, DateSelection, ResultSection, Footer, },
+      components: { Header, Breadcrumbs, IntroSection, TopSelection, SearchBar, DateSelection, ResultSection, Footer, },
 
       data() {
         return {
@@ -187,7 +194,6 @@
           ],
         }
       },
-
   }
 </script>
 
