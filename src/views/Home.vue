@@ -59,7 +59,7 @@
         </div>
          <div class="rf-grid-row rf-grid-row--gutter">
         <template v-slot:resultCards>
-          <div v-for="aide in aides" :key="aide.id" class=" aide rf-col-xs-12 rf-col-sm-6  rf-col-md-4 rf-col-xl-3">
+          <div v-for="aide in aides" :key="aide.id" class="aide rf-col-xs-12 rf-col-sm-6  rf-col-md-4 rf-col-xl-3">
             <div>
               <h3><router-link :to="{ name: 'aid_detail', params: { slug: aide.slug } }">{{ aide.name }}</router-link></h3>
               <div>
@@ -213,6 +213,10 @@
 
     .aide {
         position: relative;
+    }
+
+    .aide a {
+        position: initial;
     }
 
     .aide a::after {
