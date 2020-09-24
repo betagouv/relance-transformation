@@ -1,7 +1,9 @@
 <template>
     <div class="rf-col-xs-10 rf-col-sm-6">
         <div role="button" tabindex="0" class="rf-grid-row unselected" :class="{selected:focus}">
-            <img :src="require(`@/assets/picto/${filename}`)" alt="" class="rf-col-2">
+            <div class="rf-col-2">    
+                <img :src="require(`@/assets/picto/${filename}`)" alt="" />
+            </div>
             <h3 class="rf-col-10 rf-text--lg">{{ title }}</h3>
         </div>
     </div>
