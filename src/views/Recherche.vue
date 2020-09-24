@@ -43,7 +43,7 @@
       data() {
           return {
               title: "France Relance : rechercher un financement - Ministère de la Transformation et de la Fonction publiques",
-              description: "Rechercher un financement dans le cadre du volet Mise à niveau numérique de l'État et des territoires du plan de relance",
+              description: "Rechercher un financement dans le cadre du volet « Mise à niveau numérique de l'État et des territoires » du plan de relance",
               previewImg: require('@/assets/Preview.png'),
           }
       },

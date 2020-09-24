@@ -66,7 +66,7 @@
       data() {
           return {
               title: "France Relance : le mot d'Amélie de montchalin - Ministère de la Transformation et de la Fonction publiques",
-              description: "Amélie de Montchalin présente les financements destinés aux administrations dans le cadre du volet Mise à niveau numérique de l'État et des territoires du plan de relance",
+              description: "Amélie de Montchalin présente les financements destinés aux administrations dans le cadre du volet « Mise à niveau numérique de l'État et des territoires » du plan de relance",
               previewImg: require('@/assets/Preview.png'),
           }
       },
