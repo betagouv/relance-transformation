@@ -1,5 +1,5 @@
 <template>
-    <div class="rf-col-xs-10 rf-col-sm-6">
+    <div class="rf-col-sm-12 rf-col-md-6">
         <div role="button" tabindex="0" class="rf-grid-row unselected" :class="{selected:focus}">
             <div class="rf-col-3 top-selection-image">
                 <img :src="require(`@/assets/picto/${filename}`)" alt="" />
