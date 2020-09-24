@@ -16,7 +16,7 @@
 
             <div class="rf-grid-row rf-grid-row--center">
                 <div class="rf-col">
-                    <h2 class="rf-h4"> Découvrez tous les financements auxquels vous pouvez faire appel :</h2>
+                    <h2 class="rf-h4"> Découvrez tous les financements auxquels vous pouvez faire appel&nbsp;:</h2>
                 </div>
             </div>
 
@@ -27,7 +27,7 @@
 
             <div v-if="topSelectionEtat" class="rf-grid-row rf-grid-row--center">
                 <div class="rf-col">
-                    <h2 class="rf-h4">Quelle est l'échéance de votre projet ?</h2>
+                    <h2 class="rf-h4">Quelle est l'échéance de votre projet&nbsp;?</h2>
                 </div>
             </div>
 
@@ -38,9 +38,9 @@
 
             <ResultSection v-if="results" class="rf-margin-top-4N">
                 <template v-slot:titleResultSection>
-                    <h2  class="rf-h4" v-if="focusTopSelection2">Dans le cadre de votre projet, vous souhaitez :</h2>
-                    <h2  class="rf-h4" v-else-if="focusEcheance1">Dans le cadre de votre projet, vous souhaitez :</h2>
-                    <h2  class="rf-h4" v-else-if="focusEcheance2">Dans le cadre de votre projet, vous pouvez :</h2>
+                    <h2  class="rf-h4" v-if="focusTopSelection2">Dans le cadre de votre projet, vous souhaitez&nbsp;:</h2>
+                    <h2  class="rf-h4" v-else-if="focusEcheance1">Dans le cadre de votre projet, vous souhaitez&nbsp;:</h2>
+                    <h2  class="rf-h4" v-else-if="focusEcheance2">Dans le cadre de votre projet, vous pouvez&nbsp;:</h2>
                 </template>
                 <div v-if="echeance2022" class="rf-grid-row rf-margin-bottom-1N">
                     <div class="rf-col-12 info-message">
