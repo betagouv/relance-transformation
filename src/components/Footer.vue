@@ -160,4 +160,8 @@
         align-items: flex-start;
     }
 
+    .rf-footer__bottom-copy {
+        max-width: 100%;
+    }
+
 </style>
