@@ -97,6 +97,7 @@
         margin-right: 32px;
         display: flex;
         flex-direction: column;
+        position: relative;
     }
 
     .rf-footer__content-desc-column p {
@@ -107,6 +108,16 @@
     .rf-footer__content-desc-column a {
         font-weight: 700;
         padding-bottom: 6px;
+        position: initial;
+    }
+
+    .rf-footer__content-desc-column a::after {
+        position: absolute;
+        content: "";
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
     }
 
     .rf-footer__brand {
