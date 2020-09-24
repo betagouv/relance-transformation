@@ -1,29 +1,29 @@
 <template>
 
   <div class="france_relance">
-    
+
     <Header></Header>
-    
+
     <div class="rf-grid-row rf-grid-row--center">
-      <div class="rf-col-8">      
+      <div class="rf-col-8">
         <IntroSection></IntroSection>
         <h2> Découvrez tous les financements auxquels vous pouvez faire appel :</h2>
       </div>
-    </div>  
+    </div>
 
     <div class="rf-grid-row rf-grid-row--center rf-grid-row--gutter">
       <TopSelection :title="topSelection1" :filename="logoEtat" :focus="focusTopSelection1" @click.native="goToSelection1()"></TopSelection>
-      <TopSelection :title="topSelection2" :filename="logoCollectivite" :focus="focusTopSelection2" @click.native="goToSelection2()"></TopSelection>    
-    </div>  
+      <TopSelection :title="topSelection2" :filename="logoCollectivite" :focus="focusTopSelection2" @click.native="goToSelection2()"></TopSelection>
+    </div>
 
     <div v-if="topSelectionEtat" class="rf-grid-row rf-grid-row--center rf-grid-row--gutter">
-      <div class="rf-col-8">      
+      <div class="rf-col-8">
         <h2>Quelle est l'échéance de votre projet ?</h2>
       </div>
-    </div>  
+    </div>
     <div v-if="topSelectionEtat" class="rf-grid-row rf-grid-row--center rf-grid-row--gutter">
       <DateSelection :title="dateSelection1" :filename="logo2022" :focus="focusEcheance1" @click.native="goToEcheance2022()"></DateSelection>
-      <DateSelection :title="dateSelection2" :filename="logo2023" :focus="focusEcheance2" @click.native="goToEcheance2023()"></DateSelection>    
+      <DateSelection :title="dateSelection2" :filename="logo2023" :focus="focusEcheance2" @click.native="goToEcheance2023()"></DateSelection>
     </div>
 
       <ResultSection v-if="results">
@@ -32,10 +32,10 @@
           <h2 v-if="focusTopSelection2">Dans le cadre de votre projet, vous souhaitez :</h2>
         </template>
         <div v-if="echeance2022" class="rf-grid-row rf-grid-row--center rf-grid-row--gutter">
-          <div class="rf-col-8"> 
+          <div class="rf-col-8">
             <img src="@/assets/picto/Info.svg" alt="" >
             <p><small>Vous pouvez candidater à plusieurs de ces offres pour un même projet</small></p>
-          </div>  
+          </div>
         </div>
         <template v-slot:resultCards>
           <div v-for="aide in aides" :key="aide.id" class="rf-grid-row rf-grid-row--center rf-grid-row--gutter">
@@ -50,11 +50,11 @@
                     </div>
                 </router-link>
               </div>
-          </div>   
-        </template> 
+          </div>
+        </template>
       </ResultSection>
-    
-  
+
+
     <Footer></Footer>
   </div>
 </template>
@@ -91,6 +91,9 @@
           echeance2022: false,
           results: false,
           aides: "",
+          title: "France Relance - Ministère de la Transformation et de la Fonction publiques",
+          description: "Administrations : bénéficiez du volet « Mise à niveau numérique de l'État et des territoires »",
+          previewImg: require('@/assets/Preview.png'),
         }
       },
 
@@ -139,6 +142,49 @@
                     this.aides = response.data.results;
                     })
             },
+      },
+
+      metaInfo () {
+        return {
+          title: this.title,
+          meta: [{
+              name: 'description',
+              content: this.description
+            },
+            {
+              property: 'og:title',
+              content: this.title
+            },
+            {
+              property: 'og:description',
+              content: this.description
+            },
+              {
+              property: 'og:image',
+              content: "https://france-relance.transformation.gouv.fr" + this.previewImg
+            },
+            {
+              name: "twitter:card",
+              content: "summary_large_image"
+            },
+            {
+              name: "twitter:site",
+              content: "@AdeMontchalin"
+            },
+            {
+              name: "twitter:title",
+              content: this.title
+            },
+            {
+              name: "twitter:description",
+              content: this.description
+            },
+            {
+              name: "twitter:image",
+              content: "https://france-relance.transformation.gouv.fr" + this.previewImg
+            },
+          ],
+        }
       },
 
   }
