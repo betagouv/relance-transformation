@@ -31,12 +31,12 @@
                 </div>
             </div>
 
-            <div v-if="topSelectionEtat" class="rf-grid-row rf-grid-row--center rf-grid-row--middle rf-grid-row--gutters rf-margin-bottom-4N">
+            <div v-if="topSelectionEtat" class="rf-grid-row rf-grid-row--center rf-grid-row--middle rf-grid-row--gutters">
                 <DateSelection :title="dateSelection1" :filename="logo2022" :focus="focusEcheance1" @click.native="goToEcheance2022()"></DateSelection>
                 <DateSelection :title="dateSelection2" :filename="logo2023" :focus="focusEcheance2" @click.native="goToEcheance2023()"></DateSelection>
             </div>
 
-            <ResultSection v-if="results">
+            <ResultSection v-if="results" class="rf-margin-top-4N">
                 <template v-slot:titleResultSection>
                     <h2  class="rf-h4" v-if="focusTopSelection2">Dans le cadre de votre projet, vous souhaitez :</h2>
                     <h2  class="rf-h4" v-else-if="focusEcheance1">Dans le cadre de votre projet, vous souhaitez :</h2>
