@@ -105,22 +105,14 @@
         padding-top: 2px;
     }
 
-    .subfooter a {
-        display: inline-block;
-        margin: 0;
-        padding: 0;
-        color: #000091;
-    }
-
     .subfooter a::after {
         display: none;
     }
 
     .subfooter img {
-        display: inline-block;
         height: 40px;
         margin-left: 5px;
-        margin-bottom: -4px;
+        vertical-align: middle;
     }
 
     .rf-footer__content-desc {
