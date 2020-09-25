@@ -1,7 +1,11 @@
 """ Production Settings """
 
 import os
+
+from sentry_sdk.integrations.django import DjangoIntegration
 import dj_database_url
+import sentry_sdk
+
 from .dev import *
 
 ############
@@ -13,6 +17,17 @@ DATABASES = {
     )
 }
 
+############
+# SNETRY   #
+############
+
+
+SENTRY_DSN = os.getenv('SENTRY_DSN', '')
+
+sentry_sdk.init(
+    dsn=SENTRY_DSN,
+    integrations=[DjangoIntegration()],
+)
 
 ############
 # SECURITY #
