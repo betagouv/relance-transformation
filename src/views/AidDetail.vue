@@ -11,7 +11,7 @@
 
                         <div class="">
                             <div class="aides-title">
-                                <img src="@/assets/FranceRelance.png" alt="Logo France Relance">
+                                <img src="@/assets/FranceRelance.png" alt="France Relance">
                                 <h1 class="">{{ aide.short_title }}</h1>
                             </div>
                             <p class="rf-text--lg">{{ aide.name }}</p>
