@@ -20,7 +20,7 @@ export default new Router({
       }
     },
     {
-      path: '/Video',
+      path: '/le-mot-d-amelie-de-montchalin',
       name: 'video',
       component: Video,
       meta: {
@@ -42,7 +42,7 @@ export default new Router({
       }
     },
     {
-      path: '/Aides/:slug',
+      path: '/:slug',
       name: 'aid_detail',
       component: AidDetail,
       meta: {
