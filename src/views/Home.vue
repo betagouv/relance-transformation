@@ -21,12 +21,9 @@
         <div class="rf-search-bar rf-search-bar--lg" id="search-input--lg">
           <label class="rf-label" for="search-input--lg-input">Label de la barre de recherche</label>
           <input v-model="recherche" class="rf-input" placeholder="Rechercher un mot, une expression, une référence…" type="search" id="search-input--lg-input" name="search-input--lg-input">
-          <router-link :to="`/Recherche/${recherche}`">
             <button class="rf-btn rf-btn--lg" title="Rechercher" type="submit">
               <span>Rechercher</span>
             </button>
-          </router-link>
-
         </div>
       </form>
     </div>
