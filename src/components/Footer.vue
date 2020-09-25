@@ -1,8 +1,7 @@
 <template>
     <div>
         <div class="subfooter rf-margin-top-15N">
-            <p class="rf-text">Ce site est conçu et édité en partenariat avec <a href="https://aides-territoires.beta.gouv.fr" target="_blank">Aides-Territoires</a></p>
-            <a href="https://aides-territoires.beta.gouv.fr" target="_blank"><img src="@/assets/LogoAT.svg" alt="Aides-Territoires - Lien vers le site"></a>
+            <p class="rf-text">Ce site est conçu et édité en partenariat avec <a href="https://aides-territoires.beta.gouv.fr" target="_blank"><img src="@/assets/LogoAT.svg" alt="Aides-Territoires - nouvelle fenêtre"></a></p>
         </div>
         <footer class="rf-footer" role="contentinfo" id="">
             <div class="rf-container">
@@ -18,7 +17,7 @@
                     <div class="rf-footer__content">
                         <div class="rf-footer__content-desc">
                             <div class="rf-footer__content-desc-column">
-                                <a href="https://www.fonction-publique.gouv.fr/">
+                                <a href="https://www.fonction-publique.gouv.fr/" target="_blank" title="fonction-publique.gouv.fr - nouvelle fenêtre">
                                     fonction-publique.gouv.fr
                                 </a>
                                 <p class="rf-footer__content-desc-entity-name">
@@ -26,7 +25,7 @@
                                 </p>
                             </div>
                             <div class="rf-footer__content-desc-column">
-                                <a href="https://www.numerique.gouv.fr/">
+                                <a href="https://www.numerique.gouv.fr/" target="_blank" title="numerique.gouv.fr - nouvelle fenêtre">
                                     numerique.gouv.fr
                                 </a>
                                 <p>
@@ -34,7 +33,7 @@
                                 </p>
                             </div>
                             <div class="rf-footer__content-desc-column">
-                                <a href="https://www.modernisation.gouv.fr/">
+                                <a href="https://www.modernisation.gouv.fr/" target="_blank" title="modernisation.gouv.fr - nouvelle fenêtre">
                                     modernisation.gouv.fr
                                 </a>
                                 <p>
@@ -44,16 +43,16 @@
                         </div>
                         <ul class="rf-footer__content-links">
                             <li>
-                                <a href="https://legifrance.gouv.fr">legifrance.gouv.fr</a>
+                                <a href="https://legifrance.gouv.fr" target="_blank" title="legifrance.gouv.fr - nouvelle fenêtre">legifrance.gouv.fr</a>
                             </li>
                             <li>
-                                <a href="https://gouvernement.fr">gouvernement.fr</a>
+                                <a href="https://gouvernement.fr" target="_blank" title="gouvernement.fr - nouvelle fenêtre">gouvernement.fr</a>
                             </li>
                             <li>
-                                <a href="https://service-public.fr">service-public.fr</a>
+                                <a href="https://service-public.fr" target="_blank" title="service-public.fr - nouvelle fenêtre">service-public.fr</a>
                             </li>
                             <li>
-                                <a href="https://data.gouv.fr">data.gouv.fr</a>
+                                <a href="https://data.gouv.fr" target="_blank" title="data.gouv.fr - nouvelle fenêtre">data.gouv.fr</a>
                             </li>
                         </ul>
                     </div>
@@ -70,7 +69,7 @@
                             <a href="https://www.transformation.gouv.fr/mentions-legales">Mentions légales</a>
                         </li>
                         <li>
-                            <a href="https://www.transformation.gouv.fr/accessibilite">Accessibilité: non conforme</a>
+                            <a href="https://www.transformation.gouv.fr/accessibilite">Accessibilité : non conforme</a>
                         </li>
                     </ul>
                     <div class="rf-footer__bottom-copy">
@@ -120,7 +119,7 @@
     .subfooter img {
         display: inline-block;
         height: 40px;
-        margin-left: 32px;
+        margin-left: 5px;
         margin-bottom: -4px;
     }
 
