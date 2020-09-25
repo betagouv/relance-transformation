@@ -15,7 +15,7 @@
         <IntroSection></IntroSection>
 
         <SearchBar>
-             <form>
+             <form @submit.stop.prevent="goToResearch()">
               <div class="rf-search-bar" id="search-input">
                   <label class="rf-label" for="search-input-input">Label de la barre de recherche</label>
                     <input type="search" class="rf-input" id="search-input-input" name="search-input-input" v-model="recherche" @keydown.enter.prevent="goToResearch(recherche)" placeholder="Rechercher un mot clé, une expression, une référence..." aria-describedby="basic-addon2">
