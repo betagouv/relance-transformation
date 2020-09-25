@@ -90,6 +90,9 @@
 
 <style>
 
+    footer a, .subfooter a {
+        box-shadow: none;
+    }
     .subfooter {
         background-color: #F9F8F6;
         text-align: left;

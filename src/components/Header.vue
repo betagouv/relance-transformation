@@ -74,7 +74,7 @@
 
 <style>
 
-  .rf-header {
+  header .rf-header, header a {
     box-shadow: none;
   }
 

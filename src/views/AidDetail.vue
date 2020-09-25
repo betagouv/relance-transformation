@@ -129,8 +129,13 @@
 
 <style>
 
+
     .aides-intro a {
         color: #107449;
+    }
+
+    .aide a {
+      box-shadow: none;
     }
 
     .aides-title {
