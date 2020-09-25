@@ -85,6 +85,10 @@
     top: 19px;
   }
 
+  .rf-header {
+      box-shadow: none;
+  }
+
   .rf-header .rf-nav {
     z-index: 0;
     box-shadow: none;
