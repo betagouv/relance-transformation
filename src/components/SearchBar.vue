@@ -1,4 +1,5 @@
 <template>
+
   <div class="rf-grid-row">
     <div class="rf-col">
       <h2 class="rf-h4">Rechercher un financement :</h2>
@@ -15,6 +16,7 @@
       </form>
     </div>
   </div>
+
 </template>
 
 <script>
@@ -33,7 +35,7 @@
 
   .formresearch {
     background-color:           #F0F0F0;
-    color:                      #6A6A6A; 
+    color:                      #6A6A6A;
     border:                     none;
   }
 
@@ -48,3 +50,4 @@
     background-color: #107449;    
   }
 </style>
+
