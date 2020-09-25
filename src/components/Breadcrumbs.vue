@@ -10,7 +10,7 @@
         </li>
       </ol>
     </nav>
- 
+
 </template>
 
 <script>
@@ -38,3 +38,9 @@ export default {
   },
 };
 </script>
+
+<style>
+    .rf-breadcrumb {
+        z-index: -1;
+    }
+</style>
