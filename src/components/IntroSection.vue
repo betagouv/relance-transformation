@@ -32,18 +32,6 @@
 
 <style>
 
-    div.rf-grid-row--top div {
-        text-align: center;
-    }
-
-    div.rf-grid-row div.rf-col div {
-        text-align: left;
-    }
-
-    div.rf-grid-row .rf-col-xs-12 .thumbs {
-        text-align: center;
-    }
-
     .subtitle p {
         margin-top: 0;
     }
@@ -72,7 +60,7 @@
 
     @media screen and (max-width: 767px) {
 
-        .france-relance {
+        .intro-france-relance-logo {
             width: 64px;
         }
 
