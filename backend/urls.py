@@ -14,9 +14,6 @@ router = routers.DefaultRouter()
 router.register('messages', MessageViewSet)
 
 
-def trigger_error(request):
-    _ = 1 / 0
-
 urlpatterns = [
 
     # http://localhost:8000/
@@ -27,7 +24,5 @@ urlpatterns = [
 
     # http://localhost:8000/api/admin/
     path('api/admin/', admin.site.urls),
-
-    path('sentry-debug/', trigger_error),
 ]
 
