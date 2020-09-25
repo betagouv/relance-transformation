@@ -51,7 +51,7 @@
               </div>
             </div>
           </template>
-          
+
         </ResultSection>
 
       </div>
@@ -67,6 +67,8 @@
     import Breadcrumbs from "@/components/Breadcrumbs";
     import Footer from "@/components/Footer";
     import ResultSection from "@/components/ResultSection";
+    import aidService from '../services/aidService'
+
 
     export default {
          name: "Search",
@@ -90,7 +92,7 @@
               default: null
           }
       },
-          
+
       metaInfo () {
         return {
           title: this.title,
@@ -139,25 +141,23 @@
           if(this.newResearch !== "") {
             this.results = "";
             this.text= newResearch;
-            const axios = require("axios");
-            axios.get(`https://aides-territoires.beta.gouv.fr/api/aids/?backers=662-mtfp&in_france_relance=true&text=${newResearch}`)
-                  .then(response => {
+            aidService.fetchAidList(`text=${newResearch}`)
+                .then(response => {
                     this.results = response.data.results;
                   })
             this.$router.push({query: {q: newResearch}})
           } else {
               return
-            }       
+            }
         }
       },
 
       mounted() {
-          const axios = require("axios");
-          axios.get(`https://aides-territoires.beta.gouv.fr/api/aids/?backers=662-mtfp&in_france_relance=true&text=${this.$route.query.q}`)
-          .then(response => {
+          aidService.fetchAidList(`text=${this.route.query.q}`)
+              .then(response => {
                 this.results = response.data.results;
                 this.text = this.$route.query.q;
-          })
+              })
       }
     }
 </script>
@@ -221,8 +221,8 @@
   #search-input--lg .rf-input {
     box-shadow: inset 0 -2px 0 0 #107449;
   }
-  #search-input--lg button.rf-btn { 
-    background-color: #107449;    
+  #search-input--lg button.rf-btn {
+    background-color: #107449;
   }
 
   div.rf-grid-row--top div {

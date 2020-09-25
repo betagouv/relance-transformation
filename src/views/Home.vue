@@ -3,7 +3,7 @@
   <div class="france_relance">
 
     <Header></Header>
-  
+
     <div class="rf-container">
 
     <Breadcrumbs></Breadcrumbs>
@@ -96,6 +96,8 @@
   import DateSelection from "@/components/DateSelection";
   import ResultSection from "@/components/ResultSection";
   import Footer from "@/components/Footer";
+  import aidService from '../services/aidService'
+
 
   export default {
       name: "FranceRelance",
@@ -147,23 +149,22 @@
             this.focusEcheance2 = false;
             this.results = true;
             this.aides = "";
-            const axios = require("axios");
-            axios.get(`https://aides-territoires.beta.gouv.fr/api/aids/?backers=662-mtfp&in_france_relance=true&targeted_audiences=commune&targeted_audiences=epci&targeted_audiences=department&targeted_audiences=region`)
-                  .then(response => {
-                  this.aides = response.data.results;
-                  })
-            },
-            goToEcheance2022() {
+
+            aidService.fetchAidList('targeted_audiences=commune&targeted_audiences=epci&targeted_audiences=department&targeted_audiences=region')
+              .then(response => {
+                this.aides = response.data.results;
+              })
+          },
+          goToEcheance2022() {
               this.focusEcheance1 = true;
               this.focusEcheance2 = false;
               this.echeance2022 = true;
               this.results = true;
               this.aides = "";
-              const axios = require("axios");
-              axios.get(`https://aides-territoires.beta.gouv.fr/api/aids/?backers=662-mtfp&in_france_relance=true&targeted_audiences=public_org&recurrence=oneoff&apply_before=2022-12-31`)
-                    .then(response => {
-                    this.aides = response.data.results;
-                    })
+              aidService.fetchAidList('targeted_audiences=public_org&recurrence=oneoff&apply_before=2022-12-31')
+                .then(response => {
+                  this.aides = response.data.results;
+                })
             },
             goToEcheance2023() {
               this.focusEcheance2 = true;
@@ -171,11 +172,10 @@
               this.echeance2022 = false;
               this.results = true;
               this.aides = "";
-              const axios = require("axios");
-              axios.get(`https://aides-territoires.beta.gouv.fr/api/aids/?backers=662-mtfp&in_france_relance=true&targeted_audiences=public_org&recurrence=ongoing`)
-                    .then(response => {
-                    this.aides = response.data.results;
-                    })
+              aidService.fetchAidList('targeted_audiences=public_org&recurrence=ongoing')
+                .then(response => {
+                  this.aides = response.data.results;
+                })
             },
       },
 
@@ -296,8 +296,8 @@
     #search-input--lg .rf-input {
       box-shadow: inset 0 -2px 0 0 #107449;
     }
-    #search-input--lg button.rf-btn { 
-      background-color: #107449;    
+    #search-input--lg button.rf-btn {
+      background-color: #107449;
     }
 
 </style>
