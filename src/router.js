@@ -16,6 +16,7 @@ export default new Router({
       component: Home,
       meta: {
         breadcrumbs: [
+          { name: 'Accueil', url: 'https://www.transformation.gouv.fr' },
           { name: 'France Relance' },
         ]
       }
@@ -26,6 +27,7 @@ export default new Router({
       component: Video,
       meta: {
         breadcrumbs: [
+          { name: 'Accueil', url: 'https://www.transformation.gouv.fr' },
           { name: 'France Relance', url: '/' },
           { name: 'Le mot d\'Amélie de Montchalin'},
         ]
@@ -37,6 +39,7 @@ export default new Router({
       component: Search,
       meta: {
         breadcrumbs: [
+          { name: 'Accueil', url: 'https://www.transformation.gouv.fr' },
           { name: 'France Relance', url: '/' },
           { name: 'Recherche'},
         ]
@@ -48,6 +51,7 @@ export default new Router({
       component: AidDetail,
       meta: {
         breadcrumbs: [
+          { name: 'Accueil', url: 'https://www.transformation.gouv.fr' },
           { name: 'France Relance', url: '/' },
           { name: 'Détail du financement' },
         ]
