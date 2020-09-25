@@ -38,8 +38,8 @@
           </div>
 
           <div class="rf-grid-row rf-grid-row--center rf-grid-row--middle rf-grid-row--gutters rf-margin-bottom-2N">
-            <TopSelection :title="topSelection1" :filename="logoEtat" :focus="focusTopSelection1" @click.native="goToSelection1()"></TopSelection>
-            <TopSelection :title="topSelection2" :filename="logoCollectivite" :focus="focusTopSelection2" @click.native="goToSelection2()"></TopSelection>
+            <TopSelection :title="topSelection1" :filename="logoEtat" :focus="focusTopSelection1" @click.native="goToSelection1()" @keyup.enter.native="goToSelection1" @keyup.space.prevent.native="goToSelection1"></TopSelection>
+            <TopSelection :title="topSelection2" :filename="logoCollectivite" :focus="focusTopSelection2" @click.native="goToSelection2()" @keyup.enter.native="goToSelection2()" @keyup.space.prevent.native="goToSelection2()"></TopSelection>
           </div>
 
           <div v-if="topSelectionEtat" class="rf-grid-row rf-grid-row--center">
@@ -49,8 +49,8 @@
           </div>
 
           <div v-if="topSelectionEtat" class="rf-grid-row rf-grid-row--center rf-grid-row--middle rf-grid-row--gutters">
-            <DateSelection :title="dateSelection1" :filename="logo2022" :focus="focusEcheance1" @click.native="goToEcheance2022()"></DateSelection>
-            <DateSelection :title="dateSelection2" :filename="logo2023" :focus="focusEcheance2" @click.native="goToEcheance2023()"></DateSelection>
+            <DateSelection :title="dateSelection1" :filename="logo2022" :focus="focusEcheance1" @click.native="goToEcheance2022()" @keyup.enter.native="goToEcheance2022()" @keyup.space.prevent.native="goToEcheance2022()"></DateSelection>
+            <DateSelection :title="dateSelection2" :filename="logo2023" :focus="focusEcheance2" @click.native="goToEcheance2023()" @keyup.enter.native="goToEcheance2023()" @keyup.space.prevent.native="goToEcheance2023()"></DateSelection>
           </div>
 
           <ResultSection v-if="results" class="rf-margin-top-4N">
@@ -145,6 +145,7 @@
             this.focusTopSelection2 = true;
             this.focusTopSelection1 = false;
             this.topSelectionEtat = false;
+            this.echeance2022 = false;
             this.focusEcheance1 = false;
             this.focusEcheance2 = false;
             this.results = true;
