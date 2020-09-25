@@ -1,57 +1,64 @@
 <template>
+
   <div class="recherche">
 
     <Header></Header>
+    <div class="rf-container">
 
-    <Breadcrumbs></Breadcrumbs>
+      <Breadcrumbs></Breadcrumbs>
 
-    <div class="rf-grid-row rf-grid-row--center">
-      <div class="rf-col-8">
+      <div class="rf-grid-row rf-grid-row--center">
+        <div class="rf-col-10">
 
-        <div class="rf-grid-row rf-grid-row--center align-items-center">
-                <img src="@/assets/FranceRelance.png" alt="Logo France Relance" class="rf-col-2 mr-5 pt-4" width="110px" >
-            <div class="rf-col-9 mt-3">
-                <h1 class="greenTitle font48 pl-2"><strong>Rechercher un financement</strong></h1>
+          <div class="rf-grid-row rf-grid-row--top rf-margin-top-2N rf-grid-row--middle">
+            <div class="rf-col-xs-12 rf-col-md-1 rf-col-lg-1 rf-col-xl-1">
+              <img class="france-relance" src="@/assets/FranceRelance.png" alt="France Relance">
             </div>
-
-            <form @submit.stop.prevent="Search(newResearch)" class="searchBar rf-col-11 my-4">
-                <div class="input-group mb-3">
-                <input type="search" class="rf-input" id="search-input-input" name="search-input-input" v-model="newResearch" placeholder="Rechercher un mot clé, une expression, une référence…">
-                <div class="input-group-append">
-                    <button class="rf-btn" title="Rechercher" type="submit">Rechercher</button>
+            <div class="rf-col text">
+                <div>
+                    <h1 class="greenTitle rf-h2">Rechercher un financement</h1>
                 </div>
-                </div>
-            </form>
+            </div>
+          </div>
 
-            <ResultSection>
-            <template v-slot:titleResultSection>
-              <h2 v-if="text">Résultats pour "{{ text }}" :</h2>
-              <!-- <h2 v-if="$route.query.q && text == ''">Résultats pour "{{ this.$route.query.q }}" :</h2> -->
-            </template>
+          <div class="rf-margin-bottom-8N rf-margin-top-4N">
+            <div class="rf-grid-row">
+                <form @submit.stop.prevent="Search(newResearch)" class="searchBar rf-col-11 my-4">
+                    <div class="rf-search-bar rf-search-bar--lg" id="search-input--lg">
+                      <label class="rf-label" for="search-input--lg-input">Label de la barre de recherche</label>
+                      <input type="search" class="rf-input" id="search-input-input" name="search-input-input" v-model="newResearch" placeholder="Rechercher">
+                      <button class="rf-btn" title="Rechercher" type="submit">
+                        <span>Rechercher</span>
+                      </button>
+                    </div>
+                </form>
+            </div>
+          </div>
 
-            <template v-slot:resultCards>
-              <div v-for="aide in results" :key="aide.id" class="rf-grid-row rf-grid-row--center rf-grid-row--gutter">
-                <div class="rf-col-4">
-                    <router-link :to="`/Aides/${aide.slug}/`">
-                        <div class="col-sm bgGrey p-4 justify-content-start">
-                            <h3 class="mb-5 text-left col-sm"><strong><a href="" class="text-reset font16">{{ aide.name }}</a></strong></h3>
-                            <div class="rf-grid-row align-items-center">
-                                <p class="m-0 moreInfos text-left font14">Obtenir des informations</p>
-                                <img src="@/assets/picto/Fleche.svg" alt="" aria-hidden="true" class="ml-2">
-                            </div>
-                        </div>
-                    </router-link>
+          <ResultSection class="rf-margin-top-4N rf-padding-top-4N">
+          <template v-slot:titleResultSection>
+            <p v-if="text" class="rf-h3">Résultats pour «&nbsp;{{ text }}&nbsp;»&nbsp;:</p>
+            <!-- <h2 v-if="$route.query.q && text == ''">Résultats pour "{{ this.$route.query.q }}" :</h2> -->
+          </template>
+
+          <template v-slot:resultCards>
+            <div class="rf-grid-row rf-grid-row--start rf-grid-row--gutters">
+              <div v-for="aide in results" :key="aide.id" class="rf-col-xs-12 rf-col-sm-6 rf-col-md-4 rf-col-xl-4">
+                  <div class="aide">
+                      <h3 class="rf-text"><router-link :to="{ name: 'aid_detail', params: { slug: aide.slug } }">{{ aide.name }}</router-link></h3>
+                      <p class="rf-text--sm">Obtenir des informations<img src="@/assets/picto/Fleche.svg" alt="" /></p>
                   </div>
-              </div>   
-            </template> 
-          </ResultSection>
-
-        </div>
+              </div>
+            </div>
+          </template>
+          
+        </ResultSection>
 
       </div>
     </div>
 
     <Footer></Footer>
+    </div>
   </div>
 </template>
 
@@ -59,13 +66,12 @@
     import Header from "@/components/Header";
     import Breadcrumbs from "@/components/Breadcrumbs";
     import Footer from "@/components/Footer";
-    import SearchBar from "@/components/SearchBar";
     import ResultSection from "@/components/ResultSection";
 
     export default {
          name: "Search",
 
-      components: { Header, Breadcrumbs, SearchBar, ResultSection, Footer, },
+      components: { Header, Breadcrumbs, ResultSection, Footer, },
 
       data() {
           return {
@@ -145,13 +151,13 @@
         }
       },
 
-        mounted() {
-            const axios = require("axios");
-            axios.get(`https://staging.aides-territoires.beta.gouv.fr/api/aids/?backers=505-mtfp&in_france_relance=true&text=${this.$route.query.q}`)
-            .then(response => {
-                 this.results = response.data.results;
-                 this.text = this.$route.query.q;
-            })
+      mounted() {
+          const axios = require("axios");
+          axios.get(`https://staging.aides-territoires.beta.gouv.fr/api/aids/?backers=505-mtfp&in_france_relance=true&text=${this.$route.query.q}`)
+          .then(response => {
+                this.results = response.data.results;
+                this.text = this.$route.query.q;
+          })
       }
 
     }
@@ -159,8 +165,94 @@
 
 <style>
 
-    .font48 {
-        font-size: 48px;
-    }
+  .aide {
+    position: relative;
+    background-color: #F9F8F6;
+    padding: 32px 32px 24px 32px;
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+  }
+
+  .aide:hover {
+      box-shadow: inset 0 0 0 2px #107449;
+  }
+
+  .aide a {
+      position: initial;
+      margin-bottom: 20px;
+      color: initial;
+  }
+
+  .aide p {
+      margin: 0;
+      color: #107449;
+  }
+
+  .aide img {
+      padding-left: 8px;
+      margin-bottom: -2px;
+  }
+
+  .aide a::after {
+      position: absolute;
+      content: "";
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+  }
+
+  .greenButton {
+    background-color:           #107449;
+    color:                      #fff;
+  }
+
+  .formresearch {
+    background-color:           #F0F0F0;
+    color:                      #6A6A6A;
+    border:                     none;
+  }
+
+  .border-bottom-green {
+    border-bottom:              2px solid #107449;
+  }
+
+  #search-input--lg .rf-input {
+    box-shadow: inset 0 -2px 0 0 #107449;
+  }
+  #search-input--lg button.rf-btn { 
+    background-color: #107449;    
+  }
+
+  div.rf-grid-row--top div {
+      text-align: center;
+  }
+
+  div.rf-grid-row div.rf-col div {
+      text-align: left;
+  }
+
+  .france-relance {
+      width: 80px;
+  }
+
+  .text {
+      padding-left: 32px !important;
+  }
+
+  @media screen and (max-width: 767px) {
+
+      .france-relance {
+          width: 64px;
+      }
+
+      .text {
+          padding-left: 0px !important;
+          padding-top: 16px;
+      }
+  }
+
 
 </style>
