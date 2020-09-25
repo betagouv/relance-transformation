@@ -3,13 +3,15 @@
 
         <Header></Header>
 
-        <Breadcrumbs :dynamic_page_title="title"></Breadcrumbs>
-
         <div class="rf-container">
+
+            <Breadcrumbs :dynamic_page_title="title"></Breadcrumbs>
+
             <div class="rf-grid-row rf-grid-row--center">
                 <div class="rf-col-md-10 rf-col-lg-8" v-if="aide">
 
-                        <div class="">
+                        <div class="aides-intro">
+                            <a href="./" class="rf-link rf-link--icon-left rf-margin-bottom-3N" target="_self">Retour aux appels à projet</a>
                             <div class="aides-title">
                                 <img src="@/assets/FranceRelance.png" alt="France Relance">
                                 <h1 class="">{{ aide.short_title }}</h1>
@@ -127,6 +129,10 @@
 
 <style>
 
+    .aides-intro a {
+        color: #107449;
+    }
+
     .aides-title {
         display: flex;
         align-items: flex-start;
@@ -156,7 +162,7 @@
         }
 
         .aides-title img {
-            height: 64px;
+            height: 48px;
             margin-right: 0px;
         }
     }
