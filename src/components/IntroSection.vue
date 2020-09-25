@@ -13,7 +13,7 @@
                 </div>
                 <div class="rf-col-md-3 rf-col-sm-4 rf-col-xs-12">
                     <div class="thumbs">
-                        <router-link :to="`/video/`">
+                        <router-link :to="`/le-mot-d-amelie-de-montchalin/`">
                             <img src="@/assets/FausseVideo.png" alt="Voir la vidéo d'Amélie de Montchalin"/>
                         </router-link>
                         <p class="rf-text--xs">Le mot d'Amélie de Montchalin</p>
@@ -67,6 +67,10 @@
         .text {
             padding-left: 0px !important;
             padding-top: 16px;
+        }
+
+        .thumbs {
+            text-align: center;
         }
     }
 
