@@ -1,14 +1,16 @@
 {
-  "name": "django-vue",
+  "name": "france-relance-mtfp",
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "start": "node server.js",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "express": "^4.17.1",
     "js-cookie": "^2.2.0",
     "vue": "^2.5.17",
     "vue-meta": "^2.4.0",
