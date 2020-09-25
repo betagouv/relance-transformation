@@ -252,9 +252,12 @@
         box-shadow: inset 0 0 0 2px #107449;
     }
 
-    .aide a {
-        position: initial;
+    .aide .rf-text {
+        margin-top: 0;
         margin-bottom: 20px;
+    }
+
+    .aide a {
         color: initial;
     }
 
