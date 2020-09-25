@@ -12,7 +12,7 @@
                         <div class="">
                             <div class="aides-title">
                                 <img src="@/assets/FranceRelance.png" alt="Logo France Relance">
-                                <h1 class="">{{ aide.short_title }} mais qui peut aussi être long</h1>
+                                <h1 class="">{{ aide.short_title }}</h1>
                             </div>
                             <p class="rf-text--lg">{{ aide.name }}</p>
                         </div>
