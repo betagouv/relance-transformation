@@ -20,17 +20,17 @@ function getUrlFromParams(params) {
   let url = 'aids/?';
 
   if (backers) {
-    url += `backers=${backers}`
+    url += `backers=${backers}`;
   }
   if (inFranceRelance) {
-    url += `&in_france_relance=${inFranceRelance}`
+    url += `&in_france_relance=${inFranceRelance}`;
   }
   if (targetedAudiences) {
     if (typeof targetedAudiences === 'string') {
       url += `&targeted_audiences=${targetedAudiences}`;
     }
     if (Array.isArray(targetedAudiences)) {
-      url += targetedAudiences.map(targetedAudience => `&targeted_audiences=${targetedAudience}`).join('&')
+      url += targetedAudiences.map(targetedAudience => `&targeted_audiences=${targetedAudience}`).join('&');
     }    
   }
   if (recurrence) {
