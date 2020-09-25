@@ -3,16 +3,35 @@
   <div class="france_relance">
 
     <Header></Header>
+    <div class="rf-container">
 
     <Breadcrumbs></Breadcrumbs>
 
-    <div class="rf-container">
+
         <div class="rf-grid-row rf-grid-row--center">
             <div class="rf-col">
 
             <IntroSection class="rf-margin-bottom-2N"></IntroSection>
 
-            <SearchBar class="rf-margin-bottom-8N"></SearchBar>
+            <div class="rf-margin-bottom-8N">
+              <div class="rf-grid-row">
+    <div class="rf-col">
+      <h2 class="rf-h4">Rechercher un financement :</h2>
+      <form @submit.stop.prevent="goToResearch()">
+        <div class="rf-search-bar rf-search-bar--lg" id="search-input--lg">
+          <label class="rf-label" for="search-input--lg-input">Label de la barre de recherche</label>
+          <input v-model="recherche" class="rf-input" placeholder="Rechercher un mot, une expression, une référence…" type="search" id="search-input--lg-input" name="search-input--lg-input">
+          <router-link :to="`/Recherche/${recherche}`">
+            <button class="rf-btn rf-btn--lg" title="Rechercher" type="submit">
+              <span>Rechercher</span>
+            </button>
+          </router-link>
+
+        </div>
+      </form>
+    </div>
+  </div>
+            </div>
 
             <div class="rf-grid-row rf-grid-row--center">
                 <div class="rf-col">
@@ -60,8 +79,10 @@
                 </div>
             </ResultSection>
 
+
             </div>
         </div>
+
     </div>
 
     <Footer></Footer>
@@ -110,6 +131,11 @@
       },
 
       methods: {
+          goToResearch() {
+            if(this.recherche !== ""){
+              this.$router.push({ name: 'search', query: { q: this.recherche }})
+            } 
+          },
           goToSelection1() {
             this.focusTopSelection1 = true;
             this.focusTopSelection2 = false;
@@ -261,5 +287,25 @@
         left: 0;
         right: 0;
     }
+  .greenButton {
+    background-color:           #107449;
+    color:                      #fff;
+  }
 
+  .formresearch {
+    background-color:           #F0F0F0;
+    color:                      #6A6A6A;
+    border:                     none;
+  }
+
+  .border-bottom-green {
+    border-bottom:              2px solid #107449;
+  }
+
+  #search-input--lg .rf-input {
+    box-shadow: inset 0 -2px 0 0 #107449;
+  }
+  #search-input--lg button.rf-btn { 
+    background-color: #107449;    
+  }
 </style>
