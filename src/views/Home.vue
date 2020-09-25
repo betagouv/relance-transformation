@@ -9,7 +9,7 @@
 
 
         <div class="rf-grid-row rf-grid-row--center">
-            <div class="rf-col">
+            <div class="rf-col-xl-10">
 
             <IntroSection class="rf-margin-bottom-2N"></IntroSection>
 
@@ -64,16 +64,16 @@
                         <p class="rf-text--sm">Vous pouvez candidater à plusieurs de ces offres pour un même projet</p>
                     </div>
                 </div>
-                <div class="rf-grid-row rf-grid-row--start rf-grid-row--gutters">
-                    <template v-slot:resultCards>
+                <template v-slot:resultCards>
+                    <div class="rf-grid-row rf-grid-row--start rf-grid-row--gutters">
                         <div v-for="aide in aides" :key="aide.id" class="rf-col-xs-12 rf-col-sm-6 rf-col-md-4 rf-col-xl-4">
                             <div class="aide">
                                 <h3 class="rf-text"><router-link :to="{ name: 'aid_detail', params: { slug: aide.slug } }">{{ aide.name }}</router-link></h3>
                                 <p class="rf-text--sm">Obtenir des informations<img src="@/assets/picto/Fleche.svg" alt="" /></p>
                             </div>
                         </div>
-                    </template>
-                </div>
+                    </div>
+                </template>
             </ResultSection>
 
 
@@ -131,7 +131,7 @@
           goToResearch() {
             if(this.recherche !== ""){
               this.$router.push({ name: 'search', query: { q: this.recherche }})
-            } 
+            }
           },
           goToSelection1() {
             this.focusTopSelection1 = true;
@@ -226,10 +226,6 @@
 
 <style>
 
-    .rf-col {
-        max-width: 940px;
-    }
-
     .info-message {
         display: flex;
         align-items: flex-start;
@@ -256,9 +252,13 @@
         box-shadow: inset 0 0 0 2px #107449;
     }
 
+    .aide .rf-text {
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+
     .aide a {
         position: initial;
-        margin-bottom: 20px;
         color: initial;
     }
 
@@ -271,10 +271,6 @@
         padding-left: 8px;
         margin-bottom: -2px;
     }
-
-    /* .aide h3 a, .aide h3 a:link, .aide h3 a:visited, {
-      color: #383838;
-    } */
 
     .aide a::after {
         position: absolute;
@@ -302,7 +298,7 @@
   #search-input--lg .rf-input {
     box-shadow: inset 0 -2px 0 0 #107449;
   }
-  #search-input--lg button.rf-btn { 
-    background-color: #107449;    
+  #search-input--lg button.rf-btn {
+    background-color: #107449;
   }
 </style>
