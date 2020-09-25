@@ -3,18 +3,7 @@
         <div class="rf-grid-row">
           <div class="rf-col">
             <h2 class="rf-h4">Rechercher un financement :</h2><br/>
-            <form>
-              <div class="rf-search-bar" id="search-input">
-                  <label class="rf-label" for="search-input-input">Label de la barre de recherche</label>
-                  <input v-model="recherche" class="rf-input" placeholder="Rechercher" type="search" id="search-input-input" name="search-input-input">
-                  <router-link :to="`/Recherche/${recherche}`"><button class="rf-btn" title="Rechercher">
-                      <span>
-                          Rechercher
-                      </span>
-                  </button>
-                  </router-link>
-              </div>
-            </form>
+            <slot></slot>
           </div>
         </div>
 

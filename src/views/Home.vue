@@ -15,12 +15,17 @@
         <IntroSection></IntroSection>
 
         <SearchBar>
-            <form class="rf-col-11">
-              <div class="input-group mb-3">
-                <input type="text" name="recherche" class="form-control border-bottom-green formresearch p-4" v-model="recherche" @keydown.enter.prevent="goToResearch(recherche)" placeholder="Rechercher un mot clé, une expression, une référence..." aria-describedby="basic-addon2">
-                <div class="input-group-append">
-                    <button class="font20 btn my-2 greenButton my-sm-0 input-group-text pl-4 pr-4" type="submit" @click.stop.prevent="goToResearch()">Rechercher</button>
-                </div>
+             <form>
+              <div class="rf-search-bar" id="search-input">
+                  <label class="rf-label" for="search-input-input">Label de la barre de recherche</label>
+                    <input type="search" class="rf-input" id="search-input-input" name="search-input-input" v-model="recherche" @keydown.enter.prevent="goToResearch(recherche)" placeholder="Rechercher un mot clé, une expression, une référence..." aria-describedby="basic-addon2">
+                    <div class="input-group-append">
+                        <button class="rf-btn" title="Rechercher" type="submit"  @click.stop.prevent="goToResearch()">
+                          <span>
+                            Rechercher
+                          </span>
+                        </button>
+                    </div>
               </div>
            </form>
         </SearchBar>
@@ -58,18 +63,20 @@
             <p>Vous pouvez candidater à plusieurs de ces offres pour un même projet</p>
           </div>
         </div>
-
-         <div class="rf-grid-row rf-grid-row--start rf-grid-row--gutters ">
+ 
         <template v-slot:resultCards>
-          <div v-for="aide in aides" :key="aide.id" class="rf-col-xs-12 rf-col-sm-6 rf-col-md-4 rf-col-xl-3">
-            <div class="aide">
-            <h3 class="rf-text"><router-link :to="{ name: 'aid_detail', params: { slug: aide.slug } }">{{ aide.name }}</router-link></h3>
-            
-              <p class="rf-text--sm">Obtenir des informations <img src="@/assets/picto/Fleche.svg" alt="" /> </p>
+            <div class="rf-grid-row rf-grid-row--start rf-grid-row--gutters ">
+              <div v-for="aide in aides" :key="aide.id" class="rf-col-xs-12 rf-col-sm-6 rf-col-md-4 rf-col-xl-3">
+                <div class="aide">
+                <h3 class="rf-text"><router-link :to="{ name: 'aid_detail', params: { slug: aide.slug } }">{{ aide.name }}</router-link></h3>
+                
+                  <p class="rf-text--sm">Obtenir des informations <img src="@/assets/picto/Fleche.svg" alt="" /> </p>
 
+                </div>
+              </div>
             </div>
-          </div>
         </template>
+        
       </ResultSection>
       </div>
     </div>
