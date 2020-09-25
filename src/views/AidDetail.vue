@@ -11,8 +11,8 @@
 
                         <div class="">
                             <div class="aide-title">
-                                <div class=""><img src="@/assets/FranceRelance.png" alt="Logo France Relance" width="100px"></div>
-                                <h1 class="">{{ aide.short_title }}</h1>
+                                <img src="@/assets/FranceRelance.png" alt="Logo France Relance">
+                                <h1 class="">{{ aide.short_title }} mais qui peut aussi être long</h1>
                             </div>
                             <p class="">{{ aide.name }}</p>
                         </div>
@@ -126,6 +126,39 @@
 </script>
 
 <style>
+
+    .aide-title {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .aide-title h1 {
+        color: #107449;
+        margin-top: 0;
+    }
+
+    .aide-title img {
+        height: 120px;
+        margin-right: 32px;
+    }
+
+    @media screen and (max-width: 767px) {
+
+        .aide-title {
+            display: inline-block;
+        }
+
+        .aide-title h1 {
+            margin-top: 8px;;
+            font-size: 2.5rem;
+        }
+
+        .aide-title img {
+            height: 64px;
+            margin-right: 0px;
+        }
+    }
 
     .buttonCandidater {
         background-color: #18936a;
