@@ -140,7 +140,7 @@
             this.results = "";
             this.text= newResearch;
             const axios = require("axios");
-            axios.get(`https://staging.aides-territoires.beta.gouv.fr/api/aids/?backers=505-mtfp&in_france_relance=true&text=${newResearch}`)
+            axios.get(`https://aides-territoires.beta.gouv.fr/api/aids/?backers=505-mtfp&in_france_relance=true&text=${newResearch}`)
                   .then(response => {
                     this.results = response.data.results;
                   })
@@ -153,7 +153,7 @@
 
       mounted() {
           const axios = require("axios");
-          axios.get(`https://staging.aides-territoires.beta.gouv.fr/api/aids/?backers=505-mtfp&in_france_relance=true&text=${this.$route.query.q}`)
+          axios.get(`https://aides-territoires.beta.gouv.fr/api/aids/?backers=662-mtfp&in_france_relance=true&text=${this.$route.query.q}`)
           .then(response => {
                 this.results = response.data.results;
                 this.text = this.$route.query.q;
