@@ -1,11 +1,11 @@
 <template>
     <div class="rf-grid-row rf-grid-row--top">
         <div class="rf-col-xs-12 rf-col-md-1 rf-col-lg-1 rf-col-xl-1">
-            <img class="france-relance" src="@/assets/FranceRelance.png" alt="France Relance">
+            <img class="intro-france-relance-logo" src="@/assets/FranceRelance.png" alt="France Relance">
         </div>
         <div class="rf-col text">
             <div>
-                <h1 class="greenTitle rf-h2">Administrations : bénéficiez du volet «&nbsp;Mise à niveau numérique de l'État et des territoires&nbsp;»</h1>
+                <h1 class="rf-h2">Administrations : bénéficiez du volet «&nbsp;Mise à niveau numérique de l'État et des territoires&nbsp;»</h1>
             </div>
             <div class="rf-grid-row subtitle">
                 <div class="rf-col-md-8 rf-col-sm-7 rf-col-xs-12 rf-margin-bottom-1N">
@@ -16,7 +16,7 @@
                         <router-link :to="`/video/`">
                             <img src="@/assets/FausseVideo.png" alt="Voir la vidéo d'Amélie de Montchalin"/>
                         </router-link>
-                        <p class="fontGrey rf-text--xs">Le mot d'Amélie de Montchalin</p>
+                        <p class="rf-text--xs">Le mot d'Amélie de Montchalin</p>
                     </div>
                 </div>
             </div>
@@ -44,28 +44,22 @@
         text-align: center;
     }
 
-    .greenTitle {
-        color: #107449;
-        margin-top:0;
-        font-size: 2rem;
-    }
-
-    .fontGrey {
-        color: #6A6A6A;
-        font-size: 0.8rem;
-    }
-
-    p {
-        font-size: 1.2rem;
+    .subtitle p {
         margin-top: 0;
     }
 
-    .france-relance {
+    .intro-france-relance-logo {
         width: 80px;
     }
 
     .text {
         padding-left: 32px !important;
+    }
+
+    .text h1 {
+        color: #107449;
+        margin-top:0;
+        font-size: 2rem;
     }
 
     .subtitle {
