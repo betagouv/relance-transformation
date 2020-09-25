@@ -223,21 +223,19 @@
 </script>
 
 <style>
-
     .rf-col {
-        max-width: 940px;
+      max-width: 940px;
     }
 
     .info-message {
-        display: flex;
-        align-items: flex-start;
-        margin-top: -8px;
+      display: flex;
+      align-items: flex-start;
+      margin-top: -8px;
     }
-
     .info-message img {
-        padding: 1px 8px 0 2px;
-        flex-shrink: 0;
-        width: 28px;
+      padding: 1px 8px 0 2px;
+      flex-shrink: 0;
+      width: 28px;
     }
 
     .aide {
@@ -249,54 +247,43 @@
       flex-flow: column nowrap;
       justify-content: space-between;
     }
-
     .aide:hover {
-        box-shadow: inset 0 0 0 2px #107449;
+      box-shadow: inset 0 0 0 2px #107449;
     }
 
     .aide a {
-        position: initial;
-        margin-bottom: 20px;
-        color: initial;
+      position: initial;
+      margin-bottom: 20px;
+      color: initial;
     }
-
     .aide p {
-        margin: 0;
-        color: #107449;
+      margin: 0;
+      color: #107449;
     }
-
     .aide img {
-        padding-left: 8px;
-        margin-bottom: -2px;
+      padding-left: 8px;
+      margin-bottom: -2px;
     }
-
-    /* .aide h3 a, .aide h3 a:link, .aide h3 a:visited, {
-      color: #383838;
-    } */
-
     .aide a::after {
-        position: absolute;
-        content: "";
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
+      position: absolute;
+      content: "";
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
     }
     .greenButton {
       background-color:           #107449;
       color:                      #fff;
     }
-
     .formresearch {
       background-color:           #F0F0F0;
       color:                      #6A6A6A;
       border:                     none;
     }
-
     .border-bottom-green {
       border-bottom:              2px solid #107449;
     }
-
     #search-input--lg .rf-input {
       box-shadow: inset 0 -2px 0 0 #107449;
     }
