@@ -11,35 +11,35 @@
                 <div class="rf-col-md-10 rf-col-lg-8" v-if="aide">
 
                         <div class="aides-intro">
-                            <a href="./" class="rf-link rf-link--icon-left rf-margin-bottom-3N" target="_self">Retour aux appels à projet</a>
+                            <a href="./" class="rf-link rf-link--icon-left rf-margin-bottom-3N">Retour aux appels à projet</a>
                             <div class="aides-title">
-                                <img src="@/assets/FranceRelance.png" alt="France Relance">
-                                <h1 class="">{{ aide.short_title }}</h1>
+                                <img src="@/assets/FranceRelance.png" alt="France Relance" />
+                                <h1>{{ aide.short_title }}</h1>
                             </div>
                             <p class="rf-text--lg">{{ aide.name }}</p>
                         </div>
 
                         <div class="rf-margin-top-8N">
-                            <h2 class="">Description</h2>
+                            <h2>Description</h2>
                             <div v-html="aide.description" class="rf-text"></div>
                         </div>
 
                         <div class="rf-margin-top-8N">
-                            <h2 class="">Conditions</h2>
+                            <h2>Conditions</h2>
                             <div v-html="aide.eligibility" class="rf-text"></div>
                         </div>
 
                         <div class="rf-margin-top-8N">
-                            <h2 class="">Exemples d'applications</h2>
+                            <h2>Exemples d’applications</h2>
                             <div>
-                                <div v-html="aide.project_examples" class="rf-text">À titre d'exemple, les thématiques suivantes pourront être explorées :</div>
+                                <div v-html="aide.project_examples" class="rf-text">À titre d’exemple, les thématiques suivantes pourront être explorées :</div>
                             </div>
                         </div>
 
                         <div class="rf-margin-top-8N">
-                            <h2 class="">Candidater</h2>
+                            <h2>Candidater</h2>
                             <div v-html="aide.contact"></div>
-                            <div class="rf-btn candidate-button"><a :href="aide.application_url" class="rf-text">Candidater à cet appel à projet</a></div>
+                            <div><a :href="aide.application_url" title="Candidater à cet appel à projet - Nouvelle fenêtre" target="_blank" class="rf-btn candidate-button rf-text">Candidater à cet appel à projet</a></div>
                         </div>
 
                 </div>
