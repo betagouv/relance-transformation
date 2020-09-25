@@ -258,6 +258,7 @@
     }
 
     .aide a {
+        position: initial;
         color: initial;
     }
 
