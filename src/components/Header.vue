@@ -79,7 +79,6 @@
   }
 
   .rf-nav__rs--custom {
-    z-index: 1;
     position: absolute;
     right: 2px;
     top: 19px;
@@ -90,7 +89,6 @@
   }
 
   .rf-header .rf-nav {
-    z-index: 0;
     box-shadow: none;
     border-top: 1px solid #e7e7e7;
     border-bottom: 1px solid #e7e7e7;
@@ -150,13 +148,11 @@
     }
 
     .rf-nav__rs--custom {
-      z-index: 2;
       position: absolute;
       top: -28px;
     }
 
     .rf-header .rf-nav {
-      z-index: 10;
       border-top: none;
       border-bottom: none;
       width: auto;
