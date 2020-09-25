@@ -9,7 +9,7 @@
 
 
         <div class="rf-grid-row rf-grid-row--center">
-            <div class="rf-col">
+            <div class="rf-col-xl-10">
 
             <IntroSection class="rf-margin-bottom-2N"></IntroSection>
 
@@ -131,7 +131,7 @@
           goToResearch() {
             if(this.recherche !== ""){
               this.$router.push({ name: 'search', query: { q: this.recherche }})
-            } 
+            }
           },
           goToSelection1() {
             this.focusTopSelection1 = true;
@@ -226,10 +226,6 @@
 
 <style>
 
-    .rf-col {
-        max-width: 940px;
-    }
-
     .info-message {
         display: flex;
         align-items: flex-start;
@@ -272,10 +268,6 @@
         margin-bottom: -2px;
     }
 
-    /* .aide h3 a, .aide h3 a:link, .aide h3 a:visited, {
-      color: #383838;
-    } */
-
     .aide a::after {
         position: absolute;
         content: "";
@@ -302,7 +294,7 @@
   #search-input--lg .rf-input {
     box-shadow: inset 0 -2px 0 0 #107449;
   }
-  #search-input--lg button.rf-btn { 
-    background-color: #107449;    
+  #search-input--lg button.rf-btn {
+    background-color: #107449;
   }
 </style>
