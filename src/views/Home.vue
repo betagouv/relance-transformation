@@ -127,7 +127,7 @@
       methods: {
           goToResearch() {
             if(this.recherche !== ""){
-              this.$router.push({ path: 'recherche', query: { q: this.recherche }})
+              this.$router.push({ name: 'search', query: { q: this.recherche }})
             } 
           },
           goToSelection1() {
