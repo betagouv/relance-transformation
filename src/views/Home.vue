@@ -145,6 +145,7 @@
             this.focusTopSelection2 = true;
             this.focusTopSelection1 = false;
             this.topSelectionEtat = false;
+            this.echeance2022 = false;
             this.focusEcheance1 = false;
             this.focusEcheance2 = false;
             this.results = true;
