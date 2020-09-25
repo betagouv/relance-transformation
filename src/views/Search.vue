@@ -23,7 +23,7 @@
 
           <div class="rf-margin-bottom-8N rf-margin-top-4N">
             <div class="rf-grid-row">
-                <form @submit.stop.prevent="Search(newResearch)" class="searchBar rf-col-11 my-4">
+                <form @submit.stop.prevent="Search(newResearch)" class="searchBar rf-col">
                     <div class="rf-search-bar rf-search-bar--lg" id="search-input--lg">
                       <label class="rf-label" for="search-input--lg-input">Label de la barre de recherche</label>
                       <input type="search" class="rf-input" id="search-input-input" name="search-input-input" v-model="newResearch" placeholder="Rechercher">
@@ -38,7 +38,7 @@
           <ResultSection class="rf-margin-top-4N rf-padding-top-4N">
           <template v-slot:titleResultSection>
             <p v-if="text" class="rf-h3">Résultats pour «&nbsp;{{ text }}&nbsp;»&nbsp;:</p>
-            <!-- <h2 v-if="$route.query.q && text == ''">Résultats pour "{{ this.$route.query.q }}" :</h2> -->
+            <p v-if="results == false">Aucun résultat ne correspond à votre recherche.</p>
           </template>
 
           <template v-slot:resultCards>
@@ -78,7 +78,7 @@
               title: "France Relance : rechercher un financement - Ministère de la Transformation et de la Fonction publiques",
               description: "Rechercher un financement dans le cadre du volet « Mise à niveau numérique de l'État et des territoires » du plan de relance",
               previewImg: require('@/assets/Preview.png'),
-              results: "",
+              results: null,
               newResearch: '',
               text: '',
           }
