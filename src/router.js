@@ -42,7 +42,7 @@ export default new Router({
       }
     },
     {
-      path: '/Aides/:slug',
+      path: '/:slug',
       name: 'aid_detail',
       component: AidDetail,
       meta: {
