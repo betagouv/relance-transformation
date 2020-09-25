@@ -18,7 +18,7 @@
              <form @submit.stop.prevent="goToResearch()">
               <div class="rf-search-bar" id="search-input">
                   <label class="rf-label" for="search-input-input">Rechercher un financement</label>
-                    <input type="search" class="rf-input" id="search-input-input" name="search-input-input" v-model="recherche" @keydown.enter.prevent="goToResearch(recherche)" placeholder="Rechercher un mot clé, une expression, une référence..." aria-describedby="basic-addon2">
+                    <input type="search" class="rf-input" id="search-input-input" name="search-input-input" v-model="recherche" placeholder="Rechercher un mot clé, une expression, une référence…">
                     <div class="input-group-append">
                         <button class="rf-btn" title="Rechercher" type="submit"  @click.stop.prevent="goToResearch()">
                           <span>
