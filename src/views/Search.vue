@@ -26,7 +26,7 @@
                 <form @submit.stop.prevent="Search(newResearch)" class="searchBar rf-col">
                     <div class="rf-search-bar rf-search-bar--lg" id="search-input--lg">
                       <label class="rf-label" for="search-input--lg-input">Label de la barre de recherche</label>
-                      <input type="search" class="rf-input" id="search-input-input" name="search-input-input" v-model="newResearch" placeholder="Rechercher">
+                      <input type="search" class="rf-input" id="search-input-input" name="search-input-input" v-model="newResearch" @keydown.space="preventLeadingSpace" placeholder="Rechercher">
                       <button class="rf-btn" title="Rechercher" type="submit">
                         <span>Rechercher</span>
                       </button>
@@ -56,9 +56,9 @@
 
       </div>
     </div>
+    </div>
 
     <Footer></Footer>
-    </div>
   </div>
 </template>
 
@@ -78,7 +78,7 @@
               title: "France Relance : rechercher un financement - Ministère de la Transformation et de la Fonction publiques",
               description: "Rechercher un financement dans le cadre du volet « Mise à niveau numérique de l'État et des territoires » du plan de relance",
               previewImg: require('@/assets/Preview.png'),
-              results: null,
+              results: "",
               newResearch: '',
               text: '',
           }
@@ -148,7 +148,14 @@
           } else {
               return
             }       
-        }
+        },
+        preventLeadingSpace(e) {
+          if(!e.target.value) {
+            e.preventDefault();
+          } else if(e.target.value[0]==' ') {
+            e.target.value = e.target.value.replace(/^\s*/, "");
+          }
+        },
       },
 
       mounted() {
