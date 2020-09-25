@@ -27,6 +27,7 @@
                   </div>
                 </form>
               </div>
+
             </div>
           </div>
 
@@ -65,6 +66,7 @@
                 <p class="rf-text--sm">Vous pouvez candidater à plusieurs de ces offres pour un même projet</p>
               </div>
             </div>
+
             <div class="rf-grid-row rf-grid-row--start rf-grid-row--gutters">
               <template v-slot:resultCards>
                 <div v-for="aide in aides" :key="aide.id" class="rf-col-xs-12 rf-col-sm-6 rf-col-md-4 rf-col-xl-4">
@@ -129,7 +131,7 @@
           goToResearch() {
             if(this.recherche !== ""){
               this.$router.push({ name: 'search', query: { q: this.recherche }})
-            } 
+            }
           },
           goToSelection1() {
             this.focusTopSelection1 = true;
@@ -223,6 +225,7 @@
 </script>
 
 <style>
+
     .rf-col {
       max-width: 940px;
     }
@@ -251,6 +254,11 @@
       box-shadow: inset 0 0 0 2px #107449;
     }
 
+    .aide .rf-text {
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+
     .aide a {
       position: initial;
       margin-bottom: 20px;
@@ -264,6 +272,7 @@
       padding-left: 8px;
       margin-bottom: -2px;
     }
+
     .aide a::after {
       position: absolute;
       content: "";
@@ -290,4 +299,5 @@
     #search-input--lg button.rf-btn { 
       background-color: #107449;    
     }
+
 </style>

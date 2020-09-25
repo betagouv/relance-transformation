@@ -5,43 +5,45 @@
 
         <Breadcrumbs :current_page_title="title"></Breadcrumbs>
 
-        <div class="rf-grid-row rf-grid-row--center">
+        <div class="rf-container">
+            <div class="rf-grid-row rf-grid-row--center">
+                <div class="rf-col-md-10 rf-col-lg-8" v-if="aide">
 
-            <div class="rf-col-7" v-if="aide">
-
-                    <div class="intro mb-5 col-sm">
-                        <div class="row align-items-center mb-4">
-                            <div class="col-sm-1 mr-5"><img src="@/assets/FranceRelance.png" alt="Logo France Relance" width="100px"></div>
-                            <h1 class="greenTitle text-left col-sm"><strong>{{ aide.short_title }}</strong></h1>
+                        <div class="">
+                            <div class="aides-title">
+                                <img src="@/assets/FranceRelance.png" alt="France Relance">
+                                <h1 class="">{{ aide.short_title }}</h1>
+                            </div>
+                            <p class="rf-text--lg">{{ aide.name }}</p>
                         </div>
-                        <p class="text-left h3 mb-5">{{ aide.name }}</p>
-                    </div>
 
-                    <div class="description text-left my-5 pt-4 col-sm">
-                        <h2 class="mb-3 fontBlack"><strong>Description</strong></h2>
-                        <div v-html="aide.description" class=""></div>
-                    </div>
-
-                    <div class="conditions text-left my-5 pt-4 col-sm">
-                        <h2 class="mb-4 fontBlack"><strong>Conditions</strong></h2>
-                        <div v-html="aide.eligibility" class=""></div>
-                    </div>
-
-                    <div class="exemples text-left my-5 pt-4 col-sm">
-                        <h2 class="mb-4 fontBlack"><strong>Exemples d'applications</strong></h2>
-                        <div>
-                            <div v-html="aide.project_examples">À titre d'exemple, les thématiques suivantes pourront être explorées :</div>
+                        <div class="rf-margin-top-8N">
+                            <h2 class="">Description</h2>
+                            <div v-html="aide.description" class="rf-text"></div>
                         </div>
-                    </div>
 
-                    <div class="candidater text-left my-5 pt-4 col-sm">
-                        <h2 class="mb-4 fontBlack"><strong>Candidater</strong></h2>
-                        <div v-html="aide.contact"></div>
-                        <div class="buttonCandidater p-3 mt-3 col-sm-5 text-center"><a :href="aide.application_url" class="text-reset">Candidater à cet appel à projet</a></div>
-                    </div>
+                        <div class="rf-margin-top-8N">
+                            <h2 class="">Conditions</h2>
+                            <div v-html="aide.eligibility" class="rf-text"></div>
+                        </div>
 
+                        <div class="rf-margin-top-8N">
+                            <h2 class="">Exemples d'applications</h2>
+                            <div>
+                                <div v-html="aide.project_examples" class="rf-text">À titre d'exemple, les thématiques suivantes pourront être explorées :</div>
+                            </div>
+                        </div>
+
+                        <div class="rf-margin-top-8N">
+                            <h2 class="">Candidater</h2>
+                            <div v-html="aide.contact"></div>
+                            <div class="rf-btn candidate-button"><a :href="aide.application_url" class="rf-text">Candidater à cet appel à projet</a></div>
+                        </div>
+
+                </div>
             </div>
         </div>
+
         <Footer></Footer>
     </div>
 </template>
@@ -71,8 +73,8 @@
             aidService.fetchAidDetail(this.$route.params.slug)
                 .then(aidDetail => {
                     this.aide = aidDetail
-                    this.title = aidDetail.short_title;	
-                    this.meta_title = this.title + " - Ministère de la Transformation et de la Fonction publiques"	
+                    this.title = aidDetail.short_title;
+                    this.meta_title = this.title + " - Ministère de la Transformation et de la Fonction publiques"
                     this.description = aidDetail.name;
             })
         },
@@ -125,23 +127,47 @@
 
 <style>
 
-    .fontBlack {
-        color: #000;
+    .aides-title {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
     }
 
-    .buttonCandidater {
-        background-color: #18936a;
-        color: #fff;
-        border: none;
+    .aides-title h1 {
+        color: #107449;
+        margin-top: 0;
+        margin-bottom: 8px;
     }
 
-    .buttonCandidater:active {
-        background-color: #18936a;
-        color: #fff !important;
-        border: none;
+    .aides-title img {
+        height: 120px;
+        margin-right: 32px;
     }
 
-    p {
-        font-size: 20px;
+    @media screen and (max-width: 767px) {
+
+        .aides-title {
+            display: inline-block;
+        }
+
+        .aides-title h1 {
+            margin-top: 8px;
+            font-size: 2.5rem;
+        }
+
+        .aides-title img {
+            height: 64px;
+            margin-right: 0px;
+        }
     }
+
+    .aides h2 {
+        margin-bottom: 16px;
+    }
+
+    .candidate-button {
+        background-color: #107449 !important;
+        margin-top: 16px;
+    }
+
 </style>
