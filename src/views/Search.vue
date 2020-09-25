@@ -18,7 +18,7 @@
                 <div class="input-group mb-3">
                 <input type="search" class="form-control border-bottom-green formresearch p-4" v-model="newResearch" placeholder="Rechercher un mot clé, une expression, une référence…">
                 <div class="input-group-append">
-                    <button class="font20 btn my-2 greenButton my-sm-0 input-group-text pl-4 pr-4" type="button" @click="Research(newResearch)">Rechercher</button>
+                    <button class="font20 btn my-2 greenButton my-sm-0 input-group-text pl-4 pr-4" type="button">Rechercher</button>
                 </div>
                 </div>
             </form>
