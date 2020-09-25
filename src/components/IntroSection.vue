@@ -5,16 +5,16 @@
         </div>
         <div class="rf-col">
             <div>
-                <h1 class="greenTitle">Administrations : bénéficiez du volet « Mise à niveau numérique de l'État et des territoires »</h1>
+                <h1 class="greenTitle rf-h2">Administrations : bénéficiez du volet « Mise à niveau numérique de l'État et des territoires »</h1>
             </div>
             <div class="rf-grid-row">
                 <div class="rf-col-sm-8 rf-col-xs-12">
-                    <p>Votre projet doit contribuer à la relance de l'économie française, notamment des entreprises, et doit produire des résultats concrets sous 18 mois.</p>
+                    <p class="rf-text--lead">Votre projet doit contribuer à la relance de l'économie française, notamment des entreprises, et doit produire des résultats concrets sous 18 mois.</p>
                 </div>
                 <div class="rf-col-sm-4 rf-col-xs-12">
                     <div class="thumbs">
                         <a href="" class="rf-col"><img src="@/assets/PhotoAmelieDeMontchalin.png" alt="la vidéo d'Amélie de Montchalin" width="182px"/></a>
-                        <p class="fontGrey">Le mot d'Amélie de Montchalin</p>
+                        <p class="fontGrey rf-text--xs">Le mot d'Amélie de Montchalin</p>
                     </div>
                 </div>
             </div>
