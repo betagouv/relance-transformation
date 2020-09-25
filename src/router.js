@@ -29,7 +29,7 @@ export default new Router({
           { name: 'France Relance', url: '/' },
           { name: 'Le mot d\'Amélie de Montchalin'},
         ]
-      }
+      },
     },
     {
       path: '/recherche',
@@ -49,6 +49,7 @@ export default new Router({
       meta: {
         breadcrumbs: [
           { name: 'France Relance', url: '/' },
+          { name: 'Détail du financement' },
         ]
       }
     },

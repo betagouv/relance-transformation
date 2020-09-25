@@ -3,7 +3,7 @@
 
         <Header></Header>
 
-        <Breadcrumbs :current_page_title="title"></Breadcrumbs>
+        <Breadcrumbs :dynamic_page_title="title"></Breadcrumbs>
 
         <div class="rf-container">
             <div class="rf-grid-row rf-grid-row--center">
