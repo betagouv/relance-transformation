@@ -14,7 +14,7 @@
                 <h1 class="greenTitle font48 pl-2"><strong>Rechercher un financement</strong></h1>
             </div>
 
-            <form @submit.stop.prevent="Research(newResearch)" class="searchBar rf-col-11 my-4">
+            <form @submit.stop.prevent="Search(newResearch)" class="searchBar rf-col-11 my-4">
                 <div class="input-group mb-3">
                 <input type="search" class="rf-input" id="search-input-input" name="search-input-input" v-model="newResearch" placeholder="Rechercher un mot clé, une expression, une référence…">
                 <div class="input-group-append">
@@ -129,7 +129,7 @@
       },
 
       methods: {
-        Research(newResearch) {
+        Search(newResearch) {
           if(this.newResearch !== "") {
             this.results = "";
             this.text= newResearch;
