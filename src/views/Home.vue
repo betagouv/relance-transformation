@@ -3,83 +3,83 @@
   <div class="france_relance">
 
     <Header></Header>
+  
     <div class="rf-container">
 
     <Breadcrumbs></Breadcrumbs>
 
+      <div class="rf-grid-row rf-grid-row--center">
+        <div class="rf-col">
 
-        <div class="rf-grid-row rf-grid-row--center">
-            <div class="rf-col-xl-10">
+          <IntroSection class="rf-margin-bottom-2N"></IntroSection>
 
-            <IntroSection class="rf-margin-bottom-2N"></IntroSection>
+          <div class="rf-margin-bottom-8N">
+            <div class="rf-grid-row">
+              <div class="rf-col">
+                <h2 class="rf-h4">Rechercher un financement :</h2>
+                <form @submit.stop.prevent="goToResearch()">
+                  <div class="rf-search-bar rf-search-bar--lg" id="search-input--lg">
+                    <label class="rf-label" for="search-input--lg-input">Label de la barre de recherche</label>
+                    <input v-model="recherche" class="rf-input" placeholder="Rechercher un mot, une expression, une référence…" type="search" id="search-input--lg-input" name="search-input--lg-input">
+                      <button class="rf-btn rf-btn--lg" title="Rechercher" type="submit">
+                        <span>Rechercher</span>
+                      </button>
+                  </div>
+                </form>
+              </div>
 
-            <div class="rf-margin-bottom-8N">
-              <div class="rf-grid-row">
-    <div class="rf-col">
-      <h2 class="rf-h4">Rechercher un financement :</h2>
-      <form @submit.stop.prevent="goToResearch()">
-        <div class="rf-search-bar rf-search-bar--lg" id="search-input--lg">
-          <label class="rf-label" for="search-input--lg-input">Label de la barre de recherche</label>
-          <input v-model="recherche" class="rf-input" placeholder="Rechercher un mot, une expression, une référence…" type="search" id="search-input--lg-input" name="search-input--lg-input">
-            <button class="rf-btn rf-btn--lg" title="Rechercher" type="submit">
-              <span>Rechercher</span>
-            </button>
+            </div>
+          </div>
+
+          <div class="rf-grid-row rf-grid-row--center">
+            <div class="rf-col">
+              <h2 class="rf-h4"> Découvrez tous les financements auxquels vous pouvez faire appel&nbsp;:</h2>
+            </div>
+          </div>
+
+          <div class="rf-grid-row rf-grid-row--center rf-grid-row--middle rf-grid-row--gutters rf-margin-bottom-2N">
+            <TopSelection :title="topSelection1" :filename="logoEtat" :focus="focusTopSelection1" @click.native="goToSelection1()"></TopSelection>
+            <TopSelection :title="topSelection2" :filename="logoCollectivite" :focus="focusTopSelection2" @click.native="goToSelection2()"></TopSelection>
+          </div>
+
+          <div v-if="topSelectionEtat" class="rf-grid-row rf-grid-row--center">
+            <div class="rf-col">
+              <h2 class="rf-h4">Quelle est l'échéance de votre projet&nbsp;?</h2>
+            </div>
+          </div>
+
+          <div v-if="topSelectionEtat" class="rf-grid-row rf-grid-row--center rf-grid-row--middle rf-grid-row--gutters">
+            <DateSelection :title="dateSelection1" :filename="logo2022" :focus="focusEcheance1" @click.native="goToEcheance2022()"></DateSelection>
+            <DateSelection :title="dateSelection2" :filename="logo2023" :focus="focusEcheance2" @click.native="goToEcheance2023()"></DateSelection>
+          </div>
+
+          <ResultSection v-if="results" class="rf-margin-top-4N">
+            <template v-slot:titleResultSection>
+              <h2  class="rf-h4" v-if="focusTopSelection2">Dans le cadre de votre projet, vous souhaitez&nbsp;:</h2>
+              <h2  class="rf-h4" v-else-if="focusEcheance1">Dans le cadre de votre projet, vous souhaitez&nbsp;:</h2>
+              <h2  class="rf-h4" v-else-if="focusEcheance2">Dans le cadre de votre projet, vous pouvez&nbsp;:</h2>
+            </template>
+
+            <div v-if="echeance2022" class="rf-grid-row rf-margin-bottom-1N">
+              <div class="rf-col-12 info-message">
+                <img src="@/assets/picto/Info.svg" alt="">
+                <p class="rf-text--sm">Vous pouvez candidater à plusieurs de ces offres pour un même projet</p>
+              </div>
+            </div>
+
+            <div class="rf-grid-row rf-grid-row--start rf-grid-row--gutters">
+              <template v-slot:resultCards>
+                <div v-for="aide in aides" :key="aide.id" class="rf-col-xs-12 rf-col-sm-6 rf-col-md-4 rf-col-xl-4">
+                  <div class="aide">
+                    <h3 class="rf-text"><router-link :to="{ name: 'aid_detail', params: { slug: aide.slug } }">{{ aide.name }}</router-link></h3>
+                    <p class="rf-text--sm">Obtenir des informations<img src="@/assets/picto/Fleche.svg" alt="" /></p>
+                  </div>
+                </div>
+              </template>
+            </div>
+          </ResultSection>
         </div>
-      </form>
-    </div>
-  </div>
-            </div>
-
-            <div class="rf-grid-row rf-grid-row--center">
-                <div class="rf-col">
-                    <h2 class="rf-h4"> Découvrez tous les financements auxquels vous pouvez faire appel&nbsp;:</h2>
-                </div>
-            </div>
-
-            <div class="rf-grid-row rf-grid-row--center rf-grid-row--middle rf-grid-row--gutters rf-margin-bottom-2N">
-                <TopSelection :title="topSelection1" :filename="logoEtat" :focus="focusTopSelection1" @click.native="goToSelection1()"></TopSelection>
-                <TopSelection :title="topSelection2" :filename="logoCollectivite" :focus="focusTopSelection2" @click.native="goToSelection2()"></TopSelection>
-            </div>
-
-            <div v-if="topSelectionEtat" class="rf-grid-row rf-grid-row--center">
-                <div class="rf-col">
-                    <h2 class="rf-h4">Quelle est l'échéance de votre projet&nbsp;?</h2>
-                </div>
-            </div>
-
-            <div v-if="topSelectionEtat" class="rf-grid-row rf-grid-row--center rf-grid-row--middle rf-grid-row--gutters">
-                <DateSelection :title="dateSelection1" :filename="logo2022" :focus="focusEcheance1" @click.native="goToEcheance2022()"></DateSelection>
-                <DateSelection :title="dateSelection2" :filename="logo2023" :focus="focusEcheance2" @click.native="goToEcheance2023()"></DateSelection>
-            </div>
-
-            <ResultSection v-if="results" class="rf-margin-top-4N">
-                <template v-slot:titleResultSection>
-                    <h2  class="rf-h4" v-if="focusTopSelection2">Dans le cadre de votre projet, vous souhaitez&nbsp;:</h2>
-                    <h2  class="rf-h4" v-else-if="focusEcheance1">Dans le cadre de votre projet, vous souhaitez&nbsp;:</h2>
-                    <h2  class="rf-h4" v-else-if="focusEcheance2">Dans le cadre de votre projet, vous pouvez&nbsp;:</h2>
-                </template>
-                <div v-if="echeance2022" class="rf-grid-row rf-margin-bottom-1N">
-                    <div class="rf-col-12 info-message">
-                        <img src="@/assets/picto/Info.svg" alt="">
-                        <p class="rf-text--sm">Vous pouvez candidater à plusieurs de ces offres pour un même projet</p>
-                    </div>
-                </div>
-                <template v-slot:resultCards>
-                    <div class="rf-grid-row rf-grid-row--start rf-grid-row--gutters">
-                        <div v-for="aide in aides" :key="aide.id" class="rf-col-xs-12 rf-col-sm-6 rf-col-md-4 rf-col-xl-4">
-                            <div class="aide">
-                                <h3 class="rf-text"><router-link :to="{ name: 'aid_detail', params: { slug: aide.slug } }">{{ aide.name }}</router-link></h3>
-                                <p class="rf-text--sm">Obtenir des informations<img src="@/assets/picto/Fleche.svg" alt="" /></p>
-                            </div>
-                        </div>
-                    </div>
-                </template>
-            </ResultSection>
-
-
-            </div>
-        </div>
-
+      </div>
     </div>
 
     <Footer></Footer>
@@ -226,16 +226,19 @@
 
 <style>
 
-    .info-message {
-        display: flex;
-        align-items: flex-start;
-        margin-top: -8px;
+    .rf-col {
+      max-width: 940px;
     }
 
+    .info-message {
+      display: flex;
+      align-items: flex-start;
+      margin-top: -8px;
+    }
     .info-message img {
-        padding: 1px 8px 0 2px;
-        flex-shrink: 0;
-        width: 28px;
+      padding: 1px 8px 0 2px;
+      flex-shrink: 0;
+      width: 28px;
     }
 
     .aide {
@@ -247,9 +250,8 @@
       flex-flow: column nowrap;
       justify-content: space-between;
     }
-
     .aide:hover {
-        box-shadow: inset 0 0 0 2px #107449;
+      box-shadow: inset 0 0 0 2px #107449;
     }
 
     .aide .rf-text {
@@ -258,47 +260,44 @@
     }
 
     .aide a {
-        position: initial;
-        color: initial;
+      position: initial;
+      margin-bottom: 20px;
+      color: initial;
     }
-
     .aide p {
-        margin: 0;
-        color: #107449;
+      margin: 0;
+      color: #107449;
     }
-
     .aide img {
-        padding-left: 8px;
-        margin-bottom: -2px;
+      padding-left: 8px;
+      margin-bottom: -2px;
     }
 
     .aide a::after {
-        position: absolute;
-        content: "";
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
+      position: absolute;
+      content: "";
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
     }
-  .greenButton {
-    background-color:           #107449;
-    color:                      #fff;
-  }
+    .greenButton {
+      background-color:           #107449;
+      color:                      #fff;
+    }
+    .formresearch {
+      background-color:           #F0F0F0;
+      color:                      #6A6A6A;
+      border:                     none;
+    }
+    .border-bottom-green {
+      border-bottom:              2px solid #107449;
+    }
+    #search-input--lg .rf-input {
+      box-shadow: inset 0 -2px 0 0 #107449;
+    }
+    #search-input--lg button.rf-btn { 
+      background-color: #107449;    
+    }
 
-  .formresearch {
-    background-color:           #F0F0F0;
-    color:                      #6A6A6A;
-    border:                     none;
-  }
-
-  .border-bottom-green {
-    border-bottom:              2px solid #107449;
-  }
-
-  #search-input--lg .rf-input {
-    box-shadow: inset 0 -2px 0 0 #107449;
-  }
-  #search-input--lg button.rf-btn {
-    background-color: #107449;
-  }
 </style>

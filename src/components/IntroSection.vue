@@ -13,7 +13,7 @@
                 </div>
                 <div class="rf-col-md-3 rf-col-sm-4 rf-col-xs-12">
                     <div class="thumbs">
-                        <router-link :to="`/le-mot-d-amelie-de-montchalin/`">
+                        <router-link :to="{ name: 'video' }">
                             <img src="@/assets/FausseVideo.png" alt="Voir la vidéo d'Amélie de Montchalin"/>
                         </router-link>
                         <p class="rf-text--xs">Le mot d'Amélie de Montchalin</p>

@@ -1,16 +1,16 @@
 <template>
-  <div class="rf-container">
+
     <nav class="rf-breadcrumb" aria-label="Vous êtes ici :">
-      <ul class="rf-breadcrumb__list">
+      <ol class="rf-breadcrumb__list">
         <li v-for="crumb in previous_pages" :key="crumb.name" class="rf-breadcrumb__item">
           <a v-bind:href="crumb.url">{{ crumb.name }}</a>
         </li>
         <li class="rf-breadcrumb__item rf-breadcrumb__item--current" aria-current="page">
           {{ current_page_title }}
         </li>
-      </ul>
+      </ol>
     </nav>
-  </div>
+ 
 </template>
 
 <script>
@@ -38,6 +38,3 @@ export default {
   },
 };
 </script>
-
-<style>
-</style>
