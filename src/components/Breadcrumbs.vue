@@ -10,7 +10,7 @@
         </li>
       </ol>
     </nav>
- 
+
 </template>
 
 <script>
