@@ -127,6 +127,9 @@
 
 <style>
 
+    .aide a {
+      box-shadow: none;
+    }
     .aides-title {
         display: flex;
         align-items: flex-start;
