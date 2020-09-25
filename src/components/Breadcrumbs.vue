@@ -1,7 +1,7 @@
 <template>
   <div class="rf-container">
     <nav class="rf-breadcrumb" aria-label="Vous êtes ici :">
-      <ul class="rf-breadcrumb__list">
+      <ol class="rf-breadcrumb__list">
         <li class="rf-breadcrumb__item">
           <a href="https://www.transformation.gouv.fr/">Accueil</a>
         </li>
@@ -17,7 +17,7 @@
         <li v-if="current_page_title" class="rf-breadcrumb__item rf-breadcrumb__item--current" aria-current="page">
             {{ current_page_title }}
         </li>
-      </ul>
+      </ol>
     </nav>
   </div>
 </template>
@@ -38,6 +38,3 @@ export default {
   },
 };
 </script>
-
-<style>
-</style>
