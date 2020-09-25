@@ -41,12 +41,10 @@
     border-bottom:              2px solid #107449;
   }
 
-#search-input--lg .rf-input {
-  box-shadow: inset 0 -2px 0 0 #107449;
-  
-}
-#search-input--lg button.rf-btn { 
-background-color: #107449;  
-
-}
+  #search-input--lg .rf-input {
+    box-shadow: inset 0 -2px 0 0 #107449;
+  }
+  #search-input--lg button.rf-btn { 
+    background-color: #107449;    
+  }
 </style>
