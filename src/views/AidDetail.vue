@@ -10,34 +10,34 @@
                 <div class="rf-col-md-10 rf-col-lg-8" v-if="aide">
 
                         <div class="">
-                            <div class="aide-title">
+                            <div class="aides-title">
                                 <img src="@/assets/FranceRelance.png" alt="Logo France Relance">
                                 <h1 class="">{{ aide.short_title }} mais qui peut aussi être long</h1>
                             </div>
-                            <p class="">{{ aide.name }}</p>
+                            <p class="rf-text--lg">{{ aide.name }}</p>
                         </div>
 
-                        <div class="">
+                        <div class="rf-margin-top-8N">
                             <h2 class="">Description</h2>
-                            <div v-html="aide.description" class=""></div>
+                            <div v-html="aide.description" class="rf-text"></div>
                         </div>
 
-                        <div class="">
+                        <div class="rf-margin-top-8N">
                             <h2 class="">Conditions</h2>
-                            <div v-html="aide.eligibility" class=""></div>
+                            <div v-html="aide.eligibility" class="rf-text"></div>
                         </div>
 
-                        <div class="">
+                        <div class="rf-margin-top-8N">
                             <h2 class="">Exemples d'applications</h2>
                             <div>
-                                <div v-html="aide.project_examples">À titre d'exemple, les thématiques suivantes pourront être explorées :</div>
+                                <div v-html="aide.project_examples" class="rf-text">À titre d'exemple, les thématiques suivantes pourront être explorées :</div>
                             </div>
                         </div>
 
-                        <div class="">
+                        <div class="rf-margin-top-8N">
                             <h2 class="">Candidater</h2>
                             <div v-html="aide.contact"></div>
-                            <div class=""><a :href="aide.application_url" class="text-reset">Candidater à cet appel à projet</a></div>
+                            <div class="rf-btn candidate-button"><a :href="aide.application_url" class="rf-text">Candidater à cet appel à projet</a></div>
                         </div>
 
                 </div>
@@ -127,53 +127,47 @@
 
 <style>
 
-    .aide-title {
+    .aides-title {
         display: flex;
         align-items: flex-start;
         justify-content: flex-start;
     }
 
-    .aide-title h1 {
+    .aides-title h1 {
         color: #107449;
         margin-top: 0;
+        margin-bottom: 8px;
     }
 
-    .aide-title img {
+    .aides-title img {
         height: 120px;
         margin-right: 32px;
     }
 
     @media screen and (max-width: 767px) {
 
-        .aide-title {
+        .aides-title {
             display: inline-block;
         }
 
-        .aide-title h1 {
-            margin-top: 8px;;
+        .aides-title h1 {
+            margin-top: 8px;
             font-size: 2.5rem;
         }
 
-        .aide-title img {
+        .aides-title img {
             height: 64px;
             margin-right: 0px;
         }
     }
 
-    .buttonCandidater {
-        background-color: #18936a;
-        color: #fff;
-        border: none;
+    .aides h2 {
+        margin-bottom: 16px;
     }
 
-    .buttonCandidater:active {
-        background-color: #18936a;
-        color: #fff !important;
-        border: none;
-    }
-
-    p {
-        font-size: 20px;
+    .candidate-button {
+        background-color: #107449 !important;
+        margin-top: 16px;
     }
 
 </style>
