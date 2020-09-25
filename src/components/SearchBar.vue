@@ -2,7 +2,7 @@
 
         <div class="rf-grid-row">
           <div class="rf-col">
-            <h2 class="rf-h4">Rechercher un financement :</h2><br/>
+            <h2 class="rf-h4 rf-margin-bottom-3N">Rechercher un financement :</h2>
             <form>
               <div class="rf-search-bar" id="search-input">
                   <label class="rf-label" for="search-input-input">Label de la barre de recherche</label>
@@ -28,7 +28,7 @@
                   </router-link>
 
            </form>
-        </div>   
+        </div>
       </div-->
 </template>
 
@@ -48,7 +48,7 @@
 
   .formresearch {
     background-color:           #F0F0F0;
-    color:                      #6A6A6A; 
+    color:                      #6A6A6A;
     border:                     none;
   }
 
@@ -58,10 +58,10 @@
 
 #search-input .rf-input {
   box-shadow: inset 0 -2px 0 0 #107449;
-  
+
 }
-#search-input button.rf-btn { 
-background-color: #107449;  
+#search-input button.rf-btn {
+background-color: #107449;
 }
 
 </style>

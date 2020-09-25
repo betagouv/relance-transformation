@@ -4,65 +4,68 @@
 
     <Header></Header>
 
-    <div class="rf-grid-row">
-      <div class="rf-col">
-        <Breadcrumbs></Breadcrumbs>
-      </div>
-    </div>
-    <div class="rf-grid-row rf-grid-row--center">
-      <div class="rf-col-8">
+    <Breadcrumbs></Breadcrumbs>
 
-        <IntroSection></IntroSection>
-        <SearchBar></SearchBar>
-
+    <div class="rf-container">
         <div class="rf-grid-row rf-grid-row--center">
-          <div class="rf-col">
-            <h2 class="rf-h4"> Découvrez tous les financements auxquels vous pouvez faire appel :</h2>
-          </div>
-        </div>
+            <div class="rf-col">
 
-        <div class="rf-grid-row rf-grid-row--center rf-grid-row--middle rf-grid-row--gutters">
-          <TopSelection :title="topSelection1" :filename="logoEtat" :focus="focusTopSelection1" @click.native="goToSelection1()"></TopSelection>
-          <TopSelection :title="topSelection2" :filename="logoCollectivite" :focus="focusTopSelection2" @click.native="goToSelection2()"></TopSelection>
-        </div>
+            <IntroSection class="rf-margin-bottom-2N"></IntroSection>
 
-        <div v-if="topSelectionEtat" class="rf-grid-row rf-grid-row--center rf-grid-row--gutters">
-          <div class="rf-col">
-            <h2 class="rf-h4">Quelle est l'échéance de votre projet ?</h2>
-          </div>
-        </div>
+            <SearchBar class="rf-margin-bottom-8N"></SearchBar>
 
-        <div v-if="topSelectionEtat" class="rf-grid-row rf-grid-row--center rf-grid-row--middle rf-grid-row--gutters">
-          <DateSelection :title="dateSelection1" :filename="logo2022" :focus="focusEcheance1" @click.native="goToEcheance2022()"></DateSelection>
-          <DateSelection :title="dateSelection2" :filename="logo2023" :focus="focusEcheance2" @click.native="goToEcheance2023()"></DateSelection>
-        </div>
-
-      <ResultSection v-if="results">
-        <template v-slot:titleResultSection>
-          <h2  class="rf-h4" v-if="focusTopSelection1">Dans le cadre de votre projet, vous pouvez :</h2>
-          <h2  class="rf-h4" v-if="focusTopSelection2">Dans le cadre de votre projet, vous souhaitez :</h2>
-        </template>
-        <div v-if="echeance2022" class="rf-grid-row">
-          <div class="rf-col-8">
-            <img src="@/assets/picto/Info.svg" alt="" >
-            <p>Vous pouvez candidater à plusieurs de ces offres pour un même projet</p>
-          </div>
-        </div>
-         <div class="rf-grid-row rf-grid-row--start rf-grid-row--gutters ">
-        <template v-slot:resultCards>
-          <div v-for="aide in aides" :key="aide.id" class="rf-col-xs-12 rf-col-sm-6 rf-col-md-4 rf-col-xl-3">
-            <div class="aide">
-            <h3 class="rf-text"><router-link :to="{ name: 'aid_detail', params: { slug: aide.slug } }">{{ aide.name }}</router-link></h3>
-            
-              <p class="rf-text--sm">Obtenir des informations <img src="@/assets/picto/Fleche.svg" alt="" /> </p>
+            <div class="rf-grid-row rf-grid-row--center">
+                <div class="rf-col">
+                    <h2 class="rf-h4"> Découvrez tous les financements auxquels vous pouvez faire appel&nbsp;:</h2>
+                </div>
             </div>
-          </div>
-        </template>
+
+            <div class="rf-grid-row rf-grid-row--center rf-grid-row--middle rf-grid-row--gutters rf-margin-bottom-2N">
+                <TopSelection :title="topSelection1" :filename="logoEtat" :focus="focusTopSelection1" @click.native="goToSelection1()"></TopSelection>
+                <TopSelection :title="topSelection2" :filename="logoCollectivite" :focus="focusTopSelection2" @click.native="goToSelection2()"></TopSelection>
+            </div>
+
+            <div v-if="topSelectionEtat" class="rf-grid-row rf-grid-row--center">
+                <div class="rf-col">
+                    <h2 class="rf-h4">Quelle est l'échéance de votre projet&nbsp;?</h2>
+                </div>
+            </div>
+
+            <div v-if="topSelectionEtat" class="rf-grid-row rf-grid-row--center rf-grid-row--middle rf-grid-row--gutters">
+                <DateSelection :title="dateSelection1" :filename="logo2022" :focus="focusEcheance1" @click.native="goToEcheance2022()"></DateSelection>
+                <DateSelection :title="dateSelection2" :filename="logo2023" :focus="focusEcheance2" @click.native="goToEcheance2023()"></DateSelection>
+            </div>
+
+            <ResultSection v-if="results" class="rf-margin-top-4N">
+                <template v-slot:titleResultSection>
+                    <h2  class="rf-h4" v-if="focusTopSelection2">Dans le cadre de votre projet, vous souhaitez&nbsp;:</h2>
+                    <h2  class="rf-h4" v-else-if="focusEcheance1">Dans le cadre de votre projet, vous souhaitez&nbsp;:</h2>
+                    <h2  class="rf-h4" v-else-if="focusEcheance2">Dans le cadre de votre projet, vous pouvez&nbsp;:</h2>
+                </template>
+                <div v-if="echeance2022" class="rf-grid-row rf-margin-bottom-1N">
+                    <div class="rf-col-12 info-message">
+                        <img src="@/assets/picto/Info.svg" alt="">
+                        <p class="rf-text--sm">Vous pouvez candidater à plusieurs de ces offres pour un même projet</p>
+                    </div>
+                </div>
+                <div class="rf-grid-row rf-grid-row--start rf-grid-row--gutters">
+                    <template v-slot:resultCards>
+                        <div v-for="aide in aides" :key="aide.id" class="rf-col-xs-12 rf-col-sm-6 rf-col-md-4 rf-col-xl-4">
+                            <div class="aide">
+                                <h3 class="rf-text"><router-link :to="{ name: 'aid_detail', params: { slug: aide.slug } }">{{ aide.name }}</router-link></h3>
+                                <p class="rf-text--sm">Obtenir des informations<img src="@/assets/picto/Fleche.svg" alt="" /></p>
+                            </div>
+                        </div>
+                    </template>
+                </div>
+            </ResultSection>
+
+            </div>
         </div>
-      </ResultSection>
-      </div>
     </div>
+
     <Footer></Footer>
+
   </div>
 </template>
 
@@ -85,12 +88,12 @@
         return {
           topSelection1: "Vous êtes un service de l'État ou un établissement public",
           topSelection2: "Vous êtes une collectivité territoriale ou un regroupement de collectivités territoriales",
-          logoEtat: "Etat/Actif.svg",
-          logoCollectivite: "Collectivite/Actif.svg",
+          logoEtat: "Etat/Normal.svg",
+          logoCollectivite: "Collectivite/Normal.svg",
           dateSelection1: "Votre projet sera réalisé au plus tard à la fin d'année 2022",
           dateSelection2: "Votre projet sera réalisé au plus tôt en début d'année 2023",
-          logo2022: "2022/Actif.svg",
-          logo2023: "2023/Actif.svg",
+          logo2022: "2022/Normal.svg",
+          logo2023: "2023/Normal.svg",
           focusTopSelection1: false,
           focusTopSelection2: false,
           focusEcheance1: false,
@@ -199,21 +202,56 @@
 </script>
 
 <style>
+
+    .rf-col {
+        max-width: 940px;
+    }
+
+    .info-message {
+        display: flex;
+        align-items: flex-start;
+        margin-top: -8px;
+    }
+
+    .info-message img {
+        padding: 1px 8px 0 2px;
+        flex-shrink: 0;
+        width: 28px;
+    }
+
     .aide {
       position: relative;
       background-color: #F9F8F6;
-      color: #107449;
-      padding: 0.5em;
+      padding: 32px 32px 24px 32px;
       height: 100%;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: space-between;
+    }
+
+    .aide:hover {
+        box-shadow: inset 0 0 0 2px #107449;
     }
 
     .aide a {
         position: initial;
+        margin-bottom: 20px;
+        color: initial;
     }
 
-    .aide h3 a, .aide h3 a:link, .aide h3 a:visited, {
-      color: #383838;
+    .aide p {
+        margin: 0;
+        color: #107449;
     }
+
+    .aide img {
+        padding-left: 8px;
+        margin-bottom: -2px;
+    }
+
+    /* .aide h3 a, .aide h3 a:link, .aide h3 a:visited, {
+      color: #383838;
+    } */
 
     .aide a::after {
         position: absolute;
