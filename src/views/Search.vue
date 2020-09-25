@@ -158,7 +158,7 @@
                 this.results = response.data.results;
                 this.text = this.$route.query.q;
           })
-
+      }
     }
 </script>
 
