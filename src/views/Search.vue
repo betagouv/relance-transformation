@@ -141,13 +141,13 @@
 
         setTitle(results) {
           if(results.length == 0) {
-            this.title = `Aucun résultat pour «${this.text}» - France Relance : rechercher un financement - Ministère de la Transformation et de la Fonction publiques`;
+            this.title = `Rechercher un financement : Aucun résultat pour «${this.text}» - France Relance - Ministère de la Transformation et de la Fonction publiques`;
             this.noResult = true;
           } else if (results.length == 1)  {
-            this.title = `${results.length} résultat pour «${this.text}» - France Relance : rechercher un financement - Ministère de la Transformation et de la Fonction publiques`;
+            this.title = `Rechercher un financement : ${results.length} résultat pour «${this.text}» - France Relance - Ministère de la Transformation et de la Fonction publiques`;
             this.noResult = false;
           } else {
-            this.title = `${results.length} résultats pour «${this.text}» - France Relance : rechercher un financement - Ministère de la Transformation et de la Fonction publiques`;
+            this.title = `Rechercher un financement : ${results.length} résultats pour «${this.text}» - France Relance - Ministère de la Transformation et de la Fonction publiques`;
             this.noResult = false;
           }
         },
