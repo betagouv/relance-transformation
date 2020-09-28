@@ -8,11 +8,10 @@
       <Breadcrumbs></Breadcrumbs>
 
       <div class="rf-grid-row rf-grid-row--center">
-        <div class="rf-col-10">
-
-          <div class="rf-grid-row rf-grid-row--top rf-margin-top-2N rf-grid-row--middle">
+        <div class="rf-col-xs-12 rf-col-sm-10">
+          <div class="rf-grid-row rf-grid-row--top">
             <div class="rf-col-xs-12 rf-col-md-1 rf-col-lg-1 rf-col-xl-1">
-              <img class="france-relance" src="@/assets/FranceRelance.png" alt="France Relance">
+              <img class="intro-france-relance-logo" src="@/assets/FranceRelance.png" alt="France Relance">
             </div>
             <div class="rf-col text">
                 <div>
@@ -25,9 +24,9 @@
             <div class="rf-grid-row">
                 <form @submit.stop.prevent="Search(newResearch)" class="searchBar rf-col">
                     <div class="rf-search-bar rf-search-bar--lg" id="search-input--lg">
-                      <label class="rf-label" for="search-input--lg-input">Label de la barre de recherche</label>
-                      <input type="search" class="rf-input" id="search-input-input" name="search-input-input" v-model="newResearch" placeholder="Rechercher">
-                      <button class="rf-btn" title="Rechercher" type="submit">
+                      <label class="rf-label" for="search-input--lg-input">Rechercher un financement</label>
+                      <input type="search" class="rf-input" id="search-input-input" name="search-input-input" v-model="newResearch" placeholder="Rechercher un mot, une expression, une référence...">
+                      <button class="rf-btn  rf-btn--lg" title="Rechercher" type="submit">
                         <span>Rechercher</span>
                       </button>
                     </div>
@@ -223,14 +222,6 @@
   }
   #search-input--lg button.rf-btn {
     background-color: #107449;
-  }
-
-  div.rf-grid-row--top div {
-      text-align: center;
-  }
-
-  div.rf-grid-row div.rf-col div {
-      text-align: left;
   }
 
   .france-relance {
