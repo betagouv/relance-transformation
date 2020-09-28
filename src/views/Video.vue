@@ -3,29 +3,31 @@
     <Header></Header>
     <div class="rf-container">
       <Breadcrumbs></Breadcrumbs>
-      <div class="rf-grid-row rf-grid-row--center">
+      <div class="rf-grid-row rf-grid-row--center rf-margin-bottom-3N">
         <div class="rf-col-md-10 rf-col-lg-8">
-          <div class="">
             <div class="aides-title">
               <img src="@/assets/FranceRelance.png" alt="France Relance">
               <h1 class="">Le mot d'Amélie de Montchalin</h1>
             </div>
-          </div>
-          <div class="rf-col-md-10">
-            <iframe title="Vidéo : Le mot d'Amélie de Montchalin" class="embed-responsive-item" src="https://www.youtube.com/embed/fTP37ETteOQ" allowfullscreen></iframe>
-          </div>
-          <div class="transcription rf-col-md-10">
-            <p class="rf-text-sm">Transcription de la vidéo</h2>
+        </div>
+      </div>
+      <div class="rf-grid-row rf-grid-row--center">
+        <div class="rf-col-xs-12 rf-col-md-10 rf-responsive-vid">
+          <iframe title="Vidéo : Le mot d'Amélie de Montchalin" class="rf-responsive-vid__player" src="https://www.youtube.com/embed/fTP37ETteOQ" allowfullscreen></iframe>
+        </div>
+      </div> 
+      <div class="rf-grid-row rf-grid-row--center">
+        <div class="rf-col-md-10 rf-col-lg-8 transcription">
+            <p class="rf-text-sm">Transcription de la vidéo</p>
             <h2>Paragraphe 1</h2>
             <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod iusto sed, praesentium quia et voluptatum commodi quam. Voluptates, amet illo, alias harum, unde officia eveniet fugit porro aliquam labore quisquam.</p>
             <p class="">Lorem ipsum dolor <a href="#">sit amet consectetur adipisicing elit</a>. Quod iusto sed, praesentium quia et voluptatum commodi quam. Voluptates, amet illo, alias harum, unde officia eveniet fugit porro aliquam labore quisquam.</p>
-            <h2>Paragraphe 3</h2>
+            <h2>Paragraphe 2</h2>
             <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod iusto sed, praesentium quia et voluptatum commodi quam. Voluptates, amet illo, alias harum, unde officia eveniet fugit porro aliquam labore quisquam.</p>
             <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod iusto sed, praesentium quia et voluptatum commodi quam. Voluptates, amet illo, alias harum, unde officia eveniet fugit porro aliquam labore quisquam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod iusto sed, praesentium quia et voluptatum commodi quam. Voluptates, amet illo, alias harum, unde officia eveniet fugit porro aliquam labore quisquam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod iusto sed, praesentium quia et voluptatum commodi quam. Voluptates, amet illo, alias harum, unde officia eveniet fugit porro aliquam labore quisquam.</p>
             <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod iusto sed, praesentium quia et voluptatum commodi quam. Voluptates, amet illo, alias harum, unde officia eveniet fugit porro aliquam labore quisquam.</p>
-            <h2>Paragraphe 5</h2>
+            <h2>Paragraphe 3</h2>
             <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod iusto sed, praesentium quia et voluptatum commodi quam. Voluptates, amet illo, alias harum, unde officia eveniet fugit porro aliquam labore quisquam.</p>
-          </div>
         </div>
       </div>
     </div>
