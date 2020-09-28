@@ -8,11 +8,10 @@
       <Breadcrumbs></Breadcrumbs>
 
       <div class="rf-grid-row rf-grid-row--center">
-        <div class="rf-col-10">
-
-          <div class="rf-grid-row rf-grid-row--top rf-margin-top-2N rf-grid-row--middle">
+        <div class="rf-col-xs-12 rf-col-sm-10">
+          <div class="rf-grid-row rf-grid-row--top">
             <div class="rf-col-xs-12 rf-col-md-1 rf-col-lg-1 rf-col-xl-1">
-              <img class="france-relance" src="@/assets/FranceRelance.png" alt="France Relance">
+              <img class="intro-france-relance-logo" src="@/assets/FranceRelance.png" alt="France Relance">
             </div>
             <div class="rf-col text">
                 <div>
@@ -27,7 +26,7 @@
                     <div class="rf-search-bar rf-search-bar--lg" id="search-input--lg">
                       <label class="rf-label" for="search-input--lg-input">Label de la barre de recherche</label>
                       <input type="search" class="rf-input" id="search-input--lg-input" name="search-input--lg-input" v-model="newResearch" placeholder="Rechercher">
-                      <button class="rf-btn" title="Rechercher" type="submit">
+                      <button class="rf-btn  rf-btn--lg" title="Rechercher" type="submit">
                         <span>Rechercher</span>
                       </button>
                     </div>
@@ -37,9 +36,9 @@
 
           <ResultSection class="rf-margin-top-4N rf-padding-top-4N">
           <template v-slot:titleResultSection>
-            <p v-if="text == null">Aucune recherche n’a pu être effectuée car vous n’avez pas saisi de terme de recherche.</p>
-            <p v-if="text" class="rf-h3">Résultats pour «&nbsp;{{ text }}&nbsp;»&nbsp;:</p>
-            <p v-if="noResult && text !== undefined && text !== null">Aucun résultat ne correspond à votre recherche.</p>
+            <h2 v-if="text == null" class="rf-h4">Aucune recherche n’a pu être effectuée car vous n’avez pas saisi de terme de recherche.</h2>
+            <h2 v-if="text" class="rf-h4">Résultats pour «&nbsp;{{ text }}&nbsp;»&nbsp;:</h2>
+            <h2 v-if="noResult && text !== undefined && text !== null" class="rf-h4">Aucun résultat ne correspond à votre recherche.</h2>
           </template>
 
           <template v-slot:resultCards>
@@ -255,14 +254,6 @@
   }
   #search-input--lg button.rf-btn {
     background-color: #107449;
-  }
-
-  div.rf-grid-row--top div {
-      text-align: center;
-  }
-
-  div.rf-grid-row div.rf-col div {
-      text-align: left;
   }
 
   .france-relance {
