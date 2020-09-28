@@ -31,6 +31,7 @@ export default {
 
     div[role="button"] {
         height: 120px;
+        cursor: pointer;
     }
 
     div[role="button"]:hover, div[role="button"]:focus {
