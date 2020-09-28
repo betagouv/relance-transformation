@@ -1,6 +1,6 @@
 <template>
     <div>
-        <footer class="rf-footer" role="contentinfo" id="">
+        <footer class="rf-footer rf-margin-top-12N" role="contentinfo" id="">
             <div class="rf-container">
                 <div class="rf-footer__body">
                     <div class="rf-footer__brand">
