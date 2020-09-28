@@ -14,7 +14,7 @@ Vue.config.productionTip = false
 
 Vue.use(VueMeta)
 
-if (process.env.VUE_APP_USE_ANALYTICS) {
+if (process.env.VUE_APP_MATOMO_SITE_ID) {
   Vue.use(VueMatomo, {
     host: 'https://stats.data.gouv.fr',
     siteId: process.env.VUE_APP_MATOMO_SITE_ID,
