@@ -1,9 +1,5 @@
 <template>
     <div>
-        <div class="subfooter rf-margin-top-15N">
-            <p class="rf-text">Ce site est conçu et édité en partenariat avec :</p>
-            <a href="https://aides-territoires.beta.gouv.fr" target="_blank"><img src="@/assets/LogoAT.svg" alt="Aides-Territoires - nouvelle fenêtre"></a>
-        </div>
         <footer class="rf-footer" role="contentinfo" id="">
             <div class="rf-container">
                 <div class="rf-footer__body">
@@ -91,34 +87,9 @@
 
 <style>
 
-    footer a, .subfooter a {
+    footer a {
         box-shadow: none;
     }
-    .subfooter {
-        background-color: #F9F8F6;
-        text-align: left;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 12px 16px;
-    }
-
-    .subfooter p {
-        display: inline-block;
-        margin: 0;
-    }
-
-    .subfooter a::after {
-        display: none;
-    }
-
-    .subfooter img {
-        height: 32px;
-        margin-left: 12px;
-        margin-top: 4px;
-        vertical-align: middle;
-    }
-
     .rf-footer__content-desc {
         display: flex;
         flex-wrap: wrap;
