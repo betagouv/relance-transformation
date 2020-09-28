@@ -1,4 +1,6 @@
-MIT License
+Le contenu de ce dépôt est placé sous licence MIT License, à l'exception des
+fichiers police de caractères Marianne du répertoire : 
+`/public/static/fonts/`.
 
 Copyright (c) 2020 beta.gouv.fr
 
