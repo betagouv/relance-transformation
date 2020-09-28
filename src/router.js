@@ -4,6 +4,7 @@ import Home from '@/views/Home.vue'
 import AidDetail from '@/views/AidDetail.vue'
 import Video from '@/views/Video.vue'
 import Search from '@/views/Search.vue'
+import NotFound from '@/views/NotFound.vue'
 
 Vue.use(Router)
 
@@ -57,6 +58,22 @@ export default new Router({
         ]
       }
     },
+    {
+      path: '/404',
+      name: '404',
+      component: NotFound,
+      meta: {
+        breadcrumbs: [
+          { name: 'Accueil', url: 'https://www.transformation.gouv.fr' },
+          { name: 'France Relance', url: '/' },
+          { name: 'Erreur'},
+        ]
+      }
+    },
+    {
+      path: '*', redirect: '/404'
+    },
+ 
   ],
   scrollBehavior (to, from, savedPosition) {
     return { x: 0, y: 0 }

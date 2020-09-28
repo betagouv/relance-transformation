@@ -29,7 +29,7 @@
     import Footer from "@/components/Footer";
 
     export default {
-         name: "404",
+         name: "NotFound",
 
       components: { Header, Breadcrumbs, Footer, },
 
