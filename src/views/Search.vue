@@ -22,10 +22,10 @@
 
           <div class="rf-margin-bottom-8N rf-margin-top-4N">
             <div class="rf-grid-row">
-                <form @submit.stop.prevent="Search(newResearch)" class="searchBar rf-col">
+                <form class="searchBar rf-col" @submit.stop.prevent="Search(newResearch)">
                     <div class="rf-search-bar rf-search-bar--lg" id="search-input--lg">
                       <label class="rf-label" for="search-input--lg-input">Rechercher un financement</label>
-                      <input type="search" class="rf-input" id="search-input-input" name="search-input-input" v-model="newResearch" placeholder="Rechercher un mot, une expression, une référence...">
+                      <input type="search" class="rf-input" id="search-input--lg-input" name="search-input--lg-input" v-model="newResearch" placeholder="Rechercher">
                       <button class="rf-btn  rf-btn--lg" title="Rechercher" type="submit">
                         <span>Rechercher</span>
                       </button>
@@ -36,8 +36,9 @@
 
           <ResultSection class="rf-margin-top-4N rf-padding-top-4N">
           <template v-slot:titleResultSection>
+            <h2 v-if="text == null" class="rf-h4">Aucune recherche n’a pu être effectuée car vous n’avez pas saisi de terme de recherche.</h2>
             <h2 v-if="text" class="rf-h4">Résultats pour «&nbsp;{{ text }}&nbsp;»&nbsp;:</h2>
-            <h2 v-if="noResult" class="rf-h4">Aucun résultat ne correspond à votre recherche.</h2>
+            <h2 v-if="noResult && text !== undefined && text !== null" class="rf-h4">Aucun résultat ne correspond à votre recherche.</h2>
           </template>
 
           <template v-slot:resultCards>
@@ -139,7 +140,9 @@
       methods: {
 
         setTitle(results) {
-          if(results.length == 0) {
+          if(results.length == 0 && this.text == null) {
+            this.title = `Rechercher un financement : Aucun résultat car absence de terme de recherche – France Relance – Ministère de la Transformation et de la Fonction publiques`;
+          } else if (results.length == 0) {
             this.title = `Rechercher un financement : Aucun résultat pour « ${this.text} » – France Relance – Ministère de la Transformation et de la Fonction publiques`;
             this.noResult = true;
           } else if (results.length == 1)  {
@@ -152,33 +155,40 @@
         },
 
         Search(newResearch) {
-          if(this.newResearch.trim() !== "") {
-            this.results = "";
-            this.text= newResearch;
-            aidService.fetchAidList(`text=${newResearch}`)
+            this.results = "";  
+            if(newResearch.trim() == "") {
+              this.text = null;
+              this.$router.push({query: {q: null}})
+              this.setTitle(this.results);
+            } else {
+              this.text = newResearch.trim();
+              aidService.fetchAidList(`text=${newResearch.trim()}`)
                 .then(response => {
                     this.results = response.data.results;
                   })
                 .then(() => {
                   this.setTitle(this.results);
                 })
-            this.$router.push({query: {q: newResearch}})  
-          } else {
-              return
-            }
+            this.$router.push({query: {q: newResearch.trim()}})  
+            }      
         },
 
       },
 
       mounted() {
-          aidService.fetchAidList(`text=${this.$route.query.q}`)
-            .then(response => {
-              this.results = response.data.results;
-              this.text = this.$route.query.q;
-            })
-            .then(() => {
-                  this.setTitle(this.results);
-            })
+          if(this.$route.query.q == null) {
+            this.text = null;
+            this.setTitle(this.results);
+          } else {
+            aidService.fetchAidList(`text=${this.$route.query.q}`)
+              .then(response => {
+                this.results = response.data.results;
+                this.text = this.$route.query.q;
+              })
+              .then(() => {
+                this.setTitle(this.results);
+              })
+          }
       }
     }
 </script>

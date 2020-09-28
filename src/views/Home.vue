@@ -27,7 +27,6 @@
                   </div>
                 </form>
               </div>
-
             </div>
           </div>
 
@@ -131,8 +130,10 @@
 
       methods: {
           goToResearch() {
-            if(this.recherche !== ""){
-              this.$router.push({ name: 'search', query: { q: this.recherche }})
+            if(this.recherche.trim() == "") {
+              this.$router.push({ name: 'search', query: { q: null}})
+            } else {
+              this.$router.push({ name: 'search', query: { q: this.recherche.trim()}})
             }
           },
           goToSelection1() {
