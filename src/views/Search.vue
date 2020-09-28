@@ -23,11 +23,11 @@
 
           <div class="rf-margin-bottom-8N rf-margin-top-4N">
             <div class="rf-grid-row">
-                <form class="searchBar rf-col">
+                <form class="searchBar rf-col" @submit.stop.prevent="Search(newResearch)">
                     <div class="rf-search-bar rf-search-bar--lg" id="search-input--lg">
                       <label class="rf-label" for="search-input--lg-input">Label de la barre de recherche</label>
                       <input type="search" class="rf-input" id="search-input-input" name="search-input-input" v-model="newResearch" placeholder="Rechercher">
-                      <button class="rf-btn" title="Rechercher" type="button" @click="Search(newResearch)">
+                      <button class="rf-btn" title="Rechercher" type="submit">
                         <span>Rechercher</span>
                       </button>
                     </div>
@@ -37,7 +37,7 @@
 
           <ResultSection class="rf-margin-top-4N rf-padding-top-4N">
           <template v-slot:titleResultSection>
-            <p v-if="text == undefined">Aucune recherche n’a pu être effectuée car vous n’avez pas saisi de terme de recherche</p>
+            <p v-if="text == null">Aucune recherche n’a pu être effectuée car vous n’avez pas saisi de terme de recherche</p>
             <p v-if="text" class="rf-h3">Résultats pour «&nbsp;{{ text }}&nbsp;»&nbsp;:</p>
             <p v-if="noResult && text !== undefined && text !== null">Aucun résultat ne correspond à votre recherche.</p>
           </template>
@@ -154,33 +154,38 @@
         },
 
         Search(newResearch) {
-          if(this.newResearch.trim() !== "") {
-            this.results = "";
-            this.text= newResearch;
-            aidService.fetchAidList(`text=${newResearch}`)
+            this.results = "";  
+            if(newResearch.trim() == "") {
+              this.text = null;
+              this.$router.push({query: {q: null}})  
+            } else {
+              this.text = newResearch.trim();
+              aidService.fetchAidList(`text=${newResearch.trim()}`)
                 .then(response => {
                     this.results = response.data.results;
                   })
                 .then(() => {
                   this.setTitle(this.results);
                 })
-            this.$router.push({query: {q: newResearch}})  
-          } else {
-              return
-            }
+            this.$router.push({query: {q: newResearch.trim()}})  
+            }      
         },
 
       },
 
       mounted() {
-          aidService.fetchAidList(`text=${this.$route.query.q}`)
-            .then(response => {
-              this.results = response.data.results;
-              this.text = this.$route.query.q;
-            })
-            .then(() => {
-                  this.setTitle(this.results);
-            })
+          if(this.$route.query.q == null) {
+            this.text = null;
+          } else {
+            aidService.fetchAidList(`text=${this.$route.query.q}`)
+              .then(response => {
+                this.results = response.data.results;
+                this.text = this.$route.query.q;
+              })
+              .then(() => {
+                this.setTitle(this.results);
+              })
+          }
       }
     }
 </script>
