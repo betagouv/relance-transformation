@@ -11,8 +11,8 @@
               <h1 class="">Le mot d'Amélie de Montchalin</h1>
             </div>
           </div>
-          <div class="rf-col">
-            <iframe title="Vidéo : Le mot d'Amélie de Montchalin" class="rf-responsive-vid" src="https://www.youtube.com/embed/fTP37ETteOQ" allowfullscreen></iframe>
+          <div class="rf-col rf-responsive-vid">
+            <iframe title="Vidéo : Le mot d'Amélie de Montchalin" class="rf-responsive-vid__player" src="https://www.youtube.com/embed/fTP37ETteOQ" allowfullscreen></iframe>
           </div>
           <div class="transcription rf-col-md-10">
             <h2 class="rf-text-sm">Transcription de la vidéo</h2>
