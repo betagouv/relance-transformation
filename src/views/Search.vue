@@ -141,7 +141,9 @@
       methods: {
 
         setTitle(results) {
-          if(results.length == 0) {
+          if(results.length == 0 && this.text == null) {
+            this.title = `Rechercher un financement : Aucun résultat car absence de terme de recherche – France Relance – Ministère de la Transformation et de la Fonction publiques`;
+          } else if (results.length == 0) {
             this.title = `Rechercher un financement : Aucun résultat pour « ${this.text} » – France Relance – Ministère de la Transformation et de la Fonction publiques`;
             this.noResult = true;
           } else if (results.length == 1)  {
@@ -157,7 +159,8 @@
             this.results = "";  
             if(newResearch.trim() == "") {
               this.text = null;
-              this.$router.push({query: {q: null}})  
+              this.$router.push({query: {q: null}})
+              this.setTitle(this.results);
             } else {
               this.text = newResearch.trim();
               aidService.fetchAidList(`text=${newResearch.trim()}`)
@@ -176,6 +179,7 @@
       mounted() {
           if(this.$route.query.q == null) {
             this.text = null;
+            this.setTitle(this.results);
           } else {
             aidService.fetchAidList(`text=${this.$route.query.q}`)
               .then(response => {
