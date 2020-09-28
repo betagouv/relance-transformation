@@ -12,7 +12,7 @@
               <h1 class="rf-h2">Erreur 404</h1>
             </div>
             <h2 class="rf-h4">Oups ! Cette page n'existe pas</h2>
-            <p>Vous pouvez <a ="./">revenir à l'accueil</a> de l'appel à projet du Ministère de la transformation et de la fonction publiques</p>
+            <p>Vous pouvez <a href="./">revenir à l'accueil</a> de l'appel à projet du Ministère de la transformation et de la fonction publiques.</p>
 
 
           </div>
