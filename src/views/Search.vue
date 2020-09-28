@@ -38,7 +38,7 @@
           <template v-slot:titleResultSection>
             <h2 v-if="text == null" class="rf-h4">Aucune recherche n’a pu être effectuée car vous n’avez pas saisi de terme de recherche.</h2>
             <h2 v-if="text" class="rf-h4">Résultats pour «&nbsp;{{ text }}&nbsp;»&nbsp;:</h2>
-            <h2 v-if="noResult && text !== undefined && text !== null" class="rf-h4">Aucun résultat ne correspond à votre recherche.</h2>
+            <p v-if="noResult && text !== undefined && text !== null">Aucun résultat ne correspond à votre recherche.</p>
           </template>
 
           <template v-slot:resultCards>
@@ -184,6 +184,7 @@
               .then(response => {
                 this.results = response.data.results;
                 this.text = this.$route.query.q;
+                this.newResearch = this.$route.query.q;
               })
               .then(() => {
                 this.setTitle(this.results);
