@@ -37,7 +37,7 @@
           <ResultSection class="rf-margin-top-4N rf-padding-top-4N">
           <template v-slot:titleResultSection>
             <h2 v-if="text" class="rf-h4">Résultats pour «&nbsp;{{ text }}&nbsp;»&nbsp;:</h2>
-            <h2 v-if="results == false" class="rf-h4">Aucun résultat ne correspond à votre recherche.</h2>
+            <h2 v-if="noResult" class="rf-h4">Aucun résultat ne correspond à votre recherche.</h2>
           </template>
 
           <template v-slot:resultCards>
