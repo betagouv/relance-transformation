@@ -37,7 +37,7 @@
 
           <ResultSection class="rf-margin-top-4N rf-padding-top-4N">
           <template v-slot:titleResultSection>
-            <p v-if="text == null">Aucune recherche n’a pu être effectuée car vous n’avez pas saisi de terme de recherche</p>
+            <p v-if="text == null">Aucune recherche n’a pu être effectuée car vous n’avez pas saisi de terme de recherche.</p>
             <p v-if="text" class="rf-h3">Résultats pour «&nbsp;{{ text }}&nbsp;»&nbsp;:</p>
             <p v-if="noResult && text !== undefined && text !== null">Aucun résultat ne correspond à votre recherche.</p>
           </template>
