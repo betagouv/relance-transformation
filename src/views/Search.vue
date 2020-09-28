@@ -24,7 +24,7 @@
             <div class="rf-grid-row">
                 <form class="searchBar rf-col" @submit.stop.prevent="Search(newResearch)">
                     <div class="rf-search-bar rf-search-bar--lg" id="search-input--lg">
-                      <label class="rf-label" for="search-input--lg-input">Label de la barre de recherche</label>
+                      <label class="rf-label" for="search-input--lg-input">Rechercher un financement</label>
                       <input type="search" class="rf-input" id="search-input--lg-input" name="search-input--lg-input" v-model="newResearch" placeholder="Rechercher">
                       <button class="rf-btn  rf-btn--lg" title="Rechercher" type="submit">
                         <span>Rechercher</span>
