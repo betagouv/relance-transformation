@@ -59,13 +59,6 @@
               <h2  class="rf-h4" v-else-if="focusEcheance2">Dans le cadre de votre projet, vous pouvez&nbsp;:</h2>
             </template>
 
-            <div v-if="echeance2022" class="rf-grid-row rf-margin-bottom-1N">
-              <div class="rf-col-12 info-message">
-                <img src="@/assets/picto/Info.svg" alt="">
-                <p class="rf-text--sm">Vous pouvez candidater à plusieurs de ces offres pour un même projet</p>
-              </div>
-            </div>
-
             <div class="rf-grid-row rf-grid-row--start rf-grid-row--gutters">
               <template v-slot:resultCards>
                 <div v-for="aide in aides" :key="aide.id" class="rf-col-xs-12 rf-col-sm-6 rf-col-md-4 rf-col-xl-4">
