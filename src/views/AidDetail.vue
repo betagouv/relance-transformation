@@ -10,10 +10,8 @@
             <div class="rf-grid-row rf-grid-row--center">
                 <div class="rf-col-md-10 rf-col-lg-8" v-if="aide">
 
-                        <div class="aides-intro">
-                            <router-link :to="{ name: 'home', query: { q: $route.query.q}}" replace>
-                                <p class="rf-link rf-link--icon-left rf-margin-bottom-3N">Retour aux appels à projet</p>
-                            </router-link>
+                        <div class="aides-intro">   
+                            <router-link :to="{ name: 'home', query: { q: $route.query.q}}" class="rf-link rf-link--icon-left rf-margin-bottom-3N" replace>Retour aux appels à projet</router-link>
                             <div class="aides-title">
                                 <img src="@/assets/FranceRelance.png" alt="France Relance" />
                                 <h1>{{ aide.short_title }}</h1>
