@@ -70,7 +70,9 @@
               <template v-slot:resultCards>
                 <div v-for="aide in aides" :key="aide.id" class="rf-col-xs-12 rf-col-sm-6 rf-col-md-4 rf-col-xl-4">
                   <div class="aide">
-                    <h3 class="rf-text"><router-link :to="{ name: 'aid_detail', params: { slug: aide.slug } }">{{ aide.name }}</router-link></h3>
+                    <h3 v-if="focusTopSelection2" class="rf-text"><router-link :to="{ name: 'aid_detail', params: { slug: aide.slug,}, query: { q: queryCol}}" replace>{{ aide.name }}</router-link></h3>
+                    <h3 v-if="focusEcheance1" class="rf-text"><router-link :to="{ name: 'aid_detail', params: { slug: aide.slug,}, query: { q: queryEtat2022}}" replace>{{ aide.name }}</router-link></h3>
+                    <h3 v-if="focusEcheance2" class="rf-text"><router-link :to="{ name: 'aid_detail', params: { slug: aide.slug,}, query: { q: queryEtat2023}}" replace>{{ aide.name }}</router-link></h3>
                     <p class="rf-text--sm">Obtenir des informations<img src="@/assets/picto/Fleche.svg" alt="" /></p>
                   </div>
                 </div>
@@ -117,6 +119,9 @@
           focusTopSelection2: false,
           focusEcheance1: false,
           focusEcheance2: false,
+          queryCol: "colT",
+          queryEtat2022: "etat2022",
+          queryEtat2023: "etat2023",
           topSelectionEtat: false,
           echeance2022: false,
           results: false,
@@ -158,6 +163,8 @@
               })
           },
           goToEcheance2022() {
+              this.focusTopSelection1 = true;
+              this.focusTopSelection2 = false;
               this.focusEcheance1 = true;
               this.focusEcheance2 = false;
               this.echeance2022 = true;
@@ -169,6 +176,8 @@
                 })
             },
             goToEcheance2023() {
+              this.focusTopSelection1 = true;
+              this.focusTopSelection2 = false;
               this.focusEcheance2 = true;
               this.focusEcheance1 = false;
               this.echeance2022 = false;
@@ -179,7 +188,19 @@
                   this.aides = response.data.results;
                 })
             },
-      },
+        },
+
+        created() {
+            if(this.$route.query.q == this.queryCol) {
+              this.goToSelection2();
+            } else if(this.$route.query.q == this.queryEtat2022) {
+              this.goToSelection1();
+              this.goToEcheance2022();
+            } else if (this.$route.query.q == this.queryEtat2023) {
+              this.goToSelection1();
+              this.goToEcheance2023();
+            } 
+        },
 
       metaInfo () {
         return {
