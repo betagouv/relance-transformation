@@ -9,7 +9,7 @@
 
       <div class="rf-grid-row rf-grid-row--center">
         <div class="rf-col-xs-12 rf-col-sm-10">
-          <div class="rf-grid-row rf-grid-row--top">
+          <div class="rf-grid-row rf-grid-row--top rf-grid-row--middle">
             <div class="rf-col-xs-12 rf-col-md-1 rf-col-lg-1 rf-col-xl-1">
               <img class="intro-france-relance-logo" src="@/assets/FranceRelance.png" alt="France Relance">
             </div>
