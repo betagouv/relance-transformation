@@ -58,7 +58,7 @@ export default new Router({
       }
     },
   ],
-  scrollBehavior (to, from, savedPosition) {
+  scrollBehavior() {
     return { x: 0, y: 0 }
   }
 })
