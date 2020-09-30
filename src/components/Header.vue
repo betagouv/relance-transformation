@@ -1,18 +1,8 @@
 <template>
     <header class="rf-header">
         <div class="rf-container">
-            <!-- <div class="rf-header__body">
-                <div class="rf-header__brand">
-                    <a class="rf-logo" href="./">
-                        <span class="rf-logo__title">Ministère
-                            <br>de la transformation
-                            <br>et de la fonction
-                            <br>publiques</span>
-                    </a>
-                </div>
-            </div> -->
             <a href="https://www.transformation.gouv.fr/">
-              <img class="rf-logo__image--custom" src="@/assets/MarqueMTFP.svg" alt="Ministère de la Transformation et de la Fonction publiques. Liberté Égalité Fraternit. - Retour à l'accueil">
+              <img class="rf-logo__image--custom" src="@/assets/MarqueMTFP.svg" alt="Ministère de la Transformation et de la Fonction publiques. Liberté Égalité Fraternité. - Retour à l'accueil">
             </a>
             <div class="rf-header__navbar">
                 <nav class="rf-nav" role="navigation" aria-label="Menu principal" id="header-navigation">
@@ -50,14 +40,14 @@
                     </ul>
                 </nav>
                 <div class="rf-nav__rs--custom">
-                  <a href="https://www.facebook.com/AmeliedeMontchalin/" title="Acceder à la page facebook de la ministre Amélie de Montchalin" target="_blank">
-                    <img class="rf-nav__rs-image--custom" src="@/assets/picto/facebook.svg" alt="Facebook">
+                  <a href="https://www.facebook.com/AmeliedeMontchalin/" target="_blank">
+                    <img class="rf-nav__rs-image--custom" src="@/assets/picto/facebook.svg" alt="Facebook de la ministre Amélie de Montchalin - nouvelle fenêtre">
                   </a>
-                  <a href="https://twitter.com/AdeMontchalin" title="Acceder à la page twitter de la ministre Amélie de Montchalin" target="_blank">
-                    <img class="rf-nav__rs-image--custom" src="@/assets/picto/twitter.svg" alt="Twitter">
+                  <a href="https://twitter.com/AdeMontchalin" target="_blank">
+                    <img class="rf-nav__rs-image--custom" src="@/assets/picto/twitter.svg" alt="Twitter de la ministre Amélie de Montchalin - nouvelle fenêtre">
                   </a>
-                  <a href="https://www.instagram.com/amelie.demontchalin/?hl=fr" title="Acceder à la page instagram de la ministre Amélie de Montchalin" target="_blank">
-                    <img class="rf-nav__rs-image--custom" src="@/assets/picto/instagram.svg" alt="Instagram">
+                  <a href="https://www.instagram.com/amelie.demontchalin/?hl=fr" target="_blank">
+                    <img class="rf-nav__rs-image--custom" src="@/assets/picto/instagram.svg" alt="Instagram de la ministre Amélie de Montchalin - nouvelle fenêtre">
                   </a>
                 </div>
             </div>
