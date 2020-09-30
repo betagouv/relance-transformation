@@ -37,8 +37,8 @@
           </div>
 
           <div class="rf-grid-row rf-grid-row--center rf-grid-row--middle rf-grid-row--gutters rf-margin-bottom-2N">
-            <TopSelection :title="topSelection1" :expanded="false" :controls="selectionDate" :filename="logoEtat" :focus="focusTopSelection1" @click.native="goToSelection1()" @keyup.enter.native="goToSelection1" @keyup.space.prevent.native="goToSelection1"></TopSelection>
-            <TopSelection :title="topSelection2" :expanded="false" :controls="controls" :filename="logoCollectivite" :focus="focusTopSelection2" @click.native="goToSelection2()" @keyup.enter.native="goToSelection2()" @keyup.space.prevent.native="goToSelection2()"></TopSelection>
+            <TopSelection :title="topSelection1" :expanded="expanded1" :controls="selectionDate" :filename="logoEtat" :focus="focusTopSelection1" @click.native="goToSelection1()" @keyup.enter.native="goToSelection1" @keyup.space.prevent.native="goToSelection1"></TopSelection>
+            <TopSelection :title="topSelection2" :expanded="expanded2" :controls="controls" :filename="logoCollectivite" :focus="focusTopSelection2" @click.native="goToSelection2()" @keyup.enter.native="goToSelection2()" @keyup.space.prevent.native="goToSelection2()"></TopSelection>
           </div>
 
           <div v-if="topSelectionEtat" id="selectionDate" >
@@ -49,8 +49,8 @@
             </div>
 
             <div v-if="topSelectionEtat" class="rf-grid-row rf-grid-row--center rf-grid-row--middle rf-grid-row--gutters">
-              <DateSelection :title="dateSelection1" :aria-expanded="false" :aria-controls="controls" :filename="logo2022" :focus="focusEcheance1" @click.native="goToEcheance2022()" @keyup.enter.native="goToEcheance2022()" @keyup.space.prevent.native="goToEcheance2022()"></DateSelection>
-              <DateSelection :title="dateSelection2" :aria-expanded="false" :aria-controls="controls" :filename="logo2023" :focus="focusEcheance2" @click.native="goToEcheance2023()" @keyup.enter.native="goToEcheance2023()" @keyup.space.prevent.native="goToEcheance2023()"></DateSelection>
+              <DateSelection :title="dateSelection1" :expanded="expanded" :aria-controls="controls" :filename="logo2022" :focus="focusEcheance1" @click.native="goToEcheance2022()" @keyup.enter.native="goToEcheance2022()" @keyup.space.prevent.native="goToEcheance2022()"></DateSelection>
+              <DateSelection :title="dateSelection2" :expanded="expanded" :aria-controls="controls" :filename="logo2023" :focus="focusEcheance2" @click.native="goToEcheance2023()" @keyup.enter.native="goToEcheance2023()" @keyup.space.prevent.native="goToEcheance2023()"></DateSelection>
             </div>
           </div>
 
@@ -122,7 +122,8 @@
           description: "Administrations : bénéficiez du volet « Mise à niveau numérique de l'État et des territoires »",
           previewImg: require('@/assets/Preview.png'),
           recherche:"",
-          expanded: false,
+          expanded1: false,
+          expanded2: false,
           selectionDate:"selectionDate",
           controls:"results",
         }
@@ -140,6 +141,8 @@
             this.focusTopSelection1 = true;
             this.focusTopSelection2 = false;
             this.topSelectionEtat = true;
+            this.expanded1 = true;
+            this.expanded2 = false;
             this.aides = "";
           },
           goToSelection2() {
@@ -151,7 +154,8 @@
             this.focusEcheance2 = false;
             this.results = true;
             this.aides = "";
-            this.expanded = false;
+            this.expanded2 = true;
+            this.expanded1 = false;
 
             aidService.fetchAidList('targeted_audiences=commune&targeted_audiences=epci&targeted_audiences=department&targeted_audiences=region')
               .then(response => {
