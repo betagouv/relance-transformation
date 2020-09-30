@@ -49,8 +49,8 @@
             </div>
 
             <div v-if="topSelectionEtat" class="rf-grid-row rf-grid-row--center rf-grid-row--middle rf-grid-row--gutters">
-              <DateSelection :title="dateSelection1" :expanded="expanded" :controls="controls2" :filename="logo2022" :focus="focusEcheance1" @click.native="goToEcheance2022()" @keyup.enter.native="goToEcheance2022()" @keyup.space.prevent.native="goToEcheance2022()"></DateSelection>
-              <DateSelection :title="dateSelection2" :expanded="expanded" :controls="controls2" :filename="logo2023" :focus="focusEcheance2" @click.native="goToEcheance2023()" @keyup.enter.native="goToEcheance2023()" @keyup.space.prevent.native="goToEcheance2023()"></DateSelection>
+              <DateSelection :title="dateSelection1" :expanded="expanded1" :controls="controls2" :filename="logo2022" :focus="focusEcheance1" @click.native="goToEcheance2022()" @keyup.enter.native="goToEcheance2022()" @keyup.space.prevent.native="goToEcheance2022()"></DateSelection>
+              <DateSelection :title="dateSelection2" :expanded="expanded2" :controls="controls2" :filename="logo2023" :focus="focusEcheance2" @click.native="goToEcheance2023()" @keyup.enter.native="goToEcheance2023()" @keyup.space.prevent.native="goToEcheance2023()"></DateSelection>
             </div>
           </div>
 
