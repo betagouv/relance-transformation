@@ -1,6 +1,6 @@
 <template>
     <div class="rf-col-sm-12 rf-col-md-6">
-         <div :aria-expanded="expanded" :aria-controls="{controls}"  role="button" tabindex="0" class="rf-grid-row unselected" :class="{selected:focus}">
+         <div :aria-expanded="expanded" :aria-controls="controls"  role="button" tabindex="0" class="rf-grid-row unselected" :class="{selected:focus}">
             <img class="rf-col-3 top-selection-image" :src="require(`@/assets/picto/${filename}`)" alt="" />
             <h3 class="rf-col-9 rf-text select-title">{{ title }}</h3>
         </div>
@@ -24,8 +24,7 @@
                 required: true,
             },
             expanded: {
-                type: Boolean,
-                default: false,
+                type: String,
             },
             controls: {
                 type: String,
