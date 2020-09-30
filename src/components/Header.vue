@@ -39,6 +39,8 @@
                             France Relance</a></li>
                     </ul>
                 </nav>
+                
+                <!--
                 <div class="rf-nav__rs--custom">
                   <a href="https://www.facebook.com/AmeliedeMontchalin/" target="_blank">
                     <img class="rf-nav__rs-image--custom" src="@/assets/picto/facebook.svg" alt="Facebook de la ministre Amélie de Montchalin - nouvelle fenêtre">
@@ -50,6 +52,7 @@
                     <img class="rf-nav__rs-image--custom" src="@/assets/picto/instagram.svg" alt="Instagram de la ministre Amélie de Montchalin - nouvelle fenêtre">
                   </a>
                 </div>
+                -->
             </div>
         </div>
     </header>
