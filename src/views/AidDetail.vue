@@ -39,7 +39,7 @@
                         <div class="rf-margin-top-8N">
                             <h2>Candidater</h2>
                             <div v-html="aide.contact"></div>
-                            <div><a :href="aide.application_url" title="Candidater à cet appel à projet - Nouvelle fenêtre" target="_blank" class="rf-btn candidate-button rf-text">Candidater à cet appel à projet</a></div>
+                            <div v-if="aide.application_url"><a :href="aide.application_url" title="Candidater à cet appel à projet - Nouvelle fenêtre" target="_blank" class="rf-btn candidate-button rf-text">Candidater à cet appel à projet</a></div>
                         </div>
 
                 </div>
