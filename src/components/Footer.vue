@@ -132,5 +132,8 @@
     .rf-footer__bottom-copy {
         max-width: 100%;
     }
+    .rf-footer__content-links li a {
+        display: inline;
+    }
 
 </style>
