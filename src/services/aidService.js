@@ -10,7 +10,7 @@ export default {
 
     // Fetch a single aid object
     fetchAidDetail(slug) {
-        const url = 'aids/?order_by=publication_date' + slug + '/'
+        const url = 'aids/' + slug + '/'
         return api.get(url)
             .then(response => response.data);
     }
