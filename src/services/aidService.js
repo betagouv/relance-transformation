@@ -4,7 +4,7 @@ export default {
     // Build an api call and fetch it's result
     fetchAidList(querystring) {
 
-        const params = `backers=${process.env.VUE_APP_MTFP_PARAM}&in_france_relance=true&${querystring}`;
+        const params = `backers=${process.env.VUE_APP_MTFP_PARAM}&in_france_relance=true&order_by=publication_date&${querystring}`;
         return api.get('/aids/?' + params);
     },
 
