@@ -14,31 +14,34 @@
                     <div class="rf-footer__content">
                         <div class="rf-footer__content-desc">
                             <div class="rf-footer__content-desc-column">
-                                <a href="https://www.fonction-publique.gouv.fr/" target="_blank" title="fonction-publique.gouv.fr - nouvelle fenêtre">
-                                    fonction-publique.gouv.fr
-                                </a>
                                 <p class="rf-footer__content-desc-entity-name">
                                     Direction Générale de l’Administration et de la Fonction Publique (DGAFP)
                                 </p>
+                                <a href="https://www.fonction-publique.gouv.fr/" target="_blank" title="fonction-publique.gouv.fr - nouvelle fenêtre">
+                                    fonction-publique.gouv.fr
+                                </a>
                             </div>
                             <div class="rf-footer__content-desc-column">
-                                <a href="https://www.numerique.gouv.fr/" target="_blank" title="numerique.gouv.fr - nouvelle fenêtre">
-                                    numerique.gouv.fr
-                                </a>
                                 <p>
                                     Direction Interministérielle du Numérique (DINUM)
                                 </p>
+                                <a href="https://www.numerique.gouv.fr/" target="_blank" title="numerique.gouv.fr - nouvelle fenêtre">
+                                    numerique.gouv.fr
+                                </a>
                             </div>
                             <div class="rf-footer__content-desc-column">
-                                <a href="https://www.modernisation.gouv.fr/" target="_blank" title="modernisation.gouv.fr - nouvelle fenêtre">
-                                    modernisation.gouv.fr
-                                </a>
                                 <p>
                                     Direction Interministérielle de la Transformation Publique (DITP)
                                 </p>
+                                <a href="https://www.modernisation.gouv.fr/" target="_blank" title="modernisation.gouv.fr - nouvelle fenêtre">
+                                    modernisation.gouv.fr
+                                </a>
                             </div>
                         </div>
                         <ul class="rf-footer__content-links">
+                            <li>
+                                <a href="https://www.elysee.fr" target="_blank" title="elysée.fr - nouvelle fenêtre">élysée.fr</a>
+                            </li>
                             <li>
                                 <a href="https://legifrance.gouv.fr" target="_blank" title="legifrance.gouv.fr - nouvelle fenêtre">legifrance.gouv.fr</a>
                             </li>
@@ -103,6 +106,7 @@
         display: flex;
         flex-direction: column;
         position: relative;
+        justify-content: space-between;
     }
 
     .rf-footer__content-desc-column p {
@@ -131,6 +135,9 @@
 
     .rf-footer__bottom-copy {
         max-width: 100%;
+    }
+    .rf-footer__content-links li {
+        margin-right: 1.5rem;
     }
     .rf-footer__content-links li a {
         display: inline;
