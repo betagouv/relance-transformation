@@ -57,7 +57,7 @@
                 <div class="rf-footer__bottom">
                     <ul class="rf-footer__bottom-list">
                         <li>
-                            <a href="https://www.transformation.gouv.fr/donnees-personnelles">Données personelles et cookies</a>
+                            <a href="https://www.transformation.gouv.fr/donnees-personnelles">Données personnelles et cookies</a>
                         </li>
                         <li>
                             <a href="https://www.transformation.gouv.fr/espace-presse/contact-presse">Contact presse</a>
