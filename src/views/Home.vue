@@ -8,7 +8,7 @@
 
 
       <div class="rf-grid-row rf-grid-row--center">
-        <div class="rf-col">
+        <div class="rf-col-md-10">
           <Breadcrumbs></Breadcrumbs>
 
           <IntroSection class="rf-margin-bottom-2N"></IntroSection>
