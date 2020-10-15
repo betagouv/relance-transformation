@@ -6,10 +6,10 @@
 
     <div class="rf-container">
 
-    <Breadcrumbs></Breadcrumbs>
 
       <div class="rf-grid-row rf-grid-row--center">
         <div class="rf-col">
+          <Breadcrumbs></Breadcrumbs>
 
           <IntroSection class="rf-margin-bottom-2N"></IntroSection>
 

@@ -5,10 +5,9 @@
 
         <div class="rf-container">
 
-            <Breadcrumbs :dynamic_page_title="title"></Breadcrumbs>
-
             <div class="rf-grid-row rf-grid-row--center">
-                <div class="rf-col-md-10 rf-col-lg-8" v-if="aide">
+                <div class="rf-col-md-10" v-if="aide">
+                    <Breadcrumbs :dynamic_page_title="title"></Breadcrumbs>
 
                         <div class="aides-intro">
                             <a href="./" class="rf-link rf-link--icon-left rf-margin-bottom-3N">Retour aux appels à projet</a>

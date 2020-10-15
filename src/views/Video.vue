@@ -2,9 +2,9 @@
   <div class="france_relance">
     <Header></Header>
     <div class="rf-container">
-      <Breadcrumbs></Breadcrumbs>
       <div class="rf-grid-row rf-grid-row--center rf-margin-bottom-3N">
         <div class="rf-col-md-10 rf-col-lg-8">
+          <Breadcrumbs></Breadcrumbs>
             <div class="aides-title">
               <img src="@/assets/FranceRelance.png" alt="France Relance">
               <h1 class="">Le mot d’Amélie de Montchalin</h1>
