@@ -5,18 +5,17 @@
 
         <div class="rf-container">
 
-            <Breadcrumbs :dynamic_page_title="title"></Breadcrumbs>
-
             <div class="rf-grid-row rf-grid-row--center">
-                <div class="rf-col-md-10 rf-col-lg-8" v-if="aide">
+                <div class="rf-col-md-10" v-if="aide">
+                    <Breadcrumbs :dynamic_page_title="title"></Breadcrumbs>
 
                         <div class="aides-intro">
-                            <a href="./" class="rf-link rf-link--icon-left rf-margin-bottom-3N">Retour aux appels à projet</a>
+                            <a href="./" class="rf-link rf-link--icon-left rf-margin-bottom-3N">Retour</a>
                             <div class="aides-title">
                                 <img src="@/assets/FranceRelance.png" alt="France Relance" />
-                                <h1>{{ aide.short_title }}</h1>
+                                <h1>{{ aide.name }}</h1>
                             </div>
-                            <p class="rf-text--lg">{{ aide.name }}</p>
+                            <p class="rf-text--lg"><strong>{{ aide.short_title }}</strong></p>
                         </div>
 
                         <div class="rf-margin-top-8N">
@@ -154,9 +153,12 @@
         height: 120px;
         margin-right: 32px;
     }
-
+    @media screen and (min-width: 767px) {
+        .aides-intro p {
+            margin-left: 152px;;
+        }
+    }
     @media screen and (max-width: 767px) {
-
         .aides-title {
             display: inline-block;
         }

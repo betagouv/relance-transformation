@@ -2,12 +2,13 @@
   <div class="france_relance">
     <Header></Header>
     <div class="rf-container">
-      <Breadcrumbs></Breadcrumbs>
       <div class="rf-grid-row rf-grid-row--center rf-margin-bottom-3N">
-        <div class="rf-col bientot">
+        <div class="rf-col-md-10">
+          <Breadcrumbs></Breadcrumbs>
+          <div class="bientot">
               <h1>Très prochaînement</h1><br/>
               <img src="@/assets/FranceRelance.png" alt="France Relance">
-
+          </div>
         </div>
       </div>
     </div>
