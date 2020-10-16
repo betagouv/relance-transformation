@@ -12,7 +12,7 @@ export default new Router({
   mode: 'history',
   routes: [
     {
-      path: '/home',
+      path: process.env.VUE_APP_PATH_TO_HOME || '/',
       name: 'home',
       component: Home,
       meta: {
@@ -35,7 +35,7 @@ export default new Router({
       },
     },
     {
-      path: '/',
+      path: process.env.VUE_APP_PATH_TO_SOON || '/bientot',
       name: 'Bientot',
       component: Bientot,
       meta: {
