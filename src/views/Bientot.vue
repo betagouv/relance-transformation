@@ -28,7 +28,7 @@
 
       data() {
           return {
-              title: "Très prochaînement - Ministère de la Transformation et de la Fonction publiques",
+              title: "Très prochainement - Ministère de la Transformation et de la Fonction publiques",
               description: "",
               previewImg: require('@/assets/Preview.png'),
           }
