@@ -6,7 +6,7 @@
         <div class="rf-col-md-10">
           <Breadcrumbs></Breadcrumbs>
           <div class="bientot">
-              <h1>Très prochaînement</h1><br/>
+              <h1>Très prochainement</h1><br/>
               <img src="@/assets/FranceRelance.png" alt="France Relance">
           </div>
         </div>
