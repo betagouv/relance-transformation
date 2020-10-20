@@ -40,10 +40,10 @@
                         </div>
                         <ul class="rf-footer__content-links">
                             <li>
-                                <a href="https://www.elysee.fr" target="_blank" title="elysée.fr - nouvelle fenêtre">élysée.fr</a>
+                                <a href="https://www.elysee.fr" target="_blank" title="élysée.fr - nouvelle fenêtre">elysee.fr</a>
                             </li>
                             <li>
-                                <a href="https://legifrance.gouv.fr" target="_blank" title="legifrance.gouv.fr - nouvelle fenêtre">legifrance.gouv.fr</a>
+                                <a href="https://legifrance.gouv.fr" target="_blank" title="légifrance.gouv.fr - nouvelle fenêtre">legifrance.gouv.fr</a>
                             </li>
                             <li>
                                 <a href="https://gouvernement.fr" target="_blank" title="gouvernement.fr - nouvelle fenêtre">gouvernement.fr</a>
