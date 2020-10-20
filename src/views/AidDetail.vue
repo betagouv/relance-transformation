@@ -38,15 +38,14 @@
                         <div class="rf-margin-top-8N">
                             <h2>Candidater</h2>
                             <div v-html="aide.contact"></div>
-                                <div class="rf-grid-row rf-grid-row--center  rf-grid-row--gutters" >
-
-                            <div class="rf-col-sm-4" v-if="aide.application_url">
-                                <a :href="aide.application_url" title="Candidater à cet appel à projet - Nouvelle fenêtre" target="_blank" class="rf-btn candidate-button rf-text">Candidater à cet appel à projet</a>
+                            <div class="rf-grid-row rf-grid-row--center  rf-grid-row--gutters" >
+                                <div class="rf-col-sm-4" v-if="aide.application_url">
+                                    <a :href="aide.application_url" title="Candidater à cet appel à projet - Nouvelle fenêtre" target="_blank" class="rf-btn candidate-button rf-text">Candidater à cet appel à projet</a>
                                 </div>
-                            <div class="rf-col-sm-4" v-if="aide.origin_url"> 
-                                <a :href="aide.origin_url" title="Télécharger la fiche détaillée - Nouvelle fenêtre" target="_blank" class="rf-btn rf-btn--secondary candidate-button-secondary rf-text" download="download">Télécharger la fiche détaillée</a>
+                                <div class="rf-col-sm-4" v-if="aide.origin_url"> 
+                                    <a :href="aide.origin_url" title="Télécharger la fiche détaillée - Nouvelle fenêtre" target="_blank" class="rf-btn rf-btn--secondary candidate-button-secondary rf-text" download="download">Télécharger la fiche détaillée</a>
+                                </div>
                             </div>
-                                </div>
                         </div>
 
                 </div>
