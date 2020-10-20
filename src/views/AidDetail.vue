@@ -38,7 +38,14 @@
                         <div class="rf-margin-top-8N">
                             <h2>Candidater</h2>
                             <div v-html="aide.contact"></div>
-                            <div v-if="aide.application_url"><a :href="aide.application_url" title="Candidater à cet appel à projet - Nouvelle fenêtre" target="_blank" class="rf-btn candidate-button rf-text">Candidater à cet appel à projet</a></div>
+                            <div class="rf-grid-row rf-grid-row--center  rf-grid-row--gutters" >
+                                <div class="rf-col-sm-4" v-if="aide.application_url">
+                                    <a :href="aide.application_url" title="Candidater à cet appel à projet - Nouvelle fenêtre" target="_blank" class="rf-btn candidate-button rf-text">Candidater à cet appel à projet</a>
+                                </div>
+                                <div class="rf-col-sm-4" v-if="aide.origin_url"> 
+                                    <a :href="aide.origin_url" title="Télécharger la fiche détaillée - Nouvelle fenêtre" target="_blank" class="rf-btn rf-btn--secondary candidate-button-secondary rf-text" download="download">Télécharger la fiche détaillée</a>
+                                </div>
+                            </div>
                         </div>
 
                 </div>
@@ -182,5 +189,12 @@
         background-color: #107449 !important;
         margin-top: 16px;
     }
-
+    .candidate-button-secondary {
+        color: #107449 !important;
+        box-shadow: inset 0 0 0 1px #107449;
+        margin-top: 16px;
+    }
+    a.candidate-button-secondary[target=_blank]::after {
+        display: none;
+    }
 </style>

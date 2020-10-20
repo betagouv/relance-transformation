@@ -57,8 +57,10 @@
           <div v-if="results" id="results">
           <ResultSection class="rf-margin-top-4N">
             <template v-slot:titleResultSection>
-              <h2  class="rf-h4" v-if="focusTopSelection2">À venir dans les prochains jours.</h2>
+              <h2  class="rf-h4" v-if="focusTopSelection2 && aides.length == 0">À venir dans les prochains jours.</h2>
+              <h2  class="rf-h4" v-else-if="focusTopSelection2">Dans le cadre de votre projet, vous pouvez&nbsp;:</h2>
               <h2  class="rf-h4" v-else-if="focusEcheance1">Dans le cadre de votre projet, vous souhaitez&nbsp;:</h2>
+              <h2  class="rf-h4" v-else-if="focusEcheance2 && aides.length == 0">À venir dans les prochains jours.</h2>
               <h2  class="rf-h4" v-else-if="focusEcheance2">Dans le cadre de votre projet, vous pouvez&nbsp;:</h2>
             </template>
 
