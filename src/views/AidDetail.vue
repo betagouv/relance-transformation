@@ -3,7 +3,7 @@
 
         <Header></Header>
 
-        <div class="rf-container">
+        <main class="rf-container">
 
             <div class="rf-grid-row rf-grid-row--center">
                 <div class="rf-col-md-10" v-if="aide">
@@ -50,8 +50,8 @@
 
                 </div>
             </div>
-        </div>
-
+        </main>
+        <infoPlan></infoPlan>
         <Footer></Footer>
     </div>
 </template>
@@ -61,11 +61,12 @@
     import Breadcrumbs from "@/components/Breadcrumbs";
     import Footer from "@/components/Footer";
     import Header from "@/components/Header";
+    import infoPlan from "@/components/planDeRelance";
 
     export default {
         name: "Aides",
 
-        components: { Header, Breadcrumbs, Footer },
+        components: { Header, Breadcrumbs, Footer, infoPlan },
 
         data() {
             return {

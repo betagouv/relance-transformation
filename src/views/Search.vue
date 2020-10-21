@@ -3,7 +3,7 @@
   <div class="recherche">
 
     <Header></Header>
-    <div class="rf-container">
+    <main class="rf-container">
 
       <div class="rf-grid-row rf-grid-row--center">
         <div class="rf-col-xs-12 rf-col-sm-10">
@@ -55,8 +55,8 @@
 
       </div>
     </div>
-    </div>
-
+    </main>
+    <infoPlan></infoPlan>
     <Footer></Footer>
   </div>
 </template>
@@ -66,13 +66,13 @@
     import Breadcrumbs from "@/components/Breadcrumbs";
     import Footer from "@/components/Footer";
     import ResultSection from "@/components/ResultSection";
-    import aidService from '../services/aidService'
-
+    import aidService from '../services/aidService';
+    import infoPlan from "@/components/planDeRelance";
 
     export default {
          name: "Search",
 
-      components: { Header, Breadcrumbs, ResultSection, Footer, },
+      components: { Header, Breadcrumbs, ResultSection, Footer, infoPlan },
 
       data() {
           return {
