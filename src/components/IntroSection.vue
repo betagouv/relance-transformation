@@ -9,7 +9,7 @@
             </div>
             <div class="rf-grid-row subtitle">
                 <div class="rf-col-md-8 rf-col-sm-7 rf-col-xs-12 rf-margin-bottom-1N">
-                    <p class="rf-text--lg">Votre projet doit contribuer à la relance de l’économie française, notamment des entreprises, et doit produire des résultats concrets sous 18 mois.</p>
+                    <p class="rf-text--lg">Votre projet doit contribuer à la relance de l’économie française et doit produire des résultats concrets sous 18 mois.</p>
                 </div>
                 <div class="rf-col-md-3 rf-col-sm-4 rf-col-xs-12">
                     <div class="thumbs">
