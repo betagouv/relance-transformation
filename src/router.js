@@ -4,7 +4,6 @@ import Home from '@/views/Home.vue'
 import AidDetail from '@/views/AidDetail.vue'
 import Video from '@/views/Video.vue'
 import Search from '@/views/Search.vue'
-import Bientot from '@/views/Bientot.vue'
 
 Vue.use(Router)
 
@@ -31,18 +30,6 @@ export default new Router({
           { name: 'Accueil', url: 'https://www.transformation.gouv.fr' },
           { name: 'France Relance', url: '/' },
           { name: 'Le mot d\'Amélie de Montchalin'},
-        ]
-      },
-    },
-    {
-      path: '/bientot',
-      name: 'Bientot',
-      component: Bientot,
-      meta: {
-        breadcrumbs: [
-          { name: 'Accueil', url: 'https://www.transformation.gouv.fr' },
-          { name: 'France Relance', url: '/' },
-          { name: 'Bientôt'},
         ]
       },
     },
