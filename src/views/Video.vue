@@ -1,7 +1,7 @@
 <template>
   <div class="france_relance">
     <Header></Header>
-    <div class="rf-container">
+    <main class="rf-container">
       <div class="rf-grid-row rf-grid-row--center rf-margin-bottom-3N">
         <div class="rf-col-md-10">
           <Breadcrumbs></Breadcrumbs>
@@ -28,7 +28,8 @@
           <p>Mon ministère, le ministère de la Transformation et de la Fonction publiques, est à votre service pour faciliter votre vie au quotidien que vous soyez agent public ou usager du service public.</p> 
         </div>
       </div>
-    </div>
+    </main>
+    <infoPlan></infoPlan>
     <Footer></Footer>
   </div>
 </template>
@@ -37,11 +38,12 @@
     import Header from "@/components/Header";
     import Breadcrumbs from "@/components/Breadcrumbs";
     import Footer from "@/components/Footer";
+    import infoPlan from "@/components/planDeRelance";
 
     export default {
          name: "Video",
 
-      components: { Header, Breadcrumbs, Footer, },
+      components: { Header, Breadcrumbs, Footer, infoPlan},
 
       data() {
           return {
