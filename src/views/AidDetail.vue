@@ -6,7 +6,7 @@
         <main class="rf-container">
 
             <div class="rf-grid-row rf-grid-row--center">
-                <div class="rf-col-md-10" v-if="aide">
+                <div class="rf-col-md-8" v-if="aide">
                     <Breadcrumbs :dynamic_page_title="title"></Breadcrumbs>
 
                         <div class="aides-intro">
@@ -39,10 +39,10 @@
                             <h2>Candidater</h2>
                             <div v-html="aide.contact"></div>
                             <div class="rf-grid-row rf-grid-row--center  rf-grid-row--gutters" >
-                                <div class="rf-col-sm-4" v-if="aide.application_url">
+                                <div class="rf-col-sm-6" v-if="aide.application_url">
                                     <a :href="aide.application_url" title="Candidater à cet appel à projet - Nouvelle fenêtre" target="_blank" class="rf-btn candidate-button rf-text">Candidater à cet appel à projet</a>
                                 </div>
-                                <div class="rf-col-sm-4" v-if="aide.origin_url"> 
+                                <div class="rf-col-sm-6" v-if="aide.origin_url">
                                     <a :href="aide.origin_url" title="Télécharger la fiche détaillée - Nouvelle fenêtre" target="_blank" class="rf-btn rf-btn--secondary candidate-button-secondary rf-text" download="download">Télécharger la fiche détaillée</a>
                                 </div>
                             </div>
@@ -136,6 +136,9 @@
 
 <style>
 
+    ol, ul {
+      margin-left: 1.5rem;
+    }
 
     .aides-intro a {
         color: #107449;
