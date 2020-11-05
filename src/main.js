@@ -2,6 +2,9 @@ import Vue from 'vue'
 import App from '@/App.vue'
 import VueMeta from 'vue-meta'
 import VueMatomo from 'vue-matomo'
+import smartTag from 'vue-atinternet-smarttag'
+
+Vue.use(smartTag)
 
 import store from '@/store'
 import router from '@/router'

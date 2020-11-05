@@ -83,7 +83,14 @@
 <script>
     export default {
         name: "Footer",
-
+        methods: {
+            trackMyPage () {
+                this.$smartTag.sendPage({
+                    name: 'nom_de_ma_page',
+                    level2: '4'
+                })
+            }
+        }
     }
 </script>
 
