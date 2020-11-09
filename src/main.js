@@ -2,6 +2,7 @@ import Vue from 'vue'
 import App from '@/App.vue'
 import VueMeta from 'vue-meta'
 import VueMatomo from 'vue-matomo'
+import smartTag from 'vue-atinternet-smarttag'
 
 import store from '@/store'
 import router from '@/router'
@@ -13,6 +14,8 @@ import { Integrations } from "@sentry/tracing";
 Vue.config.productionTip = false
 
 Vue.use(VueMeta)
+
+Vue.use(smartTag)
 
 if (process.env.VUE_APP_MATOMO_SITE_ID) {
   Vue.use(VueMatomo, {
