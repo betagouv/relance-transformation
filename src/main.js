@@ -2,6 +2,7 @@ import Vue from 'vue'
 import App from '@/App.vue'
 import VueMeta from 'vue-meta'
 import VueMatomo from 'vue-matomo'
+import smartTag from 'vue-atinternet-smarttag'
 
 import store from '@/store'
 import router from '@/router'
@@ -13,6 +14,7 @@ import { Integrations } from "@sentry/tracing";
 Vue.config.productionTip = false
 
 Vue.use(VueMeta)
+
 
 
 if (process.env.VUE_APP_MATOMO_SITE_ID) {
@@ -29,6 +31,15 @@ const vue = new Vue({
 })
 
 vue.$mount('#app')
+
+
+Vue.use(smartTag)
+
+Vue.smartTag.sendPage({
+  name: name,
+  level2: '4'
+})
+
 
 if (process.env.VUE_APP_SENTRY_DSN) {
   Sentry.init({
