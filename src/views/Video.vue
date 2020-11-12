@@ -53,6 +53,15 @@
           }
       },
 
+      methods: {
+         trackMyPage() {
+            this.$smartTag.sendPage({
+                name: 'video',
+                level2: '4',
+            })
+          },
+      },
+
       metaInfo () {
         return {
           title: this.title,
@@ -95,6 +104,10 @@
           ],
         }
       },
+
+      mounted() {
+        this.trackMyPage()
+      }
 
     }
 </script>

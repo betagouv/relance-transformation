@@ -138,6 +138,13 @@
 
       methods: {
 
+        trackMyPage() {
+            this.$smartTag.sendPage({
+                name: 'search',
+                level2: '4',
+            })
+          },
+
         setTitle(results) {
           if(results.length == 0 && this.text == null) {
             this.title = `Rechercher un financement : Aucun résultat car absence de terme de recherche – France Relance – Ministère de la Transformation et de la Fonction publiques`;
@@ -175,6 +182,9 @@
       },
 
       mounted() {
+
+          this.trackMyPage()
+          
           if(this.$route.query.q == null) {
             this.text = null;
             this.setTitle(this.results);

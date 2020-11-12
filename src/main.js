@@ -32,14 +32,12 @@ const vue = new Vue({
 
 vue.$mount('#app')
 
-
 Vue.use(smartTag)
 
 Vue.smartTag.sendPage({
   name: name,
   level2: '4'
 })
-
 
 if (process.env.VUE_APP_SENTRY_DSN) {
   Sentry.init({

@@ -132,12 +132,14 @@
       },
 
       methods: {
-          trackMyPage () {
+
+          trackMyPage() {
             this.$smartTag.sendPage({
-              name: 'accueil',
-              level2: '4',
+                name: 'accueil',
+                level2: '4',
             })
           },
+
           goToResearch() {
             if(this.recherche.trim() == "") {
               this.$router.push({ name: 'search', query: { q: null}})
@@ -191,7 +193,11 @@
                 .then(response => {
                   this.aides = response.data.results;
                 })
-            },
+            }
+      },
+
+      mounted(){
+          this.trackMyPage()
       },
 
       metaInfo () {
