@@ -33,6 +33,7 @@
           <div class="rf-grid-row rf-grid-row--center">
             <div class="rf-col">
               <h2 class="rf-h4"> Découvrez tous les financements auxquels vous pouvez faire appel&nbsp;:</h2>
+              <p class="rf-text">Consultables aussi au <a href="static/20201029_Plan-de-relance-transformation-numerique-de-l-Etat-et-des-Territoires_Livret-des-themes.pdf" target="_blank" title="Consulter l'ensemble des aides du plan de relance transformation numérique de l'Etat et des Territoires - nouvelle fenêtre">format PDF</a>.</p>
             </div>
           </div>
 
