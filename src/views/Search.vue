@@ -140,7 +140,7 @@
 
         trackMyPage() {
             this.$smartTag.sendPage({
-                name: 'search',
+                name: 'recherche',
                 level2: '4',
             })
           },
