@@ -38,31 +38,16 @@
           </div>
 
           <div class="rf-grid-row rf-grid-row--center rf-grid-row--middle rf-grid-row--gutters rf-margin-bottom-2N">
-            <TopSelection :title="topSelection1" :expanded="expanded1" :controls="controls1" :filename="logoEtat" :focus="focusTopSelection1" @click.native="goToSelection1()" @keyup.enter.native="goToSelection1" @keyup.space.prevent.native="goToSelection1"></TopSelection>
+            <TopSelection :title="topSelection1" :expanded="expanded1" :controls="controls1" :filename="logoEtat" :focus="focusTopSelection1" @click.native="goToSelection1()" @keyup.enter.native="goToSelection1()" @keyup.space.prevent.native="goToSelection1()"></TopSelection>
             <TopSelection :title="topSelection2" :expanded="expanded2" :controls="controls2" :filename="logoCollectivite" :focus="focusTopSelection2" @click.native="goToSelection2()" @keyup.enter.native="goToSelection2()" @keyup.space.prevent.native="goToSelection2()"></TopSelection>
-          </div>
-
-          <div v-if="topSelectionEtat" id="selectionDate" >
-            <div class="rf-grid-row rf-grid-row--center">
-              <div class="rf-col">
-                <h2 class="rf-h4">Quelle est l'échéance de votre projet&nbsp;?</h2>
-              </div>
-            </div>
-
-            <div v-if="topSelectionEtat" class="rf-grid-row rf-grid-row--center rf-grid-row--middle rf-grid-row--gutters">
-              <DateSelection :title="dateSelection1" :expanded="expanded1" :controls="controls2" :filename="logo2022" :focus="focusEcheance1" @click.native="goToEcheance2022()" @keyup.enter.native="goToEcheance2022()" @keyup.space.prevent.native="goToEcheance2022()"></DateSelection>
-              <DateSelection :title="dateSelection2" :expanded="expanded2" :controls="controls2" :filename="logo2023" :focus="focusEcheance2" @click.native="goToEcheance2023()" @keyup.enter.native="goToEcheance2023()" @keyup.space.prevent.native="goToEcheance2023()"></DateSelection>
-            </div>
           </div>
 
           <div v-if="results" id="results">
           <ResultSection class="rf-margin-top-4N">
             <template v-slot:titleResultSection>
-              <h2  class="rf-h4" v-if="focusTopSelection2 && aides.length == 0">À venir dans les prochains jours.</h2>
-              <h2  class="rf-h4" v-else-if="focusTopSelection2">Dans le cadre de votre projet, vous pouvez&nbsp;:</h2>
-              <h2  class="rf-h4" v-else-if="focusEcheance1">Dans le cadre de votre projet, vous souhaitez&nbsp;:</h2>
-              <h2  class="rf-h4" v-else-if="focusEcheance2 && aides.length == 0">À venir dans les prochains jours.</h2>
-              <h2  class="rf-h4" v-else-if="focusEcheance2">Dans le cadre de votre projet, vous pouvez&nbsp;:</h2>
+              <h2  class="rf-h4" v-if="focusTopSelection1">Dans le cadre de votre projet, vous souhaitez</h2>
+              <h2  class="rf-h4" v-else-if="focusTopSelection2 && aides.length == 0">À venir dans les prochains jours.</h2>
+              <h2  class="rf-h4" v-else>Dans le cadre de votre projet, vous pouvez</h2>
             </template>
 
             <template v-slot:resultCards>
@@ -92,7 +77,6 @@
   import IntroSection from "@/components/IntroSection";
   import SearchBar from "@/components/SearchBar";
   import TopSelection from "@/components/TopSelection";
-  import DateSelection from "@/components/DateSelection";
   import ResultSection from "@/components/ResultSection";
   import Footer from "@/components/Footer";
   import aidService from '../services/aidService';
@@ -101,7 +85,7 @@
   export default {
       name: "FranceRelance",
 
-      components: { Header, Breadcrumbs, IntroSection, TopSelection, SearchBar, DateSelection, ResultSection, Footer, infoPlan },
+      components: { Header, Breadcrumbs, IntroSection, TopSelection, SearchBar, ResultSection, Footer, infoPlan },
 
       data() {
         return {
@@ -109,16 +93,10 @@
           topSelection2: "Vous êtes une collectivité territoriale ou un regroupement de collectivités territoriales",
           logoEtat: "Etat/Normal.svg",
           logoCollectivite: "Collectivite/Normal.svg",
-          dateSelection1: "Votre projet sera réalisé au plus tard à la fin d'année 2022",
-          dateSelection2: "Votre projet sera réalisé au plus tôt en début d'année 2023",
           logo2022: "2022/Normal.svg",
           logo2023: "2023/Normal.svg",
           focusTopSelection1: false,
           focusTopSelection2: false,
-          focusEcheance1: false,
-          focusEcheance2: false,
-          topSelectionEtat: false,
-          echeance2022: false,
           results: false,
           aides: "",
           title: "France Relance - Ministère de la Transformation et de la Fonction publiques",
@@ -127,7 +105,7 @@
           recherche:"",
           expanded1: "false",
           expanded2: "false",
-          controls1:"selectionDate",
+          controls1:"results",
           controls2:"results",
         }
       },
@@ -140,21 +118,9 @@
               this.$router.push({ name: 'search', query: { q: this.recherche.trim()}})
             }
           },
-          goToSelection1() {
-            this.focusTopSelection1 = true;
-            this.focusTopSelection2 = false;
-            this.topSelectionEtat = true;
-            this.expanded1 = "true";
-            this.expanded2 = "false";
-            this.aides = "";
-          },
           goToSelection2() {
             this.focusTopSelection2 = true;
             this.focusTopSelection1 = false;
-            this.topSelectionEtat = false;
-            this.echeance2022 = false;
-            this.focusEcheance1 = false;
-            this.focusEcheance2 = false;
             this.results = true;
             this.aides = "";
             this.expanded2 = "true";
@@ -165,28 +131,18 @@
                 this.aides = response.data.results;
               })
           },
-          goToEcheance2022() {
-              this.focusEcheance1 = true;
-              this.focusEcheance2 = false;
-              this.echeance2022 = true;
-              this.results = true;
-              this.aides = "";
-              aidService.fetchAidList('targeted_audiences=public_org&recurrence=oneoff&apply_before=2022-12-31')
-                .then(response => {
-                  this.aides = response.data.results;
-                })
-            },
-            goToEcheance2023() {
-              this.focusEcheance2 = true;
-              this.focusEcheance1 = false;
-              this.echeance2022 = false;
-              this.results = true;
-              this.aides = "";
-              aidService.fetchAidList('targeted_audiences=public_org&recurrence=ongoing')
-                .then(response => {
-                  this.aides = response.data.results;
-                })
-            },
+          goToSelection1() {
+            this.focusTopSelection1 = true;
+            this.focusTopSelection2 = false;
+            this.expanded1 = "true";
+            this.expanded2 = "false";
+            this.results = true;
+            this.aides = "";
+            aidService.fetchAidList('targeted_audiences=public_org&recurrence=oneoff')
+              .then(response => {
+                this.aides = response.data.results;
+              })
+        },
       },
 
       metaInfo () {
