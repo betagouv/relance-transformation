@@ -45,10 +45,9 @@
           <div v-if="results" id="results">
           <ResultSection class="rf-margin-top-4N">
             <template v-slot:titleResultSection>
-  
-            <h2  class="rf-h4" v-if="aides.length == 0">À venir dans les prochains jours.</h2>
-            <h2  class="rf-h4" v-else>Dans le cadre de votre projet, vous pouvez</h2>
- 
+              <h2  class="rf-h4" v-if="focusTopSelection1">Dans le cadre de votre projet, vous souhaitez</h2>
+              <h2  class="rf-h4" v-else-if="focusTopSelection2 && aides.length == 0">À venir dans les prochains jours.</h2>
+              <h2  class="rf-h4" v-else>Dans le cadre de votre projet, vous pouvez</h2>
             </template>
 
             <template v-slot:resultCards>
@@ -122,7 +121,6 @@
           goToSelection2() {
             this.focusTopSelection2 = true;
             this.focusTopSelection1 = false;
-            this.topSelectionEtat = false;
             this.results = true;
             this.aides = "";
             this.expanded2 = "true";
@@ -134,8 +132,8 @@
               })
           },
           goToSelection1() {
+            this.focusTopSelection1 = true;
             this.focusTopSelection2 = false;
-            this.topSelectionEtat = true;
             this.expanded1 = "true";
             this.expanded2 = "false";
             this.results = true;
