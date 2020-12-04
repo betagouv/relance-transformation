@@ -35,7 +35,7 @@ vue.$mount('#app')
 Vue.use(smartTag)
 
 Vue.smartTag.sendPage({
-  name: name,
+  name: 'accueil',
   level2: '4'
 })
 

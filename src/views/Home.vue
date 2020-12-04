@@ -132,12 +132,7 @@
       },
 
       methods: {
-          trackMyPage() {
-            this.$smartTag.sendPage({
-              name: 'accueil',
-              level2: '4',
-            })
-          },
+
           goToResearch() {
             if(this.recherche.trim() == "") {
               this.$router.push({ name: 'search', query: { q: null}})
@@ -193,11 +188,6 @@
                 })
             }
       },
-
-      mounted(){
-          this.trackMyPage()
-      },
-
       metaInfo () {
         return {
           title: this.title,
@@ -239,7 +229,7 @@
             },
           ],
         }
-      },
+      }
   }
 </script>
 

@@ -70,29 +70,25 @@
     import infoPlan from "@/components/planDeRelance";
 
     export default {
-         name: "Search",
-
+      name: "Search",
       components: { Header, Breadcrumbs, ResultSection, Footer, infoPlan },
-
       data() {
-          return {
-              title: "France Relance : rechercher un financement - Ministère de la Transformation et de la Fonction publiques",
-              description: "Rechercher un financement dans le cadre du volet « Mise à niveau numérique de l'État et des territoires » du plan de relance",
-              previewImg: require('@/assets/Preview.png'),
-              results: "",
-              newResearch: '',
-              text: '',
-              noResult: false,
-          }
+        return {
+          title: "France Relance : rechercher un financement - Ministère de la Transformation et de la Fonction publiques",
+          description: "Rechercher un financement dans le cadre du volet « Mise à niveau numérique de l'État et des territoires » du plan de relance",
+          previewImg: require('@/assets/Preview.png'),
+          results: "",
+          newResearch: '',
+          text: '',
+          noResult: false,
+        }
       },
-
       props: {
-          query: {
-              type: Function,
-              default: null
-          }
+        query: {
+          type: Function,
+          default: null
+        }
       },
-
       metaInfo () {
         return {
           title: this.title,
@@ -135,16 +131,13 @@
           ],
         }
       },
-
       methods: {
-
         trackMyPage() {
-            this.$smartTag.sendPage({
-                name: 'recherche',
-                level2: '4',
-            })
-          },
-
+          this.$smartTag.sendPage({
+            name: 'recherche',
+            level2: '4',
+          })
+        },
         setTitle(results) {
           if(results.length == 0 && this.text == null) {
             this.title = `Rechercher un financement : Aucun résultat car absence de terme de recherche – France Relance – Ministère de la Transformation et de la Fonction publiques`;
@@ -159,7 +152,6 @@
             this.noResult = false;
           }
         },
-
         Search(newResearch) {
             this.results = "";  
             if(newResearch.trim() == "") {
@@ -178,13 +170,9 @@
             this.$router.push({query: {q: newResearch.trim()}})  
             }      
         },
-
       },
-
       mounted() {
-
-          this.trackMyPage()
-          
+          this.trackMyPage()          
           if(this.$route.query.q == null) {
             this.text = null;
             this.setTitle(this.results);
