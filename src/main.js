@@ -14,6 +14,7 @@ import { Integrations } from "@sentry/tracing";
 Vue.config.productionTip = false
 
 Vue.use(VueMeta)
+Vue.use(smartTag)
 
 
 
@@ -32,12 +33,6 @@ const vue = new Vue({
 
 vue.$mount('#app')
 
-Vue.use(smartTag)
-
-Vue.smartTag.sendPage({
-  name: 'accueil',
-  level2: '4'
-})
 
 if (process.env.VUE_APP_SENTRY_DSN) {
   Sentry.init({
