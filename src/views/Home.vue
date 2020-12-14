@@ -93,16 +93,10 @@
         topSelection2: "Vous êtes une collectivité territoriale ou un regroupement de collectivités territoriales",
         logoEtat: "Etat/Normal.svg",
         logoCollectivite: "Collectivite/Normal.svg",
-        dateSelection1: "Votre projet sera réalisé au plus tard à la fin d'année 2022", 
-        dateSelection2: "Votre projet sera réalisé au plus tôt en début d'année 2023",
         logo2022: "2022/Normal.svg",
         logo2023: "2023/Normal.svg",
         focusTopSelection1: false,
         focusTopSelection2: false,
-        focusEcheance1: false,
-        focusEcheance2: false,
-        topSelectionEtat: false,
-        echeance2022: false,
         results: false,
         aides: "",
         title: "France Relance - Ministère de la Transformation et de la Fonction publiques",
@@ -111,7 +105,7 @@
         recherche:"",
         expanded1: "false",
         expanded2: "false",
-        controls1:"selectionDate",
+        controls1:"results",
         controls2:"results",
       }
     },
@@ -136,14 +130,14 @@
         this.expanded1 = "true";
         this.expanded2 = "false";
         this.aides = "";
+        aidService.fetchAidList('targeted_audiences=public_org&recurrence=oneoff')
+        .then(response => {
+            this.aides = response.data.results;
+        })
       },
       goToSelection2() {
         this.focusTopSelection2 = true;
         this.focusTopSelection1 = false;
-        this.topSelectionEtat = false;
-        this.echeance2022 = false;
-        this.focusEcheance1 = false;
-        this.focusEcheance2 = false;
         this.results = true;
         this.aides = "";
         this.expanded2 = "true";
@@ -154,28 +148,6 @@
           this.aides = response.data.results;
         })
       },
-      goToEcheance2022() {
-        this.focusEcheance1 = true;
-        this.focusEcheance2 = false;
-        this.echeance2022 = true;
-        this.results = true;
-        this.aides = "";
-        aidService.fetchAidList('targeted_audiences=public_org&recurrence=oneoff&apply_before=2022-12-31')
-        .then(response => {
-          this.aides = response.data.results;
-        })
-      },
-      goToEcheance2023() {
-        this.focusEcheance2 = true;
-        this.focusEcheance1 = false;
-        this.echeance2022 = false;
-        this.results = true;
-        this.aides = "";
-        aidService.fetchAidList('targeted_audiences=public_org&recurrence=ongoing')
-        .then(response => {
-          this.aides = response.data.results;
-        })
-      }
     },
     metaInfo () {
       return {
