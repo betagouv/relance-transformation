@@ -78,6 +78,15 @@
             }
         },
 
+        methods: {
+            trackMyPage() {
+                this.$smartTag.sendPage({
+                    name: 'DetailAide',
+                    level2: '4',
+                })
+            },
+        },
+
         created() {
             aidService.fetchAidDetail(this.$route.params.slug)
                 .then(aidDetail => {
@@ -86,6 +95,10 @@
                     this.meta_title = this.title + " - Ministère de la Transformation et de la Fonction publiques"
                     this.description = aidDetail.name;
             })
+        },
+
+        mounted() {
+            this.trackMyPage()
         },
 
         metaInfo() {

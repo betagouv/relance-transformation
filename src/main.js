@@ -14,8 +14,9 @@ import { Integrations } from "@sentry/tracing";
 Vue.config.productionTip = false
 
 Vue.use(VueMeta)
-
 Vue.use(smartTag)
+
+
 
 if (process.env.VUE_APP_MATOMO_SITE_ID) {
   Vue.use(VueMatomo, {
@@ -32,6 +33,7 @@ const vue = new Vue({
 })
 
 vue.$mount('#app')
+
 
 if (process.env.VUE_APP_SENTRY_DSN) {
   Sentry.init({
