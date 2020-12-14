@@ -83,119 +83,120 @@
   import infoPlan from "@/components/planDeRelance";
 
   export default {
-    name: "FranceRelance",
+      name: "FranceRelance",
 
-    components: { Header, Breadcrumbs, IntroSection, TopSelection, SearchBar, ResultSection, Footer, infoPlan },
+      components: { Header, Breadcrumbs, IntroSection, TopSelection, SearchBar, ResultSection, Footer, infoPlan },
 
-    data() {
-      return {
-        topSelection1: "Vous êtes un service de l'État ou un établissement public",
-        topSelection2: "Vous êtes une collectivité territoriale ou un regroupement de collectivités territoriales",
-        logoEtat: "Etat/Normal.svg",
-        logoCollectivite: "Collectivite/Normal.svg",
-        logo2022: "2022/Normal.svg",
-        logo2023: "2023/Normal.svg",
-        focusTopSelection1: false,
-        focusTopSelection2: false,
-        results: false,
-        aides: "",
-        title: "France Relance - Ministère de la Transformation et de la Fonction publiques",
-        description: "Administrations : bénéficiez du volet « Mise à niveau numérique de l'État et des territoires »",
-        previewImg: require('@/assets/Preview.png'),
-        recherche:"",
-        expanded1: "false",
-        expanded2: "false",
-        controls1:"results",
-        controls2:"results",
-      }
-    },
-    methods: {
-      trackMyPage() {
-        this.$smartTag.sendPage({
-          name: 'accueil',
-          level2: '4',
-        })
-      },
-      goToResearch() {
-        if(this.recherche.trim() == "") {
-          this.$router.push({ name: 'search', query: { q: null}})
-        } else {
-          this.$router.push({ name: 'search', query: { q: this.recherche.trim()}})
+      data() {
+        return {
+          topSelection1: "Vous êtes un service de l'État ou un établissement public",
+          topSelection2: "Vous êtes une collectivité territoriale ou un regroupement de collectivités territoriales",
+          logoEtat: "Etat/Normal.svg",
+          logoCollectivite: "Collectivite/Normal.svg",
+          logo2022: "2022/Normal.svg",
+          logo2023: "2023/Normal.svg",
+          focusTopSelection1: false,
+          focusTopSelection2: false,
+          results: false,
+          aides: "",
+          title: "France Relance - Ministère de la Transformation et de la Fonction publiques",
+          description: "Administrations : bénéficiez du volet « Mise à niveau numérique de l'État et des territoires »",
+          previewImg: require('@/assets/Preview.png'),
+          recherche:"",
+          expanded1: "false",
+          expanded2: "false",
+          controls1:"results",
+          controls2:"results",
         }
       },
-      goToSelection1() {
-        this.focusTopSelection1 = true;
-        this.focusTopSelection2 = false;
-        this.topSelectionEtat = true;
-        this.expanded1 = "true";
-        this.expanded2 = "false";
-        this.aides = "";
-        aidService.fetchAidList('targeted_audiences=public_org&recurrence=oneoff')
-        .then(response => {
-            this.aides = response.data.results;
-        })
-      },
-      goToSelection2() {
-        this.focusTopSelection2 = true;
-        this.focusTopSelection1 = false;
-        this.results = true;
-        this.aides = "";
-        this.expanded2 = "true";
-        this.expanded1 = "false";
 
-        aidService.fetchAidList('targeted_audiences=commune&targeted_audiences=epci&targeted_audiences=department&targeted_audiences=region')
-        .then(response => {
-          this.aides = response.data.results;
-        })
+      methods: {
+        trackMyPage() {
+          this.$smartTag.sendPage({
+            name: 'accueil',
+            level2: '4',
+          })
+        },
+        goToResearch() {
+            if(this.recherche.trim() == "") {
+              this.$router.push({ name: 'search', query: { q: null}})
+            } else {
+              this.$router.push({ name: 'search', query: { q: this.recherche.trim()}})
+            }
+          },
+          goToSelection2() {
+            this.focusTopSelection2 = true;
+            this.focusTopSelection1 = false;
+            this.results = true;
+            this.aides = "";
+            this.expanded2 = "true";
+            this.expanded1 = "false";
+
+            aidService.fetchAidList('targeted_audiences=commune&targeted_audiences=epci&targeted_audiences=department&targeted_audiences=region')
+              .then(response => {
+                this.aides = response.data.results;
+              })
+          },
+          goToSelection1() {
+            this.focusTopSelection1 = true;
+            this.focusTopSelection2 = false;
+            this.expanded1 = "true";
+            this.expanded2 = "false";
+            this.results = true;
+            this.aides = "";
+            aidService.fetchAidList('targeted_audiences=public_org&recurrence=oneoff')
+              .then(response => {
+                this.aides = response.data.results;
+              })
+        },
       },
-    },
-    metaInfo () {
-      return {
-        title: this.title,
-        meta: [{
-            name: 'description',
-            content: this.description
-          },
-          {
-            property: 'og:title',
-            content: this.title
-          },
-          {
-            property: 'og:description',
-            content: this.description
-          },
+
+      metaInfo () {
+        return {
+          title: this.title,
+          meta: [{
+              name: 'description',
+              content: this.description
+            },
             {
-            property: 'og:image',
-            content: "https://france-relance.transformation.gouv.fr" + this.previewImg
-          },
-          {
-            name: "twitter:card",
-            content: "summary_large_image"
-          },
-          {
-            name: "twitter:site",
-            content: "@AdeMontchalin"
-          },
-          {
-            name: "twitter:title",
-            content: this.title
-          },
-          {
-            name: "twitter:description",
-            content: this.description
-          },
-          {
-            name: "twitter:image",
-            content: "https://france-relance.transformation.gouv.fr" + this.previewImg
-          },
-        ],
-      }
+              property: 'og:title',
+              content: this.title
+            },
+            {
+              property: 'og:description',
+              content: this.description
+            },
+              {
+              property: 'og:image',
+              content: "https://france-relance.transformation.gouv.fr" + this.previewImg
+            },
+            {
+              name: "twitter:card",
+              content: "summary_large_image"
+            },
+            {
+              name: "twitter:site",
+              content: "@AdeMontchalin"
+            },
+            {
+              name: "twitter:title",
+              content: this.title
+            },
+            {
+              name: "twitter:description",
+              content: this.description
+            },
+            {
+              name: "twitter:image",
+              content: "https://france-relance.transformation.gouv.fr" + this.previewImg
+            },
+          ],
+        }
     },
     mounted() {
       this.trackMyPage()
     }
   }
-
 </script>
 
 <style>
