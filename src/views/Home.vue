@@ -33,35 +33,21 @@
           <div class="rf-grid-row rf-grid-row--center">
             <div class="rf-col">
               <h2 class="rf-h4"> Découvrez tous les financements auxquels vous pouvez faire appel&nbsp;:</h2>
+              <p class="rf-text">Consultables aussi au <a href="static/20201029_Plan-de-relance-transformation-numerique-de-l-Etat-et-des-Territoires_Livret-des-themes.pdf" target="_blank" title="Consulter l'ensemble des aides du plan de relance transformation numérique de l'Etat et des Territoires - nouvelle fenêtre">format PDF</a>.</p>
             </div>
           </div>
 
           <div class="rf-grid-row rf-grid-row--center rf-grid-row--middle rf-grid-row--gutters rf-margin-bottom-2N">
-            <TopSelection :title="topSelection1" :expanded="expanded1" :controls="controls1" :filename="logoEtat" :focus="focusTopSelection1" @click.native="goToSelection1()" @keyup.enter.native="goToSelection1" @keyup.space.prevent.native="goToSelection1"></TopSelection>
+            <TopSelection :title="topSelection1" :expanded="expanded1" :controls="controls1" :filename="logoEtat" :focus="focusTopSelection1" @click.native="goToSelection1()" @keyup.enter.native="goToSelection1()" @keyup.space.prevent.native="goToSelection1()"></TopSelection>
             <TopSelection :title="topSelection2" :expanded="expanded2" :controls="controls2" :filename="logoCollectivite" :focus="focusTopSelection2" @click.native="goToSelection2()" @keyup.enter.native="goToSelection2()" @keyup.space.prevent.native="goToSelection2()"></TopSelection>
-          </div>
-
-          <div v-if="topSelectionEtat" id="selectionDate" >
-            <div class="rf-grid-row rf-grid-row--center">
-              <div class="rf-col">
-                <h2 class="rf-h4">Quelle est l'échéance de votre projet&nbsp;?</h2>
-              </div>
-            </div>
-
-            <div v-if="topSelectionEtat" class="rf-grid-row rf-grid-row--center rf-grid-row--middle rf-grid-row--gutters">
-              <DateSelection :title="dateSelection1" :expanded="expanded1" :controls="controls2" :filename="logo2022" :focus="focusEcheance1" @click.native="goToEcheance2022()" @keyup.enter.native="goToEcheance2022()" @keyup.space.prevent.native="goToEcheance2022()"></DateSelection>
-              <DateSelection :title="dateSelection2" :expanded="expanded2" :controls="controls2" :filename="logo2023" :focus="focusEcheance2" @click.native="goToEcheance2023()" @keyup.enter.native="goToEcheance2023()" @keyup.space.prevent.native="goToEcheance2023()"></DateSelection>
-            </div>
           </div>
 
           <div v-if="results" id="results">
           <ResultSection class="rf-margin-top-4N">
             <template v-slot:titleResultSection>
-              <h2  class="rf-h4" v-if="focusTopSelection2 && aides.length == 0">À venir dans les prochains jours.</h2>
-              <h2  class="rf-h4" v-else-if="focusTopSelection2">Dans le cadre de votre projet, vous pouvez&nbsp;:</h2>
-              <h2  class="rf-h4" v-else-if="focusEcheance1">Dans le cadre de votre projet, vous souhaitez&nbsp;:</h2>
-              <h2  class="rf-h4" v-else-if="focusEcheance2 && aides.length == 0">À venir dans les prochains jours.</h2>
-              <h2  class="rf-h4" v-else-if="focusEcheance2">Dans le cadre de votre projet, vous pouvez&nbsp;:</h2>
+              <h2  class="rf-h4" v-if="focusTopSelection1">Dans le cadre de votre projet, vous souhaitez</h2>
+              <h2  class="rf-h4" v-else-if="focusTopSelection2 && aides.length == 0">À venir dans les prochains jours.</h2>
+              <h2  class="rf-h4" v-else>Dans le cadre de votre projet, vous pouvez</h2>
             </template>
 
             <template v-slot:resultCards>
@@ -91,7 +77,6 @@
   import IntroSection from "@/components/IntroSection";
   import SearchBar from "@/components/SearchBar";
   import TopSelection from "@/components/TopSelection";
-  import DateSelection from "@/components/DateSelection";
   import ResultSection from "@/components/ResultSection";
   import Footer from "@/components/Footer";
   import aidService from '../services/aidService';
@@ -99,7 +84,6 @@
 
   export default {
     name: "FranceRelance",
-
     components: { Header, Breadcrumbs, IntroSection, TopSelection, SearchBar, DateSelection, ResultSection, Footer, infoPlan },
 
     data() {
