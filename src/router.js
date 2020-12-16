@@ -4,6 +4,7 @@ import Home from '@/views/Home.vue'
 import AidDetail from '@/views/AidDetail.vue'
 import Video from '@/views/Video.vue'
 import Search from '@/views/Search.vue'
+import FondsCollectivites from '@/views/FondsCollectivites.vue'
 
 Vue.use(Router)
 
@@ -34,6 +35,18 @@ export default new Router({
       },
     },
     {
+      path: '/fonds-collectivites',
+      name: 'FondsCollectivites',
+      component: FondsCollectivites,
+      meta: {
+        breadcrumbs: [
+          { name: 'Accueil', url: 'https://www.transformation.gouv.fr' },
+          { name: 'France Relance', url: '/' },
+          { name: 'Le fond pour les collectivités'},
+        ]
+      },
+    },
+    {
       path: '/recherche',
       name: 'search',
       component: Search,
@@ -56,7 +69,7 @@ export default new Router({
           { name: 'Détail du financement' },
         ]
       }
-    },
+    }
   ],
   scrollBehavior() {
     return { x: 0, y: 0 }
