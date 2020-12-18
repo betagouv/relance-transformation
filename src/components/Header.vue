@@ -66,6 +66,9 @@
 </script>
 
 <style>
+  body {
+    margin:0;
+  }
   header .rf-header, header a {
     box-shadow: none;
   }
@@ -95,6 +98,7 @@
   }  
   ul.rf-nav__rs--custom li {
     padding: 0 0.6em;
+    display: inline;
   }  
   
   ul.rf-nav__rs--custom li::before {
@@ -115,10 +119,30 @@
   .rf-header__navbar::after {
     height: 0;
   }
+  [class*=" rf-"] a, [class^="rf-"] a, [data-rf-reset] a {
+    box-shadow: none;
+  }
+  .rf-footer__bottom-list li {
+    display: inline;
+    padding: 0 1.5em 0 0;
+    font-size: 0.9em;
+  }
+
+  .rf-footer__bottom-list li a {
+    box-shadow: none;
+    font-size: .75rem;
+    color: var(--g600);
+  }
+  .rf-footer__content-links li {
+    display: inline;
+  }   
+  .rf-footer__content-links li a {
+    font-weight: 700;
+  }
   @media screen and (min-width: 768px) {
     .rf-nav__rs--custom {
       position: absolute;
-      padding-top: 8em;
+      padding-top: 7em;
       z-index: 10;
     }
   }
