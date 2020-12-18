@@ -4,7 +4,7 @@
 
     <Header></Header>
 
-    <main class="rf-container">
+    <main class="rf-container" id="main">
 
 
       <div class="rf-grid-row rf-grid-row--center">

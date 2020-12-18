@@ -1,5 +1,17 @@
 <template>
   <div id="app">
+    <div class="rf-skiplinks">
+        <div class="rf-container">
+            <ul class="rf-skiplinks__list">
+                <li>
+                    <a class="rf-link" href="#main">Accéder au contenu</a>
+                </li>
+                <li>
+                    <a class="rf-link" href="#header-navigation">Accéder au menu</a>
+                </li>
+            </ul>
+        </div>
+    </div>
     <router-view/>
   </div>
 </template>
