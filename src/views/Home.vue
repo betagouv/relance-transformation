@@ -13,23 +13,6 @@
 
           <IntroSection class="rf-margin-bottom-2N"></IntroSection>
 
-          <div class="rf-margin-bottom-8N">
-            <div class="rf-grid-row">
-              <div class="rf-col">
-                <h2 class="rf-h4">Rechercher un financement :</h2>
-                <form @submit.stop.prevent="goToResearch()">
-                  <div class="rf-search-bar rf-search-bar--lg" id="search-input--lg">
-                    <label class="rf-label" for="search-input--lg-input">Label de la barre de recherche</label>
-                    <input v-model="recherche" class="rf-input" placeholder="Rechercher un mot, une expression, une référence…" type="search" id="search-input--lg-input" name="search-input--lg-input">
-                      <button class="rf-btn rf-btn--lg" title="Rechercher" type="submit">
-                        <span>Rechercher</span>
-                      </button>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-
           <div class="rf-grid-row rf-grid-row--center">
             <div class="rf-col">
               <h2 class="rf-h4"> Découvrez tous les financements auxquels vous pouvez faire appel&nbsp;:</h2>
@@ -117,13 +100,6 @@
             level2: '4',
           })
         },
-        goToResearch() {
-            if(this.recherche.trim() == "") {
-              this.$router.push({ name: 'search', query: { q: null}})
-            } else {
-              this.$router.push({ name: 'search', query: { q: this.recherche.trim()}})
-            }
-          },
           goToSelection2() {
             this.focusTopSelection2 = true;
             this.focusTopSelection1 = false;

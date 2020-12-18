@@ -3,7 +3,6 @@ import Router from 'vue-router'
 import Home from '@/views/Home.vue'
 import AidDetail from '@/views/AidDetail.vue'
 import Video from '@/views/Video.vue'
-import Search from '@/views/Search.vue'
 import FondsCollectivites from '@/views/FondsCollectivites.vue'
 
 Vue.use(Router)
@@ -45,18 +44,6 @@ export default new Router({
           { name: 'Le fond pour les collectivités'},
         ]
       },
-    },
-    {
-      path: '/recherche',
-      name: 'search',
-      component: Search,
-      meta: {
-        breadcrumbs: [
-          { name: 'Accueil', url: 'https://www.transformation.gouv.fr' },
-          { name: 'France Relance', url: '/' },
-          { name: 'Recherche'},
-        ]
-      }
     },
     {
       path: '/:slug',
