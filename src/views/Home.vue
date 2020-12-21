@@ -22,7 +22,14 @@
 
           <div class="rf-grid-row rf-grid-row--center rf-grid-row--middle rf-grid-row--gutters rf-margin-bottom-2N">
             <TopSelection :title="topSelection1" :expanded="expanded1" :controls="controls1" :filename="logoEtat" :focus="focusTopSelection1" @click.native="goToSelection1()" @keyup.enter.native="goToSelection1()" @keyup.space.prevent.native="goToSelection1()"></TopSelection>
-            <TopSelection :title="topSelection2" :expanded="expanded2" :controls="controls2" :filename="logoCollectivite" :focus="focusTopSelection2" @click.native="goToSelection2()" @keyup.enter.native="goToSelection2()" @keyup.space.prevent.native="goToSelection2()"></TopSelection>
+
+            <div class="rf-col-sm-12 rf-col-md-6">
+              <div class="rf-grid-row unselected collectivites" >
+                <img class="rf-col-3 top-selection-image" src="static/img/Normal.546c2386.svg" alt="" />
+                <h3 class="rf-col-9 rf-text select-title">
+                  <a href="/fonds-collectivites">Vous êtes une collectivité territoriale ou un regroupement de collectivités territoriales</a></h3>
+              </div>
+            </div>
           </div>
 
           <div v-if="results" id="results">
@@ -100,7 +107,7 @@
             level2: '4',
           })
         },
-          goToSelection2() {
+        goToSelection2() {
             this.focusTopSelection2 = true;
             this.focusTopSelection1 = false;
             this.results = true;
@@ -112,8 +119,8 @@
               .then(response => {
                 this.aides = response.data.results;
               })
-          },
-          goToSelection1() {
+        },
+        goToSelection1() {
             this.focusTopSelection1 = true;
             this.focusTopSelection2 = false;
             this.expanded1 = "true";
@@ -255,5 +262,64 @@
     #search-input--lg button.rf-btn {
       background-color: #107449;
     }
+    .collectivites {
+      position: relative;
+    }
+    .collectivites a {
+      box-shadow: none;
+    }
+    .collectivites a::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+
+    div[role="button"] {
+        height: 120px;
+    }
+
+    div[role="button"]:hover, div[role="button"]:focus, .collectivites:hover, .collectivites:focus {
+        background-color: #169B62;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    div[role="button"]:hover h3, div[role="button"]:focus h3, .collectivites:hover h3 a, .collectivites:focus h3 a {
+        color: white !important;
+    }
+
+    .selected {
+        background-color: #169B62 !important;
+    }
+
+    .selected .rf-text {
+        color: white !important;
+    }
+
+    .unselected {
+        background-color: #F9F8F6;
+        color: #6A6A6A;
+    }
+
+    .top-selection-image {
+        display: flex;
+        align-items: center;
+        padding: 20px !important;
+        max-width: 120px;
+    }
+
+    .select-title {
+        margin: 0;
+        padding-left: 0 !important;
+        padding-right: 24px !important;
+        color: #107449 !important;
+        display: flex;
+        align-items: center;
+    }
+
+
 
 </style>
