@@ -179,6 +179,10 @@
         height: 120px;
         margin-right: 32px;
     }
+    hr {
+        border: 1px solid #107449;
+        margin: 1.25em 0;
+    }
     @media screen and (min-width: 767px) {
         .aides-intro p {
             margin-left: 152px;;
