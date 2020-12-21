@@ -65,7 +65,6 @@
   import Header from "@/components/Header";
   import Breadcrumbs from "@/components/Breadcrumbs";
   import IntroSection from "@/components/IntroSection";
-  import SearchBar from "@/components/SearchBar";
   import TopSelection from "@/components/TopSelection";
   import ResultSection from "@/components/ResultSection";
   import Footer from "@/components/Footer";
@@ -75,28 +74,20 @@
   export default {
       name: "FranceRelance",
 
-      components: { Header, Breadcrumbs, IntroSection, TopSelection, SearchBar, ResultSection, Footer, infoPlan },
+      components: { Header, Breadcrumbs, IntroSection, TopSelection, ResultSection, Footer, infoPlan },
 
       data() {
         return {
           topSelection1: "Vous êtes un service de l'État ou un établissement public",
-          topSelection2: "Vous êtes une collectivité territoriale ou un regroupement de collectivités territoriales",
           logoEtat: "Etat/Normal.svg",
-          logoCollectivite: "Collectivite/Normal.svg",
-          logo2022: "2022/Normal.svg",
-          logo2023: "2023/Normal.svg",
           focusTopSelection1: false,
-          focusTopSelection2: false,
           results: false,
           aides: "",
           title: "France Relance - Ministère de la Transformation et de la Fonction publiques",
           description: "Administrations : bénéficiez du volet « Mise à niveau numérique de l'État et des territoires »",
           previewImg: require('@/assets/Preview.png'),
-          recherche:"",
           expanded1: "false",
-          expanded2: "false",
           controls1:"results",
-          controls2:"results",
         }
       },
 
@@ -248,19 +239,8 @@
       background-color:           #107449;
       color:                      #fff;
     }
-    .formresearch {
-      background-color:           #F0F0F0;
-      color:                      #6A6A6A;
-      border:                     none;
-    }
     .border-bottom-green {
       border-bottom:              2px solid #107449;
-    }
-    #search-input--lg .rf-input {
-      box-shadow: inset 0 -2px 0 0 #107449;
-    }
-    #search-input--lg button.rf-btn {
-      background-color: #107449;
     }
     .collectivites {
       position: relative;
@@ -319,7 +299,4 @@
         display: flex;
         align-items: center;
     }
-
-
-
 </style>
