@@ -117,6 +117,7 @@
         font-weight: 700;
         padding-bottom: 6px;
         position: initial;
+        box-shadow: none;
     }
 
     .rf-footer__content-desc-column a::after {
@@ -140,6 +141,7 @@
     }
     .rf-footer__content-links li a {
         display: inline;
+        box-shadow: none;
     }
 
 </style>

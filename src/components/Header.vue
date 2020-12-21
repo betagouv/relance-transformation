@@ -69,15 +69,12 @@
   body {
     margin:0;
   }
-  header .rf-header, header a {
+  .rf-header a {
     box-shadow: none;
   }
   .rf-header__body {
     margin:0;
     padding:0;
-  }
-  .rf-header {
-      box-shadow: none;
   }
   .rf-header .rf-nav {
     box-shadow: none;
@@ -118,9 +115,6 @@
   }
   .rf-header__navbar::after {
     height: 0;
-  }
-  [class*=" rf-"] a, [class^="rf-"] a, [data-rf-reset] a {
-    box-shadow: none;
   }
   .rf-footer__bottom-list li {
     display: inline;
