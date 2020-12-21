@@ -11,7 +11,7 @@
         <div class="rf-col-md-10">
           <Breadcrumbs></Breadcrumbs>
 
-          <IntroSection class="rf-margin-bottom-2N"></IntroSection>
+          <IntroSection class="rf-mb-4w"></IntroSection>
 
           <div class="rf-grid-row rf-grid-row--center">
             <div class="rf-col">
@@ -20,7 +20,7 @@
             </div>
           </div>
 
-          <div class="rf-grid-row rf-grid-row--center rf-grid-row--middle rf-grid-row--gutters rf-margin-bottom-2N">
+          <div class="rf-grid-row rf-grid-row--center rf-grid-row--middle rf-grid-row--gutters rf-mb-2w">
             <TopSelection :title="topSelection1" :expanded="expanded1" :controls="controls1" :filename="logoEtat" :focus="focusTopSelection1" @click.native="goToSelection1()" @keyup.enter.native="goToSelection1()" @keyup.space.prevent.native="goToSelection1()"></TopSelection>
 
             <div class="rf-col-sm-12 rf-col-md-6">

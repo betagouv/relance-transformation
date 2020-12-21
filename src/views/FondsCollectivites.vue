@@ -2,7 +2,7 @@
   <div class="france_relance">
     <Header></Header>
     <main class="rf-container"  id="main">
-      <div class="rf-grid-row rf-grid-row--center rf-margin-bottom-3N">
+      <div class="rf-grid-row rf-grid-row--center rf-mb-4w">
         <div class="rf-col-md-10">
           <Breadcrumbs></Breadcrumbs>
             <div class="aides-title">

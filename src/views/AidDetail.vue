@@ -10,7 +10,7 @@
                     <Breadcrumbs :dynamic_page_title="title"></Breadcrumbs>
 
                         <div class="aides-intro">
-                            <a href="./" class="rf-link rf-link--icon-left rf-margin-bottom-3N">Retour</a>
+                            <a href="./" class="rf-link rf-mb-2w">Retour</a>
                             <div class="aides-title">
                                 <img src="@/assets/FranceRelance.png" alt="France Relance" />
                                 <h1>{{ aide.name }}</h1>
