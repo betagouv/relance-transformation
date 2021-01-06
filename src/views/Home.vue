@@ -4,31 +4,14 @@
 
     <Header></Header>
 
-    <main class="rf-container">
+    <main class="rf-container" id="main">
 
 
       <div class="rf-grid-row rf-grid-row--center">
         <div class="rf-col-md-10">
           <Breadcrumbs></Breadcrumbs>
 
-          <IntroSection class="rf-margin-bottom-2N"></IntroSection>
-
-          <div class="rf-margin-bottom-8N">
-            <div class="rf-grid-row">
-              <div class="rf-col">
-                <h2 class="rf-h4">Rechercher un financement :</h2>
-                <form @submit.stop.prevent="goToResearch()">
-                  <div class="rf-search-bar rf-search-bar--lg" id="search-input--lg">
-                    <label class="rf-label" for="search-input--lg-input">Label de la barre de recherche</label>
-                    <input v-model="recherche" class="rf-input" placeholder="Rechercher un mot, une expression, une référence…" type="search" id="search-input--lg-input" name="search-input--lg-input">
-                      <button class="rf-btn rf-btn--lg" title="Rechercher" type="submit">
-                        <span>Rechercher</span>
-                      </button>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
+          <IntroSection class="rf-mb-4w"></IntroSection>
 
           <div class="rf-grid-row rf-grid-row--center">
             <div class="rf-col">
@@ -37,9 +20,19 @@
             </div>
           </div>
 
-          <div class="rf-grid-row rf-grid-row--center rf-grid-row--middle rf-grid-row--gutters rf-margin-bottom-2N">
+          <div class="rf-grid-row rf-grid-row--center rf-grid-row--middle rf-grid-row--gutters rf-mb-2w">
             <TopSelection :title="topSelection1" :expanded="expanded1" :controls="controls1" :filename="logoEtat" :focus="focusTopSelection1" @click.native="goToSelection1()" @keyup.enter.native="goToSelection1()" @keyup.space.prevent.native="goToSelection1()"></TopSelection>
-            <TopSelection :title="topSelection2" :expanded="expanded2" :controls="controls2" :filename="logoCollectivite" :focus="focusTopSelection2" @click.native="goToSelection2()" @keyup.enter.native="goToSelection2()" @keyup.space.prevent.native="goToSelection2()"></TopSelection>
+
+            <div class="rf-col-sm-12 rf-col-md-6">
+              <div class="rf-grid-row unselected collectivites" >
+                <img class="rf-col-3 top-selection-image" src="static/img/Normal.546c2386.svg" alt="" />
+                <h3 class="rf-col-9 rf-text select-title">
+                  <router-link :to="{ name: 'FondsCollectivites' }">
+                    Vous êtes une collectivité territoriale ou un regroupement de collectivités territoriales
+                  </router-link>
+                </h3>
+              </div>
+            </div>
           </div>
 
           <div v-if="results" id="results">
@@ -75,7 +68,6 @@
   import Header from "@/components/Header";
   import Breadcrumbs from "@/components/Breadcrumbs";
   import IntroSection from "@/components/IntroSection";
-  import SearchBar from "@/components/SearchBar";
   import TopSelection from "@/components/TopSelection";
   import ResultSection from "@/components/ResultSection";
   import Footer from "@/components/Footer";
@@ -85,28 +77,20 @@
   export default {
       name: "FranceRelance",
 
-      components: { Header, Breadcrumbs, IntroSection, TopSelection, SearchBar, ResultSection, Footer, infoPlan },
+      components: { Header, Breadcrumbs, IntroSection, TopSelection, ResultSection, Footer, infoPlan },
 
       data() {
         return {
           topSelection1: "Vous êtes un service de l'État ou un établissement public",
-          topSelection2: "Vous êtes une collectivité territoriale ou un regroupement de collectivités territoriales",
           logoEtat: "Etat/Normal.svg",
-          logoCollectivite: "Collectivite/Normal.svg",
-          logo2022: "2022/Normal.svg",
-          logo2023: "2023/Normal.svg",
           focusTopSelection1: false,
-          focusTopSelection2: false,
           results: false,
           aides: "",
           title: "France Relance - Ministère de la Transformation et de la Fonction publiques",
           description: "Administrations : bénéficiez du volet « Mise à niveau numérique de l'État et des territoires »",
           previewImg: require('@/assets/Preview.png'),
-          recherche:"",
           expanded1: "false",
-          expanded2: "false",
           controls1:"results",
-          controls2:"results",
         }
       },
 
@@ -117,29 +101,8 @@
             level2: '4',
           })
         },
-        goToResearch() {
-            if(this.recherche.trim() == "") {
-              this.$router.push({ name: 'search', query: { q: null}})
-            } else {
-              this.$router.push({ name: 'search', query: { q: this.recherche.trim()}})
-            }
-          },
-          goToSelection2() {
-            this.focusTopSelection2 = true;
-            this.focusTopSelection1 = false;
-            this.results = true;
-            this.aides = "";
-            this.expanded2 = "true";
-            this.expanded1 = "false";
-
-            aidService.fetchAidList('targeted_audiences=commune&targeted_audiences=epci&targeted_audiences=department&targeted_audiences=region')
-              .then(response => {
-                this.aides = response.data.results;
-              })
-          },
-          goToSelection1() {
+        goToSelection1() {
             this.focusTopSelection1 = true;
-            this.focusTopSelection2 = false;
             this.expanded1 = "true";
             this.expanded2 = "false";
             this.results = true;
@@ -265,19 +228,64 @@
       background-color:           #107449;
       color:                      #fff;
     }
-    .formresearch {
-      background-color:           #F0F0F0;
-      color:                      #6A6A6A;
-      border:                     none;
-    }
     .border-bottom-green {
       border-bottom:              2px solid #107449;
     }
-    #search-input--lg .rf-input {
-      box-shadow: inset 0 -2px 0 0 #107449;
+    .collectivites {
+      position: relative;
     }
-    #search-input--lg button.rf-btn {
-      background-color: #107449;
+    .collectivites a {
+      box-shadow: none;
+    }
+    .collectivites a::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
     }
 
+    div[role="button"] {
+        height: 120px;
+    }
+
+    div[role="button"]:hover, div[role="button"]:focus, .collectivites:hover, .collectivites:focus {
+        background-color: #169B62;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    div[role="button"]:hover h3, div[role="button"]:focus h3, .collectivites:hover h3 a, .collectivites:focus h3 a {
+        color: white !important;
+    }
+
+    .selected {
+        background-color: #169B62 !important;
+    }
+
+    .selected .rf-text {
+        color: white !important;
+    }
+
+    .unselected {
+        background-color: #F9F8F6;
+        color: #6A6A6A;
+    }
+
+    .top-selection-image {
+        display: flex;
+        align-items: center;
+        padding: 20px !important;
+        max-width: 120px;
+    }
+
+    .select-title {
+        margin: 0;
+        padding-left: 0 !important;
+        padding-right: 24px !important;
+        color: #107449 !important;
+        display: flex;
+        align-items: center;
+    }
 </style>

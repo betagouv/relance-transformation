@@ -3,14 +3,14 @@
 
         <Header></Header>
 
-        <main class="rf-container">
+        <main class="rf-container" id="main">
 
             <div class="rf-grid-row rf-grid-row--center">
                 <div class="rf-col-md-8" v-if="aide">
                     <Breadcrumbs :dynamic_page_title="title"></Breadcrumbs>
 
                         <div class="aides-intro">
-                            <a href="./" class="rf-link rf-link--icon-left rf-margin-bottom-3N">Retour</a>
+                            <a href="./" class="rf-link rf-mb-2w"><span class="rf-fi-arrow-left-line"></span> Retour</a>
                             <div class="aides-title">
                                 <img src="@/assets/FranceRelance.png" alt="France Relance" />
                                 <h1>{{ aide.name }}</h1>
@@ -156,7 +156,9 @@
     .aides-intro a {
         color: #107449;
     }
-
+    .aides-intro span {
+        color: inherit;
+    }
     .aide a {
       box-shadow: none;
     }
@@ -176,6 +178,10 @@
     .aides-title img {
         height: 120px;
         margin-right: 32px;
+    }
+    hr {
+        border: 1px solid #107449;
+        margin: 1.25em 0;
     }
     @media screen and (min-width: 767px) {
         .aides-intro p {
