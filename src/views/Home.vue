@@ -27,7 +27,10 @@
               <div class="rf-grid-row unselected collectivites" >
                 <img class="rf-col-3 top-selection-image" src="static/img/Normal.546c2386.svg" alt="" />
                 <h3 class="rf-col-9 rf-text select-title">
-                  <a href="/fonds-collectivites">Vous êtes une collectivité territoriale ou un regroupement de collectivités territoriales</a></h3>
+                  <router-link :to="{ name: 'FondsCollectivites' }">
+                    Vous êtes une collectivité territoriale ou un regroupement de collectivités territoriales
+                  </router-link>
+                </h3>
               </div>
             </div>
           </div>
@@ -98,22 +101,8 @@
             level2: '4',
           })
         },
-        goToSelection2() {
-            this.focusTopSelection2 = true;
-            this.focusTopSelection1 = false;
-            this.results = true;
-            this.aides = "";
-            this.expanded2 = "true";
-            this.expanded1 = "false";
-
-            aidService.fetchAidList('targeted_audiences=commune&targeted_audiences=epci&targeted_audiences=department&targeted_audiences=region')
-              .then(response => {
-                this.aides = response.data.results;
-              })
-        },
         goToSelection1() {
             this.focusTopSelection1 = true;
-            this.focusTopSelection2 = false;
             this.expanded1 = "true";
             this.expanded2 = "false";
             this.results = true;
