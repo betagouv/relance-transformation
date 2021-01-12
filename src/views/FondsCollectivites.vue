@@ -25,13 +25,13 @@
           <h2>Je suis un groupement de collectivités ou une collectivité de taille importante</h2>
           <p>J’ai un <strong>projet numérique mutualisé ou d’ampleur</strong> qui concerne un département ou l’équivalent d’une population d’environ 500 000 habitants, et qui porte sur :</p>
           <ul>
-            <li class="rf-pb-2v">La <a class="aides" href="#DEMAT"><strong>dématérialisation des services</strong></a> aux usagers (création ou amélioration) </li>
-            <li class="rf-pb-2v">Un <a class="aides" href="#DATA"><strong>meilleur usage des données pour nos territoires</strong></a> (intelligence artificielle, open data, archivage, tableaux de bord de pilotage des politiques publiques locales)</li>
-            <li class="rf-pb-2v">La <a class="aides" href="#COOP"><strong>coopération avec mes partenaires et usagers</strong></a> grâce au numérique (plateformes citoyennes, gestion de la connaissance partagée, marchés publics)</li>
+            <li class="rf-pb-2v">La <a class="aides" href="b78b-ameliorer-lexperience-usager-dans-une-demarch/"><strong>dématérialisation des services</strong></a> aux usagers (création ou amélioration) </li>
+            <li class="rf-pb-2v">Un <a class="aides" href="dbbc-developper-lutilisation-de-la-donnee-dans-vot/"><strong>meilleur usage des données pour nos territoires</strong></a> (intelligence artificielle, open data, archivage, tableaux de bord de pilotage des politiques publiques locales)</li>
+            <li class="rf-pb-2v">La <a class="aides" href="7fa8-developper-la-collaboration-avec-vos-ecosyste/"><strong>coopération avec mes partenaires et usagers</strong></a> grâce au numérique (plateformes citoyennes, gestion de la connaissance partagée, marchés publics)</li>
           </ul>
-          <p>Je candidate aux appels à projets nationaux <a class="aides" href="#DEMAT">dématérialisation</a>, <a class="aides" href="#DATA">données</a>, <a class="aides" href="#COOP">coopération</a>. L’État cofinance mon projet.</p>
+          <p>Je candidate aux appels à projets nationaux <a class="aides" href="b78b-ameliorer-lexperience-usager-dans-une-demarch/">dématérialisation</a>, <a class="aides" href="dbbc-developper-lutilisation-de-la-donnee-dans-vot/">données</a>, <a class="aides" href="7fa8-developper-la-collaboration-avec-vos-ecosyste/">coopération</a>. L’État cofinance mon projet.</p>
           <h2>Je suis une collectivité et je veux déployer FranceConnect ou utiliser les données mises à disposition par l’État</h2>
-          <p>Je sollicite le <a class="aides" href="#"><strong>guichet national API et FranceConnect</strong></a>. L’État m’accompagne et finance mon raccordement à ces dispositifs.</p>
+          <p>Je sollicite le <a class="aides" href="e13a-deployer-franceconnect-et-utiliser-les-api-na/"><strong>guichet national API et FranceConnect</strong></a>. L’État m’accompagne et finance mon raccordement à ces dispositifs.</p>
         </div>
       </div>
     </main>
