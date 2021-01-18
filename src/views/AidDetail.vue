@@ -53,6 +53,7 @@
         </main>
         <div class="rf-grid-col rf-grid-col--center infoPlan">
             <infoPlanEtat></infoPlanEtat>
+            <infoPlan></infoPlan>
         </div>    
         <Footer></Footer>
     </div>
@@ -63,12 +64,13 @@
     import Breadcrumbs from "@/components/Breadcrumbs";
     import Footer from "@/components/Footer";
     import Header from "@/components/Header";
+    import infoPlanEtat from "@/components/planDeRelanceEtat";
     import infoPlan from "@/components/planDeRelance";
 
     export default {
         name: "Aides",
 
-        components: { Header, Breadcrumbs, Footer, infoPlan },
+        components: { Header, Breadcrumbs, Footer, infoPlanEtat, infoPlan },
 
         data() {
             return {
