@@ -52,7 +52,6 @@
             </div>
         </main>
         <div class="rf-grid-col rf-grid-col--center infoPlan">
-            <infoPlanEtat></infoPlanEtat>
             <infoPlan></infoPlan>
         </div>    
         <Footer></Footer>
