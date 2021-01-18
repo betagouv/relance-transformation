@@ -35,7 +35,9 @@
         </div>
       </div>
     </main>
-    <infoPlan></infoPlan>
+    <div class="rf-grid-col rf-grid-col--center infoPlan">
+      <infoPlan></infoPlan>
+    </div>  
     <Footer></Footer>
   </div>
 </template>
@@ -131,5 +133,10 @@ strong.soon {
   color: white;
   padding: 0.1em 0.2em ;
 }
-
-</style>
+    .infoPlan {
+        text-align: center;
+        margin-top: 3em;
+        background-color: #f9F8F6;
+        padding: 0.5em;
+    }
+    </style>

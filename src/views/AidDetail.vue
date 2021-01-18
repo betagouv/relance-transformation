@@ -51,7 +51,9 @@
                 </div>
             </div>
         </main>
-        <infoPlan></infoPlan>
+        <div class="rf-grid-col rf-grid-col--center infoPlan">
+            <infoPlanEtat></infoPlanEtat>
+        </div>    
         <Footer></Footer>
     </div>
 </template>
@@ -219,5 +221,11 @@
     }
     a.candidate-button-secondary[target=_blank]::after {
         display: none;
+    }
+    .infoPlan {
+        text-align: center;
+        margin-top: 3em;
+        background-color: #f9F8F6;
+        padding: 0.5em;
     }
 </style>

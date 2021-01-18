@@ -58,7 +58,10 @@
         </div>
       </div>
     </main>
-    <infoPlan></infoPlan>
+    <div class="rf-grid-col rf-grid-col--center infoPlan">
+      <infoPlanEtat></infoPlanEtat>
+      <infoPlan></infoPlan>
+    </div>  
     <Footer></Footer>
 
   </div>
@@ -72,12 +75,13 @@
   import ResultSection from "@/components/ResultSection";
   import Footer from "@/components/Footer";
   import aidService from '../services/aidService';
+  import infoPlanEtat from "@/components/planDeRelanceEtat";
   import infoPlan from "@/components/planDeRelance";
 
   export default {
       name: "FranceRelance",
 
-      components: { Header, Breadcrumbs, IntroSection, TopSelection, ResultSection, Footer, infoPlan },
+      components: { Header, Breadcrumbs, IntroSection, TopSelection, ResultSection, Footer, infoPlanEtat, infoPlan },
 
       data() {
         return {
@@ -287,5 +291,11 @@
         color: #107449 !important;
         display: flex;
         align-items: center;
+    }
+    .infoPlan {
+        text-align: center;
+        margin-top: 3em;
+        background-color: #f9F8F6;
+        padding: 0.5em;
     }
 </style>

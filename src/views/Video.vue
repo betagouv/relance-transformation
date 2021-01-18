@@ -29,7 +29,10 @@
         </div>
       </div>
     </main>
-    <infoPlan></infoPlan>
+    <div class="rf-grid-col rf-grid-col--center infoPlan">
+      <infoPlanEtat></infoPlanEtat>
+      <infoPlan></infoPlan>
+    </div>  
     <Footer></Footer>
   </div>
 </template>
@@ -38,12 +41,13 @@
     import Header from "@/components/Header";
     import Breadcrumbs from "@/components/Breadcrumbs";
     import Footer from "@/components/Footer";
+    import infoPlanEtat from "@/components/planDeRelanceEtat";
     import infoPlan from "@/components/planDeRelance";
 
     export default {
          name: "Video",
 
-      components: { Header, Breadcrumbs, Footer, infoPlan},
+      components: { Header, Breadcrumbs, Footer, infoPlan, infoPlanEtat},
 
       data() {
           return {
@@ -113,7 +117,10 @@
 </script>
 
 <style>
-
-
-
+    .infoPlan {
+        text-align: center;
+        margin-top: 3em;
+        background-color: #f9F8F6;
+        padding: 0.5em;
+    }
 </style>
