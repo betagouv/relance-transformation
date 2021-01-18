@@ -43,7 +43,7 @@
                                     <a :href="aide.application_url" title="Candidater à cet appel à projet - Nouvelle fenêtre" target="_blank" class="rf-btn candidate-button rf-text">Candidater à cet appel à projet</a>
                                 </div>
                                 <div class="rf-col-sm-6" v-if="aide.origin_url">
-                                    <a :href="aide.origin_url" title="Télécharger le cahier des charges - Nouvelle fenêtre" target="_blank" class="rf-btn rf-btn--secondary candidate-button-secondary rf-text" download="download">Télécharger le cahier des charges</a>
+                                    <a :href="aide.origin_url" title="Télécharger la fiche détaillée - Nouvelle fenêtre" target="_blank" class="rf-btn rf-btn--secondary candidate-button-secondary rf-text" download="download">Télécharger la fiche détaillée</a>
                                 </div>
                             </div>
                         </div>
