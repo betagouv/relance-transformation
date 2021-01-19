@@ -29,7 +29,7 @@
                         </div>
 
                         <div class="rf-margin-top-8N">
-                            <h2>Exemples d’applications</h2>
+                            <h2>Exemples de projets attendus</h2>
                             <div>
                                 <div v-html="aide.project_examples" class="rf-text">À titre d’exemple, les thématiques suivantes pourront être explorées :</div>
                             </div>
