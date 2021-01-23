@@ -7,7 +7,7 @@
           <Breadcrumbs></Breadcrumbs>
             <div class="aides-title">
               <img src="@/assets/FranceRelance.png" alt="France Relance">
-              <h1 class="">Fonds "mise à niveau numérique des collectivités territoriales"</h1>
+              <h1 class="">Fonds "transformation numérique des collectivités territoriales"</h1>
             </div>
         </div>
       </div>
