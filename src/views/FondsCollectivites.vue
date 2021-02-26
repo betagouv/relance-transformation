@@ -20,7 +20,7 @@
           <ul>
             <li class="rf-pb-2v">J’ai un <strong>besoin d’outils numériques</strong>, et je pense que ce besoin est commun à beaucoup d’autres collectivités : j’exprime mon besoin ou m’associe à des projets lancés sur la <a class="aides" target="_blank" title="plateforme de co-construction de solutions numériques - nouvelle fenêtre" href="https://incubateur.anct.gouv.fr/relance"><strong>plateforme de co-construction de solutions numériques</strong></a>. L’État aide à la mutualisation, fournit l’ingénierie et cofinance les projets</li>
             <li class="rf-pb-2v">J’ai un <strong>projet numérique</strong> qui améliore ma relation à l’usager, je veux accompagner mes agents dans la transition numérique ou former mes agents, ou je veux développer un projet avec un laboratoire d'innovation territoriale : <a class="aides" href="dcd6-accompagner-les-projets-de-transformation-nu/"><strong>je sollicite les services du préfet de ma région ou de mon département</strong></a>. L’État cofinance mon projet, son ingénierie ou son accompagnement</li>
-            <li class="rf-pb-2v">Je veux <strong>progresser en matière de cybersécurité</strong> : je demande à <!--a class="aides" href="#"--><strong>bénéficier d’un accompagnement</strong><!--/a-->&nbsp;<strong class="soon">[À venir]</strong> grâce aux fonds de relance pilotés par l’ANSSI. L’État m’aide à trouver un prestataire puis finance mon accompagnement</li>
+            <li class="rf-pb-2v">Je veux <strong>progresser en matière de cybersécurité</strong> : <a class="aides" href=" https://www.ssi.gouv.fr/agence/cybersecurite/le-volet-cybersecurite-de-france-relance/" target="_blank" title="je demande à bénéficier d’un accompagnement - nouvelle fenêtre"><strong>je demande à bénéficier d’un accompagnement</strong></a> grâce aux fonds de relance pilotés par l’ANSSI. L’État m’aide à trouver un prestataire puis finance mon accompagnement</li>
           </ul>
           <h2>Je suis un groupement de collectivités ou une collectivité de taille importante</h2>
           <p>J’ai un <strong>projet numérique mutualisé ou d’ampleur</strong> qui concerne un département ou l’équivalent d’une population d’environ 500 000 habitants, et qui porte sur :</p>
@@ -127,16 +127,10 @@
 a.aides {
   color: #107449;
 }
-strong.soon {
-  text-transform: uppercase;
-  background-color: #107449;
-  color: white;
-  padding: 0.1em 0.2em ;
+.infoPlan {
+  text-align: center;
+  margin-top: 3em;
+  background-color: #f9F8F6;
+  padding: 0.5em;
 }
-    .infoPlan {
-        text-align: center;
-        margin-top: 3em;
-        background-color: #f9F8F6;
-        padding: 0.5em;
-    }
-    </style>
+</style>
