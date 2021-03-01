@@ -52,6 +52,7 @@
           <li class="rf-nav__item rf-nav__item--custom"><a class="rf-link rf-link--custom" href="https://www.transformation.gouv.fr/espace-presse" target="_self">Espace presse</a></li>
           <li class="rf-nav__item rf-nav__item--custom rf-nav__item--active"><a class="rf-link rf-link--custom" href="#" target="_self">
           France Relance</a></li>
+          <li class="rf-nav__item rf-nav__item--custom"><a class="rf-link rf-link--custom" href="https://gouvernement-ouvert.transformation.gouv.fr/" target="_self">Gouvernement Ouvert</a></li>
         </ul>
       </nav>
           </div>  
