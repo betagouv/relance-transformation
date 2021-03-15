@@ -257,10 +257,6 @@
         color: white !important;
     }
 
-    .selected {
-        background-color: var(--bf500) !important;
-    }
-
     .selected .rf-text {
         color: white !important;
     }
