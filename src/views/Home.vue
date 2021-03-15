@@ -197,6 +197,9 @@
       flex-flow: column nowrap;
       justify-content: space-between;
     }
+    .aide:hover {
+      box-shadow: inset 0 0 0 2px var(--bf500);
+    }
 
 
     .aide .rf-text {
@@ -211,7 +214,7 @@
     }
     .aide p {
       margin: 0;
-
+      color: var(--bf500);
     }
     .aide img {
       padding-left: 8px;
