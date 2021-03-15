@@ -25,7 +25,7 @@
 
             <div class="rf-col-sm-12 rf-col-md-6">
               <div class="rf-grid-row unselected collectivites" >
-                <img class="rf-col-3 top-selection-image" src="static/img/Normal.546c2386.svg" alt="" />
+                <img class="rf-col-3 top-selection-image" src="@/assets/picto/Collectivite/Normal.svg" alt="" />
                 <h3 class="rf-col-9 rf-text select-title">
                   <router-link :to="{ name: 'FondsCollectivites' }">
                     Vous êtes une collectivité territoriale ou un regroupement de collectivités territoriales
