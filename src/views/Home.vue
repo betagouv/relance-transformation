@@ -197,9 +197,7 @@
       flex-flow: column nowrap;
       justify-content: space-between;
     }
-    .aide:hover {
-      box-shadow: inset 0 0 0 2px #107449;
-    }
+
 
     .aide .rf-text {
         margin-top: 0;
@@ -213,7 +211,7 @@
     }
     .aide p {
       margin: 0;
-      color: #107449;
+
     }
     .aide img {
       padding-left: 8px;
@@ -228,13 +226,8 @@
       left: 0;
       right: 0;
     }
-    .greenButton {
-      background-color:           #107449;
-      color:                      #fff;
-    }
-    .border-bottom-green {
-      border-bottom:              2px solid #107449;
-    }
+
+
     .collectivites {
       position: relative;
     }
@@ -255,17 +248,17 @@
     }
 
     div[role="button"]:hover, div[role="button"]:focus, .collectivites:hover, .collectivites:focus {
-        background-color: #169B62;
-        color: #fff;
+        background-color: #083A9F;
         cursor: pointer;
     }
 
     div[role="button"]:hover h3, div[role="button"]:focus h3, .collectivites:hover h3 a, .collectivites:focus h3 a {
+        background-color: #083A9F;
         color: white !important;
     }
 
     .selected {
-        background-color: #169B62 !important;
+        background-color: var(--bf500) !important;
     }
 
     .selected .rf-text {
@@ -274,7 +267,7 @@
 
     .unselected {
         background-color: #F9F8F6;
-        color: #6A6A6A;
+        color: var(--bf500);
     }
 
     .top-selection-image {
@@ -288,7 +281,6 @@
         margin: 0;
         padding-left: 0 !important;
         padding-right: 24px !important;
-        color: #107449 !important;
         display: flex;
         align-items: center;
     }
