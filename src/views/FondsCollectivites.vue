@@ -121,12 +121,6 @@
 </script>
 
 <style>
-.rf-callout {
-  box-shadow: inset .25rem 0 0 0 #107449;
-}
-a.aides {
-  color: #107449;
-}
 .infoPlan {
   text-align: center;
   margin-top: 3em;

@@ -155,13 +155,6 @@
     ol, ul {
       margin-left: 1.5rem;
     }
-
-    .aides-intro a {
-        color: #107449;
-    }
-    .aides-intro span {
-        color: inherit;
-    }
     .aide a {
       box-shadow: none;
     }
@@ -173,7 +166,6 @@
     }
 
     .aides-title h1 {
-        color: #107449;
         margin-top: 0;
         margin-bottom: 8px;
     }
@@ -183,7 +175,7 @@
         margin-right: 32px;
     }
     hr {
-        border: 1px solid #107449;
+        border: 1px solid #000;
         margin: 1.25em 0;
     }
     @media screen and (min-width: 767px) {
@@ -212,12 +204,9 @@
     }
 
     .candidate-button {
-        background-color: #107449 !important;
         margin-top: 16px;
     }
     .candidate-button-secondary {
-        color: #107449 !important;
-        box-shadow: inset 0 0 0 1px #107449;
         margin-top: 16px;
     }
     a.candidate-button-secondary[target=_blank]::after {
