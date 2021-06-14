@@ -50,9 +50,19 @@
             </div>
           </li>
           <li class="rf-nav__item rf-nav__item--custom"><a class="rf-link rf-link--custom" href="https://www.transformation.gouv.fr/espace-presse" target="_self">Espace presse</a></li>
-          <li class="rf-nav__item rf-nav__item--custom rf-nav__item--active"><a class="rf-link rf-link--custom" href="#" target="_self">
-          France Relance</a></li>
+          <li class="rf-nav__item rf-nav__item--custom rf-nav__item--active">
+            <button class="rf-btn rf-btn--cutom" aria-expanded="false" aria-controls="rf-nav-item-4">France Relance</button>
+            <div class="rf-menu" id="rf-nav-item-4">
+              <ul class="rf-menu__list">
+                <li class="rf-menu__item rf-menu__item--active"><a class="rf-link"  aria-current="page" href="https://france-relance.transformation.gouv.fr/" target="_self">Candidatez</a>
+                </li>
+                <li class="rf-menu__item"><a class="rf-link" href="https://www.transformation.gouv.fr/decouvrez-les-projets-laureats" target="_self">Dévouvrez les projets lauréats</a>
+                </li>
+              </ul>
+            </div>
+          </li>
           <li class="rf-nav__item rf-nav__item--custom"><a class="rf-link rf-link--custom" href="https://gouvernement-ouvert.transformation.gouv.fr/" target="_self">Gouvernement Ouvert</a></li>
+          <li class="rf-nav__item rf-nav__item--custom"><a class="rf-link rf-link--custom" href="https://www.transformation.gouv.fr/cartographie-des-prepas-talents/" target="_self">Talents du service public</a></li>
         </ul>
       </nav>
           </div>  
