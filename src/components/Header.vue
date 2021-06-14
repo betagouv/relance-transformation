@@ -56,7 +56,7 @@
               <ul class="rf-menu__list">
                 <li class="rf-menu__item rf-menu__item--active"><a class="rf-link"  aria-current="page" href="https://france-relance.transformation.gouv.fr/" target="_self">Candidatez</a>
                 </li>
-                <li class="rf-menu__item"><a class="rf-link" href="https://www.transformation.gouv.fr/decouvrez-les-projets-laureats" target="_self">Dévouvrez les projets lauréats</a>
+                <li class="rf-menu__item"><a class="rf-link" href="https://www.transformation.gouv.fr/decouvrez-les-projets-laureats" target="_self">Découvrez les projets lauréats</a>
                 </li>
               </ul>
             </div>
