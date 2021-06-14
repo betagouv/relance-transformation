@@ -79,6 +79,7 @@
 <style>
   body {
     margin:0;
+    background-color: #ffffff;
   }
   .rf-header a {
     box-shadow: none;
