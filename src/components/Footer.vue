@@ -69,7 +69,7 @@
                             <a href="https://www.transformation.gouv.fr/mentions-legales">Mentions légales</a>
                         </li>
                         <li>
-                            <a href="https://www.transformation.gouv.fr/accessibilite">Accessibilité : non conforme</a>
+                            <a href="https://www.transformation.gouv.fr/accessibilite">Accessibilité : partiellement conforme</a>
                         </li>
                     </ul>
                     <div class="rf-footer__bottom-copy">
