@@ -95,7 +95,7 @@
                 .then(aidDetail => {
                     this.aide = aidDetail
                     this.title = aidDetail.short_title;
-                    this.meta_title = this.title + " - Ministère de la Transformation et de la Fonction publiques"
+                    this.meta_title = aidDetail.name + " - Ministère de la Transformation et de la Fonction publiques"
                     this.description = aidDetail.name;
             })
         },
