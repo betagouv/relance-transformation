@@ -24,7 +24,7 @@
             <li class="rf-pb-2v">Je souhaite mettre en œuvre des solutions de <strong>téléprocédures</strong> permettant de recevoir et d’instruire sous forme dématérialisée les <strong>demandes d’autorisations d’urbanismes</strong> (DAU) en prévision de l’application de la Loi ELAN : <a class="aides" href="b493-soutenir-la-dematerialisation-des-demandes-da/"><strong>je sollicite un financement spécifique dans le cadre du programme Démat. ADS.</strong></a></li>
           </ul>
           <h2>Je suis un groupement de collectivités ou une collectivité de taille importante</h2>
-          <p>J’ai un <strong>projet numérique mutualisé ou d’ampleur</strong> qui concerne un département ou l’équivalent d’une population d’environ 500 000 habitants, et qui porte sur :</p>
+          <p>J’ai un <strong>projet numérique mutualisé ou d’ampleur</strong> qui concerne un département ou l’équivalent d’une population d’au moins 300 000 habitants, et qui porte sur :</p>
           <ul>
             <li class="rf-pb-2v">La <a class="aides" href="b78b-ameliorer-lexperience-usager-dans-une-demarch/"><strong>dématérialisation des services</strong></a> aux usagers (création ou amélioration) </li>
             <li class="rf-pb-2v">Un <a class="aides" href="dbbc-developper-lutilisation-de-la-donnee-dans-vot/"><strong>meilleur usage des données pour nos territoires</strong></a> (intelligence artificielle, open data, archivage, tableaux de bord de pilotage des politiques publiques locales)</li>
