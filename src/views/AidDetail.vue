@@ -1,13 +1,13 @@
 <template>
     <div class="aides">
 
-        <Header></Header>
+        <HeaderBlock></HeaderBlock>
 
         <main class="rf-container" id="main">
 
             <div class="rf-grid-row rf-grid-row--center">
                 <div class="rf-col-md-8" v-if="aide">
-                    <Breadcrumbs :dynamic_page_title="title"></Breadcrumbs>
+                    <BreadcrumbsBlock :dynamic_page_title="title"></BreadcrumbsBlock>
 
                         <div class="aides-intro">
                             <a href="/" class="rf-link rf-fi-arrow-left-line rf-link--icon-left rf-mb-2w">Retour</a>
@@ -31,7 +31,8 @@
                         <div class="rf-margin-top-8N">
                             <h2>Exemples de projets attendus</h2>
                             <div>
-                                <div v-html="aide.project_examples" class="rf-text">À titre d’exemple, les thématiques suivantes pourront être explorées :</div>
+                                <div class="rf-text">À titre d’exemple, les thématiques suivantes pourront être explorées :</div>
+                                <div v-html="aide.project_examples" class="rf-text"></div>
                             </div>
                         </div>
 
@@ -54,22 +55,21 @@
         <div class="rf-grid-col rf-grid-col--center infoPlan">
             <infoPlan></infoPlan>
         </div>    
-        <Footer></Footer>
+        <FooterBlock></FooterBlock>
     </div>
 </template>
 
 <script>
     import aidService from '../services/aidService'
-    import Breadcrumbs from "@/components/Breadcrumbs";
-    import Footer from "@/components/Footer";
-    import Header from "@/components/Header";
-    import infoPlanEtat from "@/components/planDeRelanceEtat";
+    import BreadcrumbsBlock from "@/components/BreadcrumbsBlock";
+    import FooterBlock from "@/components/FooterBlock";
+    import HeaderBlock from "@/components/HeaderBlock";
     import infoPlan from "@/components/planDeRelance";
 
     export default {
-        name: "Aides",
+        name: "AidDetail",
 
-        components: { Header, Breadcrumbs, Footer, infoPlanEtat, infoPlan },
+        components: { HeaderBlock, BreadcrumbsBlock, FooterBlock, infoPlan },
 
         data() {
             return {

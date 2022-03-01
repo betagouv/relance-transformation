@@ -15,7 +15,7 @@
 
 <script>
 export default {
-  name: "Breadcrumbs",
+  name: "BreadcrumbsBlock",
   data() {
     return {
       breadcrumbs: [],

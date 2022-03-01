@@ -2,14 +2,14 @@
 
   <div class="france_relance">
 
-    <Header></Header>
+    <HeaderBlock></HeaderBlock>
 
     <main class="rf-container" id="main">
 
 
       <div class="rf-grid-row rf-grid-row--center">
         <div class="rf-col-md-10">
-          <Breadcrumbs></Breadcrumbs>
+          <BreadcrumbsBlock></BreadcrumbsBlock>
 
           <IntroSection class="rf-mb-4w"></IntroSection>
 
@@ -62,18 +62,18 @@
       <infoPlanEtat></infoPlanEtat>
       <infoPlan></infoPlan>
     </div>  
-    <Footer></Footer>
+    <FooterBlock></FooterBlock>
 
   </div>
 </template>
 
 <script>
-  import Header from "@/components/Header";
-  import Breadcrumbs from "@/components/Breadcrumbs";
+  import HeaderBlock from "@/components/HeaderBlock";
+  import BreadcrumbsBlock from "@/components/BreadcrumbsBlock";
   import IntroSection from "@/components/IntroSection";
   import TopSelection from "@/components/TopSelection";
   import ResultSection from "@/components/ResultSection";
-  import Footer from "@/components/Footer";
+  import FooterBlock from "@/components/FooterBlock";
   import aidService from '../services/aidService';
   import infoPlanEtat from "@/components/planDeRelanceEtat";
   import infoPlan from "@/components/planDeRelance";
@@ -81,7 +81,7 @@
   export default {
       name: "FranceRelance",
 
-      components: { Header, Breadcrumbs, IntroSection, TopSelection, ResultSection, Footer, infoPlanEtat, infoPlan },
+      components: { HeaderBlock, BreadcrumbsBlock, IntroSection, TopSelection, ResultSection, FooterBlock, infoPlanEtat, infoPlan },
 
       data() {
         return {
