@@ -1,10 +1,10 @@
 <template>
   <div class="france_relance">
-    <Header></Header>
+    <HeaderBlock></HeaderBlock>
     <main class="rf-container" id="main">
       <div class="rf-grid-row rf-grid-row--center rf-mb-4w">
         <div class="rf-col-md-10">
-          <Breadcrumbs></Breadcrumbs>
+          <BreadcrumbsBlock></BreadcrumbsBlock>
             <div class="aides-title">
               <img src="@/assets/FranceRelance.png" alt="France Relance">
               <h1 class="">Le mot d’Amélie de Montchalin</h1>
@@ -33,21 +33,21 @@
       <infoPlanEtat></infoPlanEtat>
       <infoPlan></infoPlan>
     </div>  
-    <Footer></Footer>
+    <FooterBlock></FooterBlock>
   </div>
 </template>
 
 <script>
-    import Header from "@/components/Header";
-    import Breadcrumbs from "@/components/Breadcrumbs";
-    import Footer from "@/components/Footer";
+    import HeaderBlock from "@/components/HeaderBlock";
+    import BreadcrumbsBlock from "@/components/BreadcrumbsBlock";
+    import FooterBlock from "@/components/FooterBlock";
     import infoPlanEtat from "@/components/planDeRelanceEtat";
     import infoPlan from "@/components/planDeRelance";
 
     export default {
-         name: "Video",
+         name: "VideoPage",
 
-      components: { Header, Breadcrumbs, Footer, infoPlan, infoPlanEtat},
+      components: { HeaderBlock, BreadcrumbsBlock, FooterBlock, infoPlan, infoPlanEtat},
 
       data() {
           return {

@@ -1,10 +1,10 @@
 <template>
   <div class="france_relance">
-    <Header></Header>
+    <HeaderBlock></HeaderBlock>
     <main class="rf-container"  id="main">
       <div class="rf-grid-row rf-grid-row--center rf-mb-4w">
         <div class="rf-col-md-10">
-          <Breadcrumbs></Breadcrumbs>
+          <BreadcrumbsBlock></BreadcrumbsBlock>
             <div class="aides-title">
               <img src="@/assets/FranceRelance.png" alt="France Relance">
               <h1 class="">Fonds "transformation numérique des collectivités territoriales"</h1>
@@ -39,20 +39,20 @@
     <div class="rf-grid-col rf-grid-col--center infoPlan">
       <infoPlan></infoPlan>
     </div>  
-    <Footer></Footer>
+    <FooterBlock></FooterBlock>
   </div>
 </template>
 
 <script>
-    import Header from "@/components/Header";
-    import Breadcrumbs from "@/components/Breadcrumbs";
-    import Footer from "@/components/Footer";
+    import HeaderBlock from "@/components/HeaderBlock";
+    import BreadcrumbsBlock from "@/components/BreadcrumbsBlock";
+    import FooterBlock from "@/components/FooterBlock";
     import infoPlan from "@/components/planDeRelance";
 
     export default {
          name: "FondsCollectivites",
 
-      components: { Header, Breadcrumbs, Footer, infoPlan},
+      components: { HeaderBlock, BreadcrumbsBlock, FooterBlock, infoPlan},
 
       data() {
           return {

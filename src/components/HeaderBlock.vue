@@ -72,7 +72,7 @@
 
 <script>
     export default {
-        name: "Header",
+        name: "HeaderBlock",
     }
 </script>
 

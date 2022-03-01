@@ -82,7 +82,7 @@
 
 <script>
     export default {
-        name: "Footer",
+        name: "FooterBlock",
     }
 </script>
 
