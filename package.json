@@ -8,6 +8,9 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
+  "engines": {
+    "node": "12"
+  },
   "dependencies": {
     "@sentry/browser": "^6.18.1",
     "@sentry/integrations": "^6.18.1",
