@@ -14,9 +14,9 @@
       <div class="rf-grid-row rf-grid-row--center">
         <div class="rf-col-md-10 rf-col-lg-8">
           <div class="rf-callout">
-            <p class="rf-callout__text rf-text--lg">88 millions d’euros jusqu’à 2022. <strong>Comment en bénéficier ?</strong></p>
+            <p class="rf-callout__text rf-text--lg">Les candidatures sur ces appels à projets/guichets sont à présent closes. <br>Vous pouvez consulter <a href="https://www.data.gouv.fr/fr/datasets/france-relance-donnees-relatives-aux-laureats-des-appels-a-projet-et-guichets-du-volet-mise-a-niveau-numerique-de-letat-et-des-territoires-enveloppe-mtfp/" target="_blank" title="les lauréats en opendata - nouvelle fenêtre">les lauréats en opendata</a>.</p>
           </div>  
-          <h2>Je suis une <strong>collectivité</strong> ou un <strong>groupement de collectivités</strong></h2>
+          <h2 class="rf-mt-8v">Je suis une <strong>collectivité</strong> ou un <strong>groupement de collectivités</strong></h2>
           <ul>
             <li class="rf-pb-2v">J’ai un <strong>besoin d’outils numériques</strong>, et je pense que ce besoin est commun à beaucoup d’autres collectivités : j’exprime mon besoin ou m’associe à des projets lancés sur la <a class="aides" target="_blank" title="plateforme de co-construction de solutions numériques - nouvelle fenêtre" href="https://mon.incubateur.anct.gouv.fr/processes/transformation-numerique"><strong>plateforme de co-construction de solutions numériques</strong></a>. L’État aide à la mutualisation, fournit l’ingénierie et cofinance les projets</li>
             <li class="rf-pb-2v">J’ai un <strong>projet numérique</strong> qui améliore ma relation à l’usager, je veux accompagner mes agents dans la transition numérique ou former mes agents, ou je veux développer un projet avec un laboratoire d'innovation territoriale : <a class="aides" href="dcd6-accompagner-les-projets-de-transformation-nu/"><strong>je sollicite les services du préfet de ma région ou de mon département</strong></a>. L’État cofinance mon projet, son ingénierie ou son accompagnement</li>
