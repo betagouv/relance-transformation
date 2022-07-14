@@ -18,6 +18,10 @@
                             <p class="rf-text--lg"><strong>{{ aide.short_title }}</strong></p>
                         </div>
 
+                        <div class="rf-callout" v-if="deadline_passed">
+                            <p class="rf-callout__text rf-text--lg">Les candidatures sur ces appels à projets/guichets sont à présent closes. <br>Vous pouvez consulter <a href="https://www.data.gouv.fr/fr/datasets/france-relance-donnees-relatives-aux-laureats-des-appels-a-projet-et-guichets-du-volet-mise-a-niveau-numerique-de-letat-et-des-territoires-enveloppe-mtfp/" target="_blank" title="les lauréats en opendata - nouvelle fenêtre">les lauréats en opendata</a>.</p>
+                        </div>  
+
                         <div class="rf-margin-top-8N">
                             <h2>Description</h2>
                             <div v-html="aide.description" class="rf-text"></div>
@@ -62,6 +66,7 @@
     import FooterBlock from "@/components/FooterBlock";
     import HeaderBlock from "@/components/HeaderBlock";
     import infoPlan from "@/components/planDeRelance";
+    import moment from 'moment'
 
     export default {
         name: "AidDetail",
@@ -91,6 +96,7 @@
             aidService.fetchAidDetail(this.$route.params.slug)
                 .then(aidDetail => {
                     this.aide = aidDetail
+                    this.deadline_passed = moment(aidDetail.submission_deadline).format('YYYY-MM-DD') < moment().format('YYYY-MM-DD')
                     this.title = aidDetail.short_title;
                     this.meta_title = aidDetail.name + " - Ministère de la Transformation et de la Fonction publiques"
                     this.description = aidDetail.name;
